@@ -1,0 +1,68 @@
+---
+title: API Reference
+description: How API reference entries on Elysia Reference are structured and verified, the available entries, and where each part of the Elysia API is documented in the guides.
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+The guides imported from the official documentation explain Elysia's API by topic. This section adds a structured,
+per-API view on top of them. It is written for this site and grows gradually.
+
+## Entries
+
+<CardGrid>
+	<LinkCard title="Elysia.listen()" href="/reference/listen/" description="Start serving an instance. Verified against elysia 1.4.28." />
+	<LinkCard title="Elysia.stop()" href="/reference/stop/" description="Stop a running server. Verified against elysia 1.4.28." />
+</CardGrid>
+
+## Where the API is documented in the guides
+
+Until an API has its own entry, these guide sections are its reference documentation.
+
+| Area | API | Guide section |
+| --- | --- | --- |
+| Routing | `get`, `post`, `put`, `patch`, `delete` | [Routing › HTTP Verb](/essential/route/#http-verb) |
+| Routing | `route` (custom method), `all` | [Routing › Custom Method](/essential/route/#custom-method), [All method](/essential/route/#all-method) |
+| Routing | `group`, `prefix` | [Routing › Group](/essential/route/#group), [Prefix](/essential/route/#prefix) |
+| Routing | `handle` | [Routing › Handle](/essential/route/#handle) |
+| Handler | Context, `status`, `set`, `redirect` | [Handler › Context](/essential/handler/#context), [status](/essential/handler/#status), [Set](/essential/handler/#set), [Redirect](/essential/handler/#redirect) |
+| Handler | Streams, server-sent events | [Handler › Stream](/essential/handler/#stream), [Server Sent Events](/essential/handler/#server-sent-events-sse) |
+| Context | `state`, `decorate`, `derive`, `resolve` | [Extends Context](/patterns/extends-context/#state) |
+| Plugins | `use`, scope, `guard`, `as` | [Plugin](/essential/plugin/), [Scope](/essential/plugin/#scope), [Guard](/essential/plugin/#guard), [Scope cast](/essential/plugin/#scope-cast) |
+| Lifecycle | `onRequest`, `onParse`, `onTransform`, `onBeforeHandle`, `onAfterHandle`, `mapResponse`, `onError`, `onAfterResponse` | [Lifecycle](/essential/life-cycle/#request) |
+| Validation | `t` (TypeBox), Standard Schema, `model` | [Validation](/essential/validation/#typebox), [Standard Schema](/essential/validation/#standard-schema), [Reference model](/essential/validation/#reference-model) |
+| Errors | `onError`, custom error classes | [Lifecycle › On Error](/essential/life-cycle/#on-error-error-handling), [Error Handling › Custom Error](/patterns/error-handling/#custom-error) |
+| Macros | `macro` | [Macro](/patterns/macro/) |
+| Cookies | `cookie` | [Cookie](/patterns/cookie/#cookie-attribute) |
+| WebSocket | `ws` | [WebSocket › ws](/patterns/websocket/#ws) |
+| Server | `listen`, `stop`, configuration | [Elysia.listen()](/reference/listen/), [Elysia.stop()](/reference/stop/), [Configuration](/patterns/configuration/#serve) |
+| Mounting | `mount` | [Mount](/patterns/mount/#mount) |
+| Tracing | `trace` | [Trace](/patterns/trace/#trace) |
+| Client | Eden Treaty, Eden Fetch | [Eden Treaty](/eden/treaty/overview/), [Eden Fetch](/eden/fetch/) |
+
+The API names in this table are those used as headings and in code examples on the linked pages; the table does not
+describe their behavior.
+
+## How entries are structured
+
+Every API entry uses the same sections, in this order:
+
+| Section | Content |
+| --- | --- |
+| Overview | The lead paragraph: what the API is for, in one or two sentences. |
+| Signature | The declaration, copied verbatim from the referenced source file. |
+| Parameters | One row per parameter: name, type, optional, meaning. |
+| Return value | Type and meaning of the result. |
+| Behavior | Documented behavior, each statement backed by the source or the official guides. |
+| Code example | A minimal example, taken from the official guides or the source documentation. |
+| Related APIs | Links to related entries and guide sections. |
+| Source reference | Permalink to the exact source location at a tagged release. |
+
+## Verification
+
+An entry is marked **verified** only when its signature was checked against a specific published version of the
+`elysia` package and it links to the exact source location. Everything else is marked **unverified**. Imported guide
+content is never marked as verified automatically, and no signature or behavior is added unless it appears in the
+source code or the official documentation.
+
+Contributors can start from `src/content/docs/reference/_template.mdx`, which is not published.

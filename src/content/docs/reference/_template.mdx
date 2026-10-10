@@ -1,0 +1,56 @@
+---
+# Template for API reference entries. Files starting with "_" are not published.
+# Copy to src/content/docs/reference/<name>.mdx and add the page to src/config/navigation.ts.
+title: 'Elysia.example()'
+description: One sentence describing the API.
+api:
+  name: 'Elysia.example'
+  # "verified" requires `verifiedAgainst` (package@version) and `source` (permalink to a tagged release).
+  status: unverified
+  # verifiedAgainst: elysia@1.4.28
+  # source: https://github.com/elysiajs/elysia/blob/<tag>/src/index.ts#L123
+---
+
+import ApiParameters from '@components/api/ApiParameters.astro';
+import ApiStatus from '@components/api/ApiStatus.astro';
+
+<ApiStatus />
+
+Overview: what the API is for, in one or two sentences, with a link to the guide section that explains it.
+(This lead paragraph is the Overview; Starlight's table of contents labels the top of the page "Overview".)
+
+## Signature
+
+Copy the declaration verbatim from the tagged source:
+
+```ts title="src/index.ts"
+example = (value: string) => {
+	// …
+}
+```
+
+## Parameters
+
+<ApiParameters parameters={[{ name: 'value', type: 'string', description: 'Meaning, from the source or the official docs.' }]} />
+
+## Return value
+
+Type and meaning.
+
+## Behavior
+
+Documented behavior only, each statement with a link to where it is documented.
+
+## Code example
+
+```ts
+// Prefer an example from the official guides; cite the page.
+```
+
+## Related APIs
+
+- [Related guide section](/essential/route/)
+
+## Source reference
+
+- Permalink to the exact source location used for verification.

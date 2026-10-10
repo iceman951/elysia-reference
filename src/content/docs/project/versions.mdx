@@ -1,0 +1,25 @@
+---
+title: Versions
+description: Which ElysiaJS version the documentation on this site applies to, the evidence for it, and how additional versions will be added.
+---
+
+import VersionInfo from '@components/project/VersionInfo.astro';
+
+The documentation on this site is one documentation set, imported from the main branch of the official documentation
+repository. A version label on a page means the page belongs to that set; it is not a statement that every example has
+been tested against every release in the range.
+
+<VersionInfo />
+
+## Release notes
+
+Release notes describe the release they announce and are labelled with that version instead of a documentation set.
+The most recent release note, "Elysia 2 beta", describes a pre-release; the documentation set above is not labelled
+as applying to Elysia 2.
+
+## Adding versions
+
+The site is prepared for several documentation sets (for example Elysia 1.x and 2.x side by side): each set has its
+own content directory, upstream branch and label in `src/config/versions.ts`. A version selector appears only when
+more than one set has maintained content. No version-specific differences are documented here unless the official
+documentation states them.

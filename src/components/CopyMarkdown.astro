@@ -1,0 +1,61 @@
+---
+/** "Copy as Markdown" button backed by the static `/md/<slug>.md` export. */
+interface Props {
+	slug: string;
+}
+
+const { slug } = Astro.props;
+const href = `${import.meta.env.BASE_URL}md/${slug === '' ? 'index' : slug}.md`;
+---
+
+<span class="copy-markdown">
+	<button type="button" class="copy-markdown__button" data-copy-markdown={href}>Copy as Markdown</button>
+	<a class="copy-markdown__link" href={href}>View Markdown</a>
+	<span class="sr-only" aria-live="polite" data-copy-status></span>
+</span>
+
+<script>
+	for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy-markdown]')) {
+		const status = button.parentElement?.querySelector<HTMLElement>('[data-copy-status]');
+		const label = button.textContent ?? 'Copy as Markdown';
+		button.addEventListener('click', async () => {
+			try {
+				const response = await fetch(button.dataset.copyMarkdown ?? '');
+				if (!response.ok) throw new Error(`HTTP ${response.status}`);
+				await navigator.clipboard.writeText(await response.text());
+				button.textContent = 'Copied';
+				if (status) status.textContent = 'Page Markdown copied to the clipboard.';
+			} catch {
+				button.textContent = 'Copy failed';
+				if (status) status.textContent = 'Copying failed. Use “View Markdown” instead.';
+			}
+			setTimeout(() => {
+				button.textContent = label;
+			}, 2000);
+		});
+	}
+</script>
+
+<style>
+	.copy-markdown {
+		display: inline-flex;
+		gap: 1rem;
+		align-items: center;
+	}
+	.copy-markdown__button,
+	.copy-markdown__link {
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--sl-color-text-accent);
+		font: inherit;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.copy-markdown__button:hover,
+	.copy-markdown__button:focus-visible,
+	.copy-markdown__link:hover,
+	.copy-markdown__link:focus-visible {
+		text-decoration: underline;
+	}
+</style>

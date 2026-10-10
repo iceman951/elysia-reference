@@ -1,0 +1,113 @@
+---
+title: Elysia.listen()
+description: Assigns an Elysia instance to a port and starts serving it. Signature verified against the elysia 1.4.28 source.
+api:
+  name: Elysia.listen
+  status: verified
+  verifiedAgainst: elysia@1.4.28
+  source: https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/index.ts#L8182-L8201
+---
+
+import ApiParameters from '@components/api/ApiParameters.astro';
+import ApiStatus from '@components/api/ApiStatus.astro';
+
+<ApiStatus />
+
+`listen` starts serving an Elysia instance. Its source documentation describes it as "Assign current instance to port
+and start serving". Most examples in the guides end with it, for example [Quick Start](/quick-start/) and
+[Routing](/essential/route/).
+
+## Signature
+
+Declared as an instance property in `src/index.ts`:
+
+```ts title="src/index.ts"
+listen = (
+	options: string | number | Partial<Serve>,
+	callback?: ListenCallback
+) => {
+	this['~adapter'].listen(this)(options, callback)
+
+	return this
+}
+```
+
+Referenced type, from `src/universal/server.ts`:
+
+```ts title="src/universal/server.ts"
+export type ListenCallback = (server: Server) => MaybePromise<void>
+```
+
+## Parameters
+
+<ApiParameters
+	parameters={[
+		{
+			name: 'options',
+			type: 'string | number | Partial<Serve>',
+			description:
+				'A port (number or string) or server options. <code>Serve</code> is declared in <code>src/universal/server.ts</code>; the options are described in <a href="/patterns/configuration/#serve">Configuration › serve</a>.',
+		},
+		{
+			name: 'callback',
+			type: 'ListenCallback',
+			optional: true,
+			description: 'Function that receives the <code>Server</code> object. The Quick Start example reads <code>hostname</code> and <code>port</code> from it.',
+		},
+	]}
+/>
+
+## Return value
+
+The instance itself (`this`), so the result can be kept as the application, as in
+`const app = new Elysia().get('/', () => 'Hello Elysia').listen(3000)`.
+
+## Behavior
+
+- Delegates to the instance's adapter: the implementation calls `this['~adapter'].listen(this)(options, callback)`.
+  The [Quick Start](/quick-start/) shows the Node.js adapter being selected with `new Elysia({ adapter: node() })`.
+
+## Code example
+
+From [Quick Start](/quick-start/) (Bun):
+
+```ts
+import { Elysia } from 'elysia'
+
+const app = new Elysia()
+	.get('/', () => 'Hello Elysia')
+	.listen(3000)
+
+console.log(
+	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+)
+```
+
+With a callback, from [Quick Start](/quick-start/) (Node.js):
+
+```ts
+import { Elysia } from 'elysia'
+import { node } from '@elysia/node'
+
+const app = new Elysia({ adapter: node() })
+	.get('/', () => 'Hello Elysia')
+	.listen(3000, ({ hostname, port }) => {
+		console.log(
+			`🦊 Elysia is running at ${hostname}:${port}`
+		)
+	})
+```
+
+## Related APIs
+
+- [Elysia.stop()](/reference/stop/)
+- [Configuration › serve](/patterns/configuration/#serve)
+- [Configuration › adapter](/patterns/configuration/#adapter)
+
+## Source reference
+
+- [`listen` in `src/index.ts`](https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/index.ts#L8182-L8201) at tag `1.4.28`
+- [`Serve` in `src/universal/server.ts`](https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/universal/server.ts#L125)
+- [`ListenCallback` in `src/universal/server.ts`](https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/universal/server.ts#L376)
+
+Version 1.4.28 is the lower bound of the `elysia` range pinned by the official documentation repository.

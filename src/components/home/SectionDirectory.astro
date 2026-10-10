@@ -1,0 +1,96 @@
+---
+/**
+ * Homepage directory: the main sidebar groups as compact link lists.
+ * Generated from src/config/navigation.ts, so it never drifts from the sidebar.
+ */
+import { getCollection } from 'astro:content';
+import { navigation, type NavItem } from '../../config/navigation';
+
+const FEATURED = [
+	'Getting Started',
+	'Core Concepts',
+	'Patterns',
+	'Type Safety',
+	'OpenAPI & Observability',
+	'Testing',
+	'Runtimes & Deployment',
+	'Eden',
+	'Plugins',
+	'Integrations',
+];
+
+const entries = await getCollection('docs');
+const titles = new Map(entries.map((entry) => [entry.id, entry.data.title]));
+
+function links(items: readonly NavItem[]): { href: string; label: string }[] {
+	return items.flatMap((item) => {
+		if ('generate' in item) return [];
+		if ('items' in item) return links(item.items);
+		if (!titles.has(item.slug)) return [];
+		return [{ href: `/${item.slug}/`, label: item.label ?? titles.get(item.slug)! }];
+	});
+}
+
+const sections = FEATURED.flatMap((label) => {
+	const group = navigation.find((candidate) => candidate.label === label);
+	if (!group) return [];
+	const items = links(group.items);
+	const id = `dir-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+	return items.length > 0 ? [{ id, label, items }] : [];
+});
+---
+
+<div class="section-directory not-content">
+	{
+		sections.map((section) => (
+			<section aria-labelledby={section.id}>
+				<h2 id={section.id}>{section.label}</h2>
+				<ul>
+					{section.items.map((item) => (
+						<li>
+							<a href={item.href}>{item.label}</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
+</div>
+
+<style>
+	.section-directory {
+		columns: 4 13rem;
+		column-gap: 2rem;
+		margin-block: 2rem;
+	}
+	.section-directory section {
+		break-inside: avoid;
+		margin-bottom: 1.75rem;
+	}
+	.section-directory h2 {
+		margin: 0 0 0.5rem;
+		padding-bottom: 0.375rem;
+		border-bottom: 1px solid var(--sl-color-gray-5);
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+	}
+	.section-directory ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.section-directory li + li {
+		margin-top: 0.25rem;
+	}
+	.section-directory a {
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		text-decoration: none;
+	}
+	.section-directory a:hover,
+	.section-directory a:focus-visible {
+		color: var(--sl-color-text-accent);
+		text-decoration: underline;
+	}
+</style>

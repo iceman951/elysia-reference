@@ -1,0 +1,39 @@
+---
+/** Mirrored vs. not-mirrored upstream media, from the import manifest. */
+import manifest from '../../generated/upstream-manifest.json';
+
+const notMirrored = manifest.assetsNotMirrored.filter((asset) => asset.status === 'excluded');
+const missing = manifest.assetsNotMirrored.filter((asset) => asset.status === 'missing');
+const mirroredMegabytes = (manifest.assets.reduce((total, asset) => total + asset.bytes, 0) / 1024 / 1024).toFixed(1);
+const mirroredSummary = `${manifest.assets.length} upstream files (diagrams, screenshots, charts and product videos; ${mirroredMegabytes} MB) are mirrored under /upstream/ with their original file names.`;
+const notMirroredSummary = `${notMirrored.length} referenced ${notMirrored.length === 1 ? 'file is' : 'files are'} intentionally not mirrored and ${notMirrored.length === 1 ? 'is' : 'are'} linked on the official site instead:`;
+---
+
+<p>{mirroredSummary} {notMirroredSummary}</p>
+
+{
+	notMirrored.length > 0 && (
+		<table>
+			<thead>
+				<tr>
+					<th>File</th>
+					<th>Reason</th>
+					<th>Used on</th>
+				</tr>
+			</thead>
+			<tbody>
+				{notMirrored.map((asset) => (
+					<tr>
+						<td>
+							<code>{asset.source.replace(/^docs\/public\//, '/')}</code>
+						</td>
+						<td>{asset.reason}</td>
+						<td>{asset.referencedBy.map((page) => page.replace(/^docs\//, '')).join(', ')}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)
+}
+
+{missing.length > 0 && <p>{`${missing.length} referenced files do not exist upstream (see the migration report).`}</p>}

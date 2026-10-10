@@ -1,0 +1,115 @@
+/**
+ * Configuration for the upstream documentation import pipeline.
+ *
+ * Everything that encodes an editorial decision (which pages are skipped, which
+ * assets are not mirrored, how a dead upstream link is repaired) lives here so it
+ * can be reviewed in one place. See docs/CONTENT_PIPELINE.md.
+ */
+
+export interface SkipRule {
+	/** Glob relative to the upstream docs directory, e.g. `playground/**`. */
+	pattern: string;
+	reason: string;
+}
+
+export interface AssetExclusion {
+	/** Glob relative to the upstream `docs/public` directory. */
+	pattern: string;
+	reason: string;
+}
+
+export const importConfig = {
+	upstream: {
+		name: 'elysiajs/documentation',
+		repository: 'https://github.com/elysiajs/documentation',
+		gitUrl: 'https://github.com/elysiajs/documentation.git',
+		branch: 'main',
+		/** Directory containing the VitePress site. */
+		docsDir: 'docs',
+		/** VitePress public directory (served from `/`). */
+		publicDir: 'docs/public',
+		vitepressConfig: 'docs/.vitepress/config.ts',
+		tutorialToc: 'docs/components/xiao/table-of-content.ts',
+		/** Published site; used for attribution links and canonical URLs. */
+		siteUrl: 'https://elysiajs.com',
+		licenseFile: 'LICENSE',
+		license: 'MIT',
+		copyright: 'Copyright 2022 saltyAom',
+	},
+
+	/** Version-registry id (src/config/versions.ts) that imported pages belong to. */
+	docVersion: '1.x',
+
+	/** Upstream package whose declared range is recorded as version evidence. */
+	versionEvidencePackage: 'elysia',
+
+	/**
+	 * Directories inside the docs directory that never contain pages
+	 * (VitePress config, Vue components, static files).
+	 */
+	ignoredDirs: ['.vitepress', 'components', 'public', 'node_modules'],
+
+	/** Pages that are discovered but intentionally not imported. */
+	skip: [
+		{
+			pattern: 'index.md',
+			reason:
+				'Official marketing landing page composed entirely of custom Vue components (<Fern>). Replaced by the independent homepage of this site.',
+		},
+		{
+			pattern: 'illust.md',
+			reason: 'Illustration gallery (<Yonkoma>). Artwork, not technical documentation; subject to separate artwork rights.',
+		},
+		{
+			pattern: 'blog.md',
+			reason:
+				'Blog index rendered by a custom Vue component (<Blogs>). The imported posts are listed in the "Release Notes" and "Articles" sidebar groups instead.',
+		},
+		{
+			pattern: 'playground/**',
+			reason: 'In-browser playground application (Monaco editor + Elysia runtime). It has no static documentation content.',
+		},
+	] satisfies SkipRule[],
+
+	/** Release-note style posts: imported as "Release Notes" (versioned) or "Articles". */
+	releaseNotesPattern: 'blog/*.md',
+
+	/**
+	 * Repairs for internal links that are dead upstream. Only add an alias when the
+	 * intended target is unambiguous; every alias is reported in the migration report.
+	 */
+	linkAliases: {} as Record<string, string>,
+
+	assets: {
+		/** Copied assets are written to `public/upstream/` and served from `/upstream/`. */
+		urlPrefix: '/upstream',
+		/**
+		 * Upstream public files that are never mirrored. They are referenced on the
+		 * official site instead (the importer replaces them with a link), or dropped when
+		 * purely decorative (release-note cover art). See ATTRIBUTION.md.
+		 */
+		exclude: [
+			{ pattern: 'assets/elysia*', reason: 'ElysiaJS logo and brand imagery' },
+			{ pattern: 'assets/cover*', reason: 'ElysiaJS brand cover image' },
+			{ pattern: 'assets/shigure-ui*', reason: 'Character artwork' },
+			{ pattern: 'elysia/**', reason: 'Mascot character artwork' },
+			{ pattern: 'illust/**', reason: 'Illustrations / artwork' },
+			{ pattern: 'logo/**', reason: 'Third-party and brand logos' },
+			{ pattern: 'sponsors/**', reason: 'Third-party sponsor logos' },
+			{ pattern: 'tweets/**', reason: 'Third-party social media content' },
+			{ pattern: 'oiia/**', reason: 'Memes and character artwork' },
+		] satisfies AssetExclusion[],
+		/**
+		 * Individually reviewed files referenced from imported pages that are artwork
+		 * or personal photos rather than technical figures.
+		 */
+		reviewedExclusions: [
+			{ pattern: 'blog/elysia-11/ely.webp', reason: 'Personal photograph of a person' },
+			{ pattern: 'blog/elysia-14/elysia-supersymmetry.webp', reason: 'Character artwork' },
+		] satisfies AssetExclusion[],
+		/** Cover images declared by the `<Blog src="…">` layout are decorative artwork. */
+		excludeReleaseCovers: true,
+	},
+};
+
+export type ImportConfig = typeof importConfig;

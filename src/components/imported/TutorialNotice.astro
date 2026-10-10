@@ -1,0 +1,26 @@
+---
+/** Header of a text-only tutorial lesson that is interactive on the official site. */
+import { Aside } from '@astrojs/starlight/components';
+
+interface Props {
+	/** The interactive lesson on the official site. */
+	href: string;
+	/** Related documentation page shown next to the lesson upstream. */
+	doc?: string;
+}
+
+const { href, doc } = Astro.props;
+---
+
+<Aside type="note" title="Interactive lesson">
+	This is a text-only copy of a lesson from the official interactive tutorial. The in-browser editor, starter code and
+	automated checks are available on <a href={href}>elysiajs.com</a>.
+	{
+		doc && (
+			<>
+				{' '}
+				Related reference: <a href={doc}>{doc.replace(/\/$/, '').replace(/\/#/, '#')}</a>.
+			</>
+		)
+	}
+</Aside>

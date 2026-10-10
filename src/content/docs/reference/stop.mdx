@@ -1,0 +1,74 @@
+---
+title: Elysia.stop()
+description: Stops a running Elysia server. Signature verified against the elysia 1.4.28 source.
+api:
+  name: Elysia.stop
+  status: verified
+  verifiedAgainst: elysia@1.4.28
+  source: https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/index.ts#L8203-L8231
+---
+
+import ApiParameters from '@components/api/ApiParameters.astro';
+import ApiStatus from '@components/api/ApiStatus.astro';
+
+<ApiStatus />
+
+`stop` stops a server started with [`listen`](/reference/listen/). Its source documentation describes it as "Stop
+server from serving".
+
+## Signature
+
+Declared as an instance property in `src/index.ts`:
+
+```ts title="src/index.ts"
+stop = async (closeActiveConnections?: boolean) => {
+	await this['~adapter'].stop?.(this, closeActiveConnections)
+
+	return this
+}
+```
+
+## Parameters
+
+<ApiParameters
+	parameters={[
+		{
+			name: 'closeActiveConnections',
+			type: 'boolean',
+			optional: true,
+			description:
+				'Passed to the adapter. The source documentation example <code>app.stop(true)</code> is commented “Abruptly any requests inflight”.',
+		},
+	]}
+/>
+
+## Return value
+
+A promise that resolves to the instance (`this`); the function is `async`.
+
+## Behavior
+
+- Delegates to the instance's adapter: the implementation awaits `this['~adapter'].stop?.(this, closeActiveConnections)`.
+  The optional call (`?.`) means nothing is stopped by an adapter that does not implement `stop`.
+
+## Code example
+
+From the source documentation of `stop`:
+
+```ts
+const app = new Elysia()
+	.get("/", () => 'hi')
+	.listen(3000)
+
+// Sometime later
+app.stop()
+```
+
+## Related APIs
+
+- [Elysia.listen()](/reference/listen/)
+- [Configuration › adapter](/patterns/configuration/#adapter)
+
+## Source reference
+
+- [`stop` in `src/index.ts`](https://github.com/elysiajs/elysia/blob/56310be9617b826f862c985eae95ae823d95f097/src/index.ts#L8203-L8231) at tag `1.4.28`

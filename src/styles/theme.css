@@ -1,0 +1,113 @@
+/*
+ * Elysia Reference theme: neutral greys, one restrained teal accent.
+ * Only Starlight's documented custom properties are overridden.
+ * Accent text colours meet WCAG AA (≥ 4.5:1) on the page background in both modes.
+ */
+
+/* Dark mode (Starlight default) */
+:root {
+	--sl-color-accent-low: hsl(178, 55%, 14%);
+	--sl-color-accent: hsl(175, 72%, 34%);
+	--sl-color-accent-high: hsl(170, 70%, 82%);
+	--sl-color-white: hsl(0, 0%, 100%);
+	--sl-color-gray-1: hsl(220, 16%, 93%);
+	--sl-color-gray-2: hsl(220, 9%, 78%);
+	--sl-color-gray-3: hsl(220, 7%, 62%);
+	--sl-color-gray-4: hsl(220, 7%, 40%);
+	--sl-color-gray-5: hsl(220, 9%, 25%);
+	--sl-color-gray-6: hsl(220, 12%, 15%);
+	--sl-color-black: hsl(222, 14%, 9%);
+
+	--sl-content-width: 48rem;
+	--sl-line-height: 1.7;
+	--sl-font: ui-sans-serif, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji';
+	--sl-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+/* Light mode */
+:root[data-theme='light'] {
+	--sl-color-accent-low: hsl(172, 60%, 90%);
+	--sl-color-accent: hsl(176, 82%, 24%);
+	--sl-color-accent-high: hsl(178, 82%, 15%);
+	--sl-color-white: hsl(222, 22%, 11%);
+	--sl-color-gray-1: hsl(222, 16%, 17%);
+	--sl-color-gray-2: hsl(222, 11%, 26%);
+	--sl-color-gray-3: hsl(222, 8%, 38%);
+	--sl-color-gray-4: hsl(222, 7%, 56%);
+	--sl-color-gray-5: hsl(222, 10%, 84%);
+	--sl-color-gray-6: hsl(220, 20%, 95%);
+	--sl-color-gray-7: hsl(220, 25%, 98%);
+	--sl-color-black: hsl(0, 0%, 100%);
+}
+
+/* Headings: calmer weight and spacing for long reference pages. */
+.sl-markdown-content :is(h2, h3, h4) {
+	letter-spacing: -0.01em;
+}
+.sl-markdown-content h2 {
+	padding-top: 0.5rem;
+	border-top: 1px solid var(--sl-color-hairline-light);
+}
+
+/* Badges that follow a heading's text (the importer removes the space so heading IDs stay clean). */
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) :is(.sl-badge, .tutorial-badge) {
+	margin-inline-start: 0.5em;
+	vertical-align: 0.15em;
+}
+
+/* Starlight icons used inline in prose (converted from upstream Lucide icons). */
+.sl-inline-icon {
+	display: inline-block;
+	vertical-align: -0.15em;
+}
+
+/* Upstream "md-table" comparison tables contain code blocks in cells (they keep
+   Starlight's scrollable table container, so they never widen the page). */
+.sl-markdown-content table.md-table td {
+	vertical-align: top;
+}
+.sl-markdown-content table.md-table td > .expressive-code {
+	margin: 0;
+}
+
+/* Screenshots and diagrams. */
+.sl-markdown-content img {
+	border-radius: 0.375rem;
+}
+.sl-markdown-content video {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+}
+
+/* Asides: neutral background; the variant colour stays on the border, icon and title. */
+.starlight-aside {
+	background-color: var(--sl-color-gray-6);
+}
+
+/* Current sidebar entry: a quiet tint and an accent rule instead of a solid block. */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-accent-low);
+	box-shadow: inset 3px 0 0 var(--sl-color-accent);
+}
+
+/* Keyboard focus is always visible. */
+:where(a, button, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--sl-color-accent);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+	}
+}

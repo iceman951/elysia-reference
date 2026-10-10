@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ['*']
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      astro:
+        patterns: ['astro', '@astrojs/*']
+      tooling:
+        patterns: ['*']
+        exclude-patterns: ['astro', '@astrojs/*']
+    ignore:
+      # @astrojs/check supports TypeScript 5 and 6 only.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']

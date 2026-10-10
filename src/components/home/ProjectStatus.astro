@@ -1,0 +1,28 @@
+---
+/** One-line provenance summary generated from the import manifest. */
+import manifest from '../../generated/upstream-manifest.json';
+import { currentVersion } from '../../config/versions';
+
+const { upstream, summary } = manifest;
+const date = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(upstream.commitDate));
+---
+
+<p class="project-status not-content">
+	Content from <a href={upstream.repository}>{upstream.name}</a> at{' '}
+	<a href={`${upstream.repository}/commit/${upstream.commit}`}><code>{upstream.commit.slice(0, 7)}</code></a>{' '}
+	({date}) · {currentVersion.label} · {summary.imported} pages imported ·{' '}
+	<a href="/project/migration-status/">migration status</a>
+</p>
+
+<style>
+	.project-status {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-sm);
+	}
+	.project-status a {
+		color: var(--sl-color-gray-2);
+	}
+</style>

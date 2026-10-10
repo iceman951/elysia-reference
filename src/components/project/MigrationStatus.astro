@@ -1,0 +1,65 @@
+---
+/** Import summary rendered from the manifest (the full report lives in reports/). */
+import { getCollection } from 'astro:content';
+import manifest from '../../generated/upstream-manifest.json';
+import { SITE } from '../../config/site';
+
+const { summary, upstream } = manifest;
+const entries = await getCollection('docs');
+const titles = new Map(entries.map((entry) => [entry.id, entry.data.title]));
+const withWarnings = manifest.pages.filter((page) => page.status !== 'imported');
+const reportUrl = `${SITE.repository}/blob/${SITE.productionBranch}/reports/migration-report.md`;
+const commitDate = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(upstream.commitDate));
+---
+
+<table>
+	<tbody>
+		<tr>
+			<th scope="row">Upstream commit</th>
+			<td>
+				<a href={`${upstream.repository}/commit/${upstream.commit}`}><code>{upstream.commit.slice(0, 7)}</code></a> ({commitDate})
+			</td>
+		</tr>
+		<tr><th scope="row">Markdown pages discovered</th><td>{summary.discovered}</td></tr>
+		<tr><th scope="row">Pages imported</th><td>{summary.imported}</td></tr>
+		<tr><th scope="row">… with warnings</th><td>{summary.importedWithWarnings}</td></tr>
+		<tr><th scope="row">Pages failed</th><td>{summary.failed}</td></tr>
+		<tr><th scope="row">Pages skipped</th><td>{summary.skipped}</td></tr>
+		<tr><th scope="row">Conversion errors / warnings / notes</th><td>{summary.issues.error} / {summary.issues.warning} / {summary.issues.info}</td></tr>
+		<tr><th scope="row">Assets mirrored / not mirrored / missing</th><td>{summary.assetsMirrored} / {summary.assetsNotMirrored} / {summary.assetsMissing}</td></tr>
+	</tbody>
+</table>
+
+<p>Full details, including the original source of every removed or replaced element: <a href={reportUrl}>reports/migration-report.md</a>.</p>
+
+<h2 id="skipped-pages">Skipped pages</h2>
+<table>
+	<thead><tr><th>Upstream page</th><th>Reason</th></tr></thead>
+	<tbody>
+		{
+			manifest.skipped.map((page) => (
+				<tr>
+					<td><code>{page.source}</code></td>
+					<td>{page.reason}</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>
+
+<h2 id="pages-with-warnings">Pages with warnings</h2>
+<p>Warnings mark a known difference from the official page (for example an interactive widget replaced by a link) or a defect in the upstream source (for example a dead link).</p>
+<table>
+	<thead><tr><th>Page</th><th>Errors</th><th>Warnings</th></tr></thead>
+	<tbody>
+		{
+			withWarnings.map((page) => (
+				<tr>
+					<td><a href={`/${page.slug}/`}>{titles.get(page.slug) ?? page.title}</a></td>
+					<td>{page.issues.error}</td>
+					<td>{page.issues.warning}</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>

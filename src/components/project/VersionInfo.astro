@@ -1,0 +1,46 @@
+---
+/** Version registry and the evidence recorded by the importer. */
+import manifest from '../../generated/upstream-manifest.json';
+import { versions } from '../../config/versions';
+
+const evidence = manifest.upstream.versionEvidence;
+---
+
+<table>
+	<thead>
+		<tr>
+			<th>Documentation set</th>
+			<th>Status</th>
+			<th>Upstream source</th>
+			<th>Evidence</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			versions.map((version) => (
+				<tr>
+					<td>{version.label}</td>
+					<td>{version.status}</td>
+					<td>
+						<a href={`${version.upstream.repository}/tree/${version.upstream.branch}`}>
+							<code>{version.upstream.branch}</code>
+						</a>
+					</td>
+					<td>
+						{version.evidence}
+						{evidence && (
+							<>
+								{' '}
+								Recorded at import: upstream <code>{evidence.source}</code> declares{' '}
+								<code>
+									{evidence.package}@{evidence.range}
+								</code>
+								.
+							</>
+						)}
+					</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>

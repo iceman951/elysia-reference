@@ -1,0 +1,47 @@
+---
+/**
+ * Stands in for an interactive widget of the official site (e.g. <Playground>)
+ * that cannot run here. The original markup is kept in an MDX comment next to it.
+ */
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+	/** What the widget is, e.g. "interactive example". */
+	kind: string;
+	/** Official page that contains the widget. */
+	href: string;
+}
+
+const { kind, href } = Astro.props;
+---
+
+<div class="interactive-notice not-content" role="note">
+	<Icon name="laptop" size="1.25em" class="interactive-notice__icon" />
+	<p>
+		The official documentation shows an {kind} here.{' '}
+		<a href={href}>Open it on elysiajs.com<span class="sr-only"> (official site)</span></a>
+	</p>
+</div>
+
+<style>
+	.interactive-notice {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+		padding: 0.625rem 0.875rem;
+		border: 1px dashed var(--sl-color-gray-4);
+		border-radius: 0.5rem;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.interactive-notice p {
+		margin: 0;
+	}
+	.interactive-notice a {
+		color: var(--sl-color-text-accent);
+	}
+	:global(.interactive-notice__icon) {
+		flex-shrink: 0;
+		color: var(--sl-color-gray-3);
+	}
+</style>

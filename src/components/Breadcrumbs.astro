@@ -1,0 +1,66 @@
+---
+/**
+ * Breadcrumb trail derived from the sidebar: Home › Group › Subgroup.
+ * Sidebar groups have no index pages, so only "Home" is a link.
+ */
+const { sidebar, entry } = Astro.locals.starlightRoute;
+
+type SidebarEntry = (typeof sidebar)[number];
+
+function findTrail(entries: readonly SidebarEntry[], trail: string[]): string[] | undefined {
+	for (const item of entries) {
+		if (item.type === 'link' && item.isCurrent) return trail;
+		if (item.type === 'group') {
+			const found = findTrail(item.entries, [...trail, item.label]);
+			if (found) return found;
+		}
+	}
+	return undefined;
+}
+
+const trail = entry.data.template === 'splash' ? undefined : findTrail(sidebar, []);
+---
+
+{
+	trail && trail.length > 0 && (
+		<nav class="breadcrumbs not-content" aria-label="Breadcrumb">
+			<ol>
+				<li>
+					<a href={import.meta.env.BASE_URL}>Home</a>
+				</li>
+				{trail.map((label) => (
+					<li>
+						<span>{label}</span>
+					</li>
+				))}
+			</ol>
+		</nav>
+	)
+}
+
+<style>
+	.breadcrumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		margin: 0 0 0.5rem;
+		padding: 0;
+		list-style: none;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.breadcrumbs li:not(:last-child)::after {
+		content: '/';
+		margin-inline-start: 0.375rem;
+		color: var(--sl-color-gray-4);
+	}
+	.breadcrumbs a {
+		color: var(--sl-color-gray-3);
+		text-decoration: none;
+	}
+	.breadcrumbs a:hover,
+	.breadcrumbs a:focus-visible {
+		color: var(--sl-color-white);
+		text-decoration: underline;
+	}
+</style>

@@ -1,0 +1,55 @@
+---
+/**
+ * Verification banner for API reference entries, driven by the `api` frontmatter
+ * field. An entry is only shown as verified when it names the package version and
+ * the exact source location it was checked against.
+ */
+import { Icon } from '@astrojs/starlight/components';
+
+const api = Astro.locals.starlightRoute.entry.data.api;
+const verified = api?.status === 'verified' && Boolean(api.verifiedAgainst) && Boolean(api.source);
+---
+
+{
+	api && (
+		<div class:list={['api-status', 'not-content', verified ? 'api-status--verified' : 'api-status--unverified']} role="note">
+			<Icon name={verified ? 'approve-check-circle' : 'information'} size="1.2em" />
+			{verified ? (
+				<p>
+					Signature verified against <code>{api.verifiedAgainst}</code>
+					{' — '}
+					<a href={api.source}>source</a>.
+				</p>
+			) : (
+				<p>
+					Unverified: assembled from the official guides and not yet checked against the <code>elysia</code> source code.
+				</p>
+			)}
+		</div>
+	)
+}
+
+<style>
+	.api-status {
+		display: flex;
+		gap: 0.625rem;
+		align-items: center;
+		margin-block: 1rem;
+		padding: 0.5rem 0.875rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		font-size: var(--sl-text-sm);
+	}
+	.api-status p {
+		margin: 0;
+	}
+	.api-status--verified {
+		border-color: var(--sl-color-green);
+	}
+	.api-status--verified :global(svg) {
+		color: var(--sl-color-green);
+	}
+	.api-status--unverified :global(svg) {
+		color: var(--sl-color-orange);
+	}
+</style>

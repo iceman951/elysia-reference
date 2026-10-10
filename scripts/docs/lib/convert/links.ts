@@ -1,0 +1,158 @@
+/**
+ * Internal link resolution.
+ *
+ * Upstream links are root-relative VitePress routes in several spellings
+ * (`/essential/handler`, `/essential/handler.html#derive`, `/eden/overview.md`).
+ * They are resolved against the full list of upstream pages:
+ *
+ * - imported page      → local URL (`/essential/handler/#derive`)
+ * - skipped page       → absolute URL on the official site
+ * - upstream static file → handled by the asset pipeline
+ * - nothing matches    → absolute URL on the official site + `broken-link` warning
+ *
+ * Anchors are rewritten in a second pass because heading IDs differ between
+ * VitePress and this site (see slug.ts).
+ */
+import path from 'node:path/posix';
+
+export interface PageIndexEntry {
+	/** Path relative to the upstream docs directory, e.g. `essential/route.md`. */
+	upstreamPath: string;
+	imported: boolean;
+	/** Local content slug (Starlight entry id), e.g. `essential/route`. Only for imported pages. */
+	slug?: string;
+	/** Published URL on the official site. */
+	upstreamUrl: string;
+}
+
+export type LinkTarget =
+	| { kind: 'self'; fragment: string }
+	| { kind: 'page'; page: PageIndexEntry; fragment: string; query: string }
+	| { kind: 'home'; fragment: string }
+	| { kind: 'asset'; publicPath: string }
+	| { kind: 'broken'; url: string; fragment: string }
+	| { kind: 'external'; url: string };
+
+const UPSTREAM_HOSTS = new Set(['elysiajs.com', 'www.elysiajs.com']);
+
+/** Converts an upstream page path (`essential/route.md`, `tutorial/index.md`) to its route. */
+export function routeOf(upstreamPath: string): string {
+	const withoutExt = upstreamPath.replace(/\.md$/, '');
+	if (withoutExt === 'index') return '';
+	if (withoutExt.endsWith('/index')) return `${withoutExt.slice(0, -'/index'.length)}/`;
+	return withoutExt;
+}
+
+export function upstreamUrlOf(siteUrl: string, upstreamPath: string): string {
+	return `${siteUrl}/${routeOf(upstreamPath)}`;
+}
+
+/** Local URL for a content slug (`essential/route` → `/essential/route/`). */
+export function localUrlOf(slug: string): string {
+	return slug === '' || slug === 'index' ? '/' : `/${slug}/`;
+}
+
+export interface PageIndexOptions {
+	siteUrl: string;
+	/** Files in the upstream public directory, relative to it (e.g. `assets/x.webp`). */
+	publicFiles: ReadonlySet<string>;
+	aliases: Readonly<Record<string, string>>;
+}
+
+export class PageIndex {
+	private readonly byPath = new Map<string, PageIndexEntry>();
+	private readonly options: PageIndexOptions;
+
+	constructor(entries: readonly PageIndexEntry[], options: PageIndexOptions) {
+		this.options = options;
+		for (const entry of entries) this.byPath.set(entry.upstreamPath, entry);
+	}
+
+	get(upstreamPath: string): PageIndexEntry | undefined {
+		return this.byPath.get(upstreamPath);
+	}
+
+	entries(): PageIndexEntry[] {
+		return [...this.byPath.values()];
+	}
+
+	/**
+	 * Resolves an href found in `fromPath` (upstream path relative to the docs dir).
+	 * Returns `undefined` for hrefs that need no processing (mailto:, tel:, …).
+	 */
+	resolve(href: string, fromPath: string): LinkTarget | undefined {
+		const trimmed = href.trim();
+		if (trimmed === '') return undefined;
+		if (/^(mailto|tel|data|javascript):/i.test(trimmed)) return undefined;
+
+		let pathPart = trimmed;
+		if (/^https?:\/\//i.test(trimmed)) {
+			let url: URL;
+			try {
+				url = new URL(trimmed);
+			} catch {
+				return { kind: 'external', url: trimmed };
+			}
+			if (!UPSTREAM_HOSTS.has(url.hostname)) return { kind: 'external', url: trimmed };
+			pathPart = `${url.pathname}${url.search}${url.hash}`;
+		} else if (/^[a-z][a-z0-9+.-]*:/i.test(trimmed) || trimmed.startsWith('//')) {
+			return { kind: 'external', url: trimmed };
+		}
+
+		const hashIndex = pathPart.indexOf('#');
+		const fragment = hashIndex >= 0 ? pathPart.slice(hashIndex + 1) : '';
+		let routePart = hashIndex >= 0 ? pathPart.slice(0, hashIndex) : pathPart;
+		const queryIndex = routePart.indexOf('?');
+		const query = queryIndex >= 0 ? routePart.slice(queryIndex) : '';
+		if (queryIndex >= 0) routePart = routePart.slice(0, queryIndex);
+
+		if (routePart === '') return { kind: 'self', fragment };
+
+		let absolute = routePart.startsWith('/')
+			? routePart
+			: path.join('/', path.dirname(fromPath), routePart);
+		try {
+			absolute = decodeURI(absolute);
+		} catch {
+			// Keep the raw value when it is not valid percent-encoding.
+		}
+
+		const alias = this.options.aliases[absolute] ?? this.options.aliases[absolute.replace(/\/$/, '')];
+		if (alias) return this.resolve(`${alias}${query}${fragment ? `#${fragment}` : ''}`, fromPath);
+
+		const relative = absolute.replace(/^\/+/, '');
+		if (relative === '' || relative === 'index' || relative === 'index.html' || relative === 'index.md') {
+			return { kind: 'home', fragment };
+		}
+
+		// Static files from the upstream public directory.
+		if (/\.[a-z0-9]{2,5}$/i.test(relative) && !/\.(md|html)$/i.test(relative)) {
+			if (this.options.publicFiles.has(relative)) return { kind: 'asset', publicPath: relative };
+			return { kind: 'broken', url: `${this.options.siteUrl}/${relative}`, fragment };
+		}
+
+		const base = relative.replace(/\/+$/, '').replace(/\.(md|html)$/i, '');
+		const isDirectory = relative.endsWith('/');
+		const candidates = isDirectory ? [`${base}/index.md`, `${base}.md`] : [`${base}.md`, `${base}/index.md`];
+		for (const candidate of candidates) {
+			const page = this.byPath.get(candidate);
+			if (page) return { kind: 'page', page, fragment, query };
+		}
+		return { kind: 'broken', url: `${this.options.siteUrl}/${base}${isDirectory ? '/' : ''}`, fragment };
+	}
+}
+
+/** A link in converted content whose final URL is set once all heading IDs are known. */
+export interface LinkRef {
+	original: string;
+	target: LinkTarget;
+	line: number | undefined;
+	apply: (url: string) => void;
+}
+
+export interface AnchorMap {
+	/** VitePress slug → local heading ID. */
+	fromUpstream: Map<string, string>;
+	/** All local heading IDs of the page. */
+	local: Set<string>;
+}

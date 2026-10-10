@@ -1,0 +1,64 @@
+---
+title: Attribution & Licensing
+description: Credits and license terms for the ElysiaJS documentation content adapted by Elysia Reference, its media policy, and the license of this project's own code.
+---
+
+import AssetPolicy from '@components/project/AssetPolicy.astro';
+import LicenseText from '@components/project/LicenseText.astro';
+
+Elysia Reference is independent community documentation. It is not affiliated with or endorsed by the ElysiaJS
+maintainers.
+
+## Original documentation
+
+The documentation pages on this site are adapted from the official ElysiaJS documentation.
+
+- **Source:** [github.com/elysiajs/documentation](https://github.com/elysiajs/documentation), published at
+  [elysiajs.com](https://elysiajs.com)
+- **Authors:** saltyAom and the
+  [contributors to the ElysiaJS documentation](https://github.com/elysiajs/documentation/graphs/contributors)
+- **License:** MIT
+
+The upstream copyright notice and permission notice, reproduced in full (also stored in the repository at
+`third-party/elysia-documentation/LICENSE`):
+
+<LicenseText />
+
+Every imported page names its exact source file and commit at the end of the page, and links to the corresponding
+official page.
+
+## Changes made to the original content
+
+Imported pages are converted automatically. The conversion:
+
+- converts VitePress syntax (custom containers, code groups, Vue tab and card components) to Starlight equivalents;
+- shows code blocks as they appear on the official site: Twoslash setup code and type-query markers, which the
+  official site hides, are removed, and diff markers (`[!code ++]`) become line highlights;
+- replaces interactive widgets that need the official site's runtime with a link to the official page;
+- removes HTML comments and Vue `<script setup>` blocks, which are not displayed upstream;
+- rewrites internal links to this site, and points links to pages that are not imported back to the official site;
+- leaves wording, API descriptions and code examples unchanged.
+
+The [migration status](/project/migration-status/) page and the migration report in the repository list every
+lossy step together with the original source.
+
+## Images and media
+
+The documentation's diagrams, screenshots and product videos are part of the MIT-licensed repository and are
+mirrored with their original file names. Brand assets, logos, mascot or character artwork, illustrations, photographs
+of people and third-party content are not copied: release-note cover artwork is omitted and other such images are
+linked on the official site.
+
+<AssetPolicy />
+
+## Names and branding
+
+"Elysia" and "ElysiaJS" are the names of the ElysiaJS project and are used here only to identify the subject of this
+documentation. This site uses its own logo and design and does not use the ElysiaJS logo or mascot artwork.
+
+## This project
+
+- Source code and locally written pages (the homepage, this section and the API reference overview): MIT License, see
+  `LICENSE` in [the repository](https://github.com/iceman951/elysia-reference).
+- Built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build) (MIT), with search by
+  [Pagefind](https://pagefind.app) (MIT) and code blocks by [Expressive Code](https://expressive-code.com) (MIT).

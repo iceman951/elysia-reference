@@ -1,0 +1,48 @@
+---
+/** Attribution block shown at the end of every page imported from the official docs. */
+import manifest from '../generated/upstream-manifest.json';
+
+const { entry } = Astro.locals.starlightRoute;
+const upstream = entry.data.upstream;
+const { repository, commit } = manifest.upstream;
+const sourceUrl = upstream ? `${repository}/blob/${commit}/${upstream.path}` : undefined;
+---
+
+{
+	upstream && sourceUrl && (
+		<aside class="source-notice" aria-label="Source and license">
+			<p>
+				<strong>Source:</strong> adapted from the official ElysiaJS documentation page{' '}
+				<a href={upstream.url}>{upstream.url.replace(/^https?:\/\//, '')}</a> (
+				<a href={sourceUrl}>
+					<code>{upstream.path}</code> at <code>{commit.slice(0, 7)}</code>
+				</a>
+				). Written by saltyAom and the ElysiaJS documentation contributors; Copyright 2022 saltyAom, released under the{' '}
+				<a href="/project/attribution/">MIT License</a>.
+			</p>
+			<p>
+				Converted automatically from VitePress. Code examples are shown as published upstream and have not been independently
+				verified. Report content errors to the <a href={`${repository}/issues`}>official documentation</a>; report conversion
+				problems to <a href="/project/about/#reporting-problems">this project</a>.
+			</p>
+		</aside>
+	)
+}
+
+<style>
+	.source-notice {
+		margin-top: 3rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background-color: var(--sl-color-gray-7, var(--sl-color-gray-6));
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.source-notice p + p {
+		margin-top: 0.5rem;
+	}
+	.source-notice code {
+		font-size: 0.9em;
+	}
+</style>

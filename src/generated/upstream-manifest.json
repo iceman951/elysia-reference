@@ -1,0 +1,3533 @@
+{
+	"schemaVersion": 1,
+	"generator": "scripts/docs/import.ts",
+	"upstream": {
+		"name": "elysiajs/documentation",
+		"repository": "https://github.com/elysiajs/documentation",
+		"branch": "main",
+		"commit": "f68573703415eb3df63ff02851013148fea4748f",
+		"commitDate": "2026-09-11T00:35:47+03:00",
+		"siteUrl": "https://elysiajs.com",
+		"license": "MIT",
+		"licenseSha256": "139c2b5b5370aaf2bc08f0ef98bd90984c01ecec9448a6f93297f8ee28d2c938",
+		"versionEvidence": {
+			"package": "elysia",
+			"range": "^1.4.28",
+			"source": "package.json"
+		}
+	},
+	"docVersion": "1.x",
+	"summary": {
+		"discovered": 109,
+		"imported": 104,
+		"importedWithWarnings": 35,
+		"failed": 0,
+		"skipped": 5,
+		"issues": {
+			"error": 0,
+			"warning": 129,
+			"info": 168
+		},
+		"assetsMirrored": 79,
+		"assetsNotMirrored": 2,
+		"assetsMissing": 0
+	},
+	"pages": [
+		{
+			"source": "docs/at-glance.md",
+			"sourceSha256": "b3732c9df5e5cec43735fac2f9e6b3d623681bebbc29bf39c6d8186431e6c51e",
+			"output": "src/content/docs/at-glance.mdx",
+			"outputSha256": "f10a491a62c3929692fdb92851635677c017035ea59a41308962b57b7a928ce9",
+			"slug": "at-glance",
+			"title": "At a glance",
+			"upstreamUrl": "https://elysiajs.com/at-glance",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 2
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Getting Started",
+				"label": "At Glance",
+				"order": 0
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/blog/elysia-02.md",
+			"sourceSha256": "b3dfbb611ec693e21f71e6293cba7d09de08390fd4739631f555cbf1640ce1e5",
+			"output": "src/content/docs/blog/elysia-02.mdx",
+			"outputSha256": "b5d69669703a90d86dfc1ae87dff75a922c619f63b51588a349d6ae3a9a8ab2e",
+			"slug": "blog/elysia-02",
+			"title": "Elysia 0.2 - The Blessing",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-02",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-25T00:14:06+03:00",
+			"release": {
+				"versionLabel": "0.2",
+				"date": "2023-01-29",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-03.md",
+			"sourceSha256": "da8574567dcc1c1f995fdf6531d6df05a1869fee18688328104ccf9e74835757",
+			"output": "src/content/docs/blog/elysia-03.mdx",
+			"outputSha256": "e8080d9ff142f12269d2def42ade8948f5e9738e350c97423f8562127539cca9",
+			"slug": "blog/elysia-03",
+			"title": "Elysia 0.3 - 大地の閾を探して [Looking for Edge of Ground]",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-03",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 4,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "0.3",
+				"date": "2023-03-17",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-04.md",
+			"sourceSha256": "d7e51bbc62ab577f562170754e1fb1027408fee354ca118c1fc62fb5b1e62788",
+			"output": "src/content/docs/blog/elysia-04.mdx",
+			"outputSha256": "a5bf181b38394d6d1ad9870c81e4564e200c20afdfb8f5633ccf062120358513",
+			"slug": "blog/elysia-04",
+			"title": "Elysia 0.4 - 月夜の音楽会 (Moonlit Night Concert)",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-04",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "0.4",
+				"date": "2023-03-30",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-05.md",
+			"sourceSha256": "2c053c4d64c1c8606125ecb10567ea034ba905c6030a25915929a007bc33b1b8",
+			"output": "src/content/docs/blog/elysia-05.mdx",
+			"outputSha256": "490ceb72a5ec970f29a4b8dd350a6fc8a94538b35e8a9b2a22acc5e2335a7f56",
+			"slug": "blog/elysia-05",
+			"title": "Elysia 0.5 - Radiant",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-05",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "0.5",
+				"date": "2023-05-15",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-06.md",
+			"sourceSha256": "182a8a7c22e47c551938c3a36d1f21bdfaf7204110d2cc57118fa8f2ab98a990",
+			"output": "src/content/docs/blog/elysia-06.mdx",
+			"outputSha256": "786f1bde1f0b5cc0f5e45d24aebc6716861df80cf303168363e5ebb52ae3420a",
+			"slug": "blog/elysia-06",
+			"title": "Elysia 0.6 - This Game",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-06",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "0.6",
+				"date": "2023-08-06",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-07.md",
+			"sourceSha256": "8ca5497f88e614fbbfcc8cec811dfe4febd03fc987af1e9181adb5b494b36d8c",
+			"output": "src/content/docs/blog/elysia-07.mdx",
+			"outputSha256": "77a605ea01f95efff6e1cc27a58189000e7044ad8b5e48ae456cd1847398e290",
+			"slug": "blog/elysia-07",
+			"title": "Elysia 0.7 - Stellar Stellar",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-07",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "0.7",
+				"date": "2023-09-20",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-08.md",
+			"sourceSha256": "043e447778540315a80c0a5ec5e82a30447651c5d6996210724c4a138c22579c",
+			"output": "src/content/docs/blog/elysia-08.mdx",
+			"outputSha256": "5c17361d8f10280e0ef458e6eb5602b3521de1c3420c3f90d0c1fb2aa637c5a1",
+			"slug": "blog/elysia-08",
+			"title": "Elysia 0.8 - Gate of Steiner",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-08",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 4,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-10-25T21:03:39+03:00",
+			"release": {
+				"versionLabel": "0.8",
+				"date": "2023-12-23",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-10.md",
+			"sourceSha256": "2c54a03e59f7f702251a26acb66593ceb50a18ed0ff2be6a657ace83a6838bfd",
+			"output": "src/content/docs/blog/elysia-10.mdx",
+			"outputSha256": "0bc3910234e75c6328deb5d69c6ebf79d0cfe26fa311b5751c68d424a59c0608",
+			"slug": "blog/elysia-10",
+			"title": "Elysia 1.0 - Lament of the Fallen",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-10",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 4
+			},
+			"searchable": false,
+			"lastModified": "2026-02-22T05:39:43+07:00",
+			"release": {
+				"versionLabel": "1.0",
+				"date": "2024-03-16",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-11.md",
+			"sourceSha256": "059b09a9028564bde9a26dbe9a4b05c2b5c0be9571d163071ffb226171c9cc28",
+			"output": "src/content/docs/blog/elysia-11.mdx",
+			"outputSha256": "de440986a1ff087915d3bdd1ff2e91da4e0385af64657be5eea5cb552d874215",
+			"slug": "blog/elysia-11",
+			"title": "Elysia 1.1 - Grown-up's Paradise",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-11",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "1.1",
+				"date": "2024-07-16",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-12.md",
+			"sourceSha256": "0dd855fe6d7bf9dafe9413cd6775b29ffaf4b60c38b199229fb7c9ca2efab897",
+			"output": "src/content/docs/blog/elysia-12.mdx",
+			"outputSha256": "012f6868a1227ff933e5b87966484e7af407511f0929eb1cdad2ea456e193f49",
+			"slug": "blog/elysia-12",
+			"title": "Elysia 1.2 - You and Me",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-12",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 3
+			},
+			"searchable": false,
+			"lastModified": "2026-04-24T08:28:08+07:00",
+			"release": {
+				"versionLabel": "1.2",
+				"date": "2024-12-23",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-13.md",
+			"sourceSha256": "a76998d163cddfb60e07caaf7eb228a7a9a67abf3b61b7f212e7e4334771fb3e",
+			"output": "src/content/docs/blog/elysia-13.mdx",
+			"outputSha256": "b57cd737e1872420d1c312a0e33a88d2f5b885186216f2a3bee1c9be9c24c180",
+			"slug": "blog/elysia-13",
+			"title": "Elysia 1.3 and Scientific Witchery",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-13",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"versionLabel": "1.3",
+				"date": "2025-05-05",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-14.md",
+			"sourceSha256": "56f13d8b05aabc3ae1ac3adc78c1f5577ce626180a671ccca5f19bf670cb1b2b",
+			"output": "src/content/docs/blog/elysia-14.mdx",
+			"outputSha256": "90ba5b41e8127d0da67c2d8b624dbe8b4c5f66de745900507404898c4f8a6e10",
+			"slug": "blog/elysia-14",
+			"title": "Elysia 1.4 - Supersymmetry",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-14",
+			"section": "release-notes",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 3
+			},
+			"searchable": false,
+			"lastModified": "2025-09-23T03:50:40+07:00",
+			"release": {
+				"versionLabel": "1.4",
+				"date": "2025-09-13",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-20.md",
+			"sourceSha256": "b9f51cd7e11252d965e76e7a3c8b3175543741ef321d1dd6cce91eafb41b9dee",
+			"output": "src/content/docs/blog/elysia-20.mdx",
+			"outputSha256": "40ff38b6c088705ecd96e08f6eeecdf4dcc0558c857065e1b2435b00e740f610",
+			"slug": "blog/elysia-20",
+			"title": "Elysia 2 beta - DayDream",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-20",
+			"section": "release-notes",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 21
+			},
+			"searchable": false,
+			"lastModified": "2026-07-31T10:03:39+07:00",
+			"release": {
+				"versionLabel": "2 beta",
+				"date": "2026-07-30",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-supabase.md",
+			"sourceSha256": "45028092ed3f7abd050306e6cc646e36d3a21d0f24bd2ed2c349942e66cae5f8",
+			"output": "src/content/docs/blog/elysia-supabase.mdx",
+			"outputSha256": "56a7a4009d5699a816801bd9a12ac932fd4c22f840039273e0c904477ef013e7",
+			"slug": "blog/elysia-supabase",
+			"title": "Elysia with Supabase. Your next backend at sonic speed",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-supabase",
+			"section": "articles",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"date": "2023-03-10",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/elysia-v-encore.md",
+			"sourceSha256": "d74297957c5c2f6eb8e7e74a8e1e466e3628c5205eb21acf962f97d6b70c5127",
+			"output": "src/content/docs/blog/elysia-v-encore.mdx",
+			"outputSha256": "3dfe5bf4f83e2b1e744025e8cb99d09ebdf953b461705be033988b938e9d63b2",
+			"slug": "blog/elysia-v-encore",
+			"title": "2x faster than Encore - 1 year later",
+			"upstreamUrl": "https://elysiajs.com/blog/elysia-v-encore",
+			"section": "articles",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-11-14T23:51:24+07:00",
+			"release": {
+				"date": "2025-11-14",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/openapi-type-gen.md",
+			"sourceSha256": "df56a38958fb49527f3f97f4c430c37d99d9654f26203291ebd01c38e3d14b31",
+			"output": "src/content/docs/blog/openapi-type-gen.mdx",
+			"outputSha256": "e21f3fedc14e0bca064e35860bfa19afbaceea6b5a8121dbfce683168c39d247",
+			"slug": "blog/openapi-type-gen",
+			"title": "Introducing OpenAPI Type Gen for Elysia",
+			"upstreamUrl": "https://elysiajs.com/blog/openapi-type-gen",
+			"section": "articles",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"lastModified": "2026-04-24T05:52:35+07:00",
+			"release": {
+				"date": "2025-09-04",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/blog/with-prisma.md",
+			"sourceSha256": "fe14126025e75066973e2586d66ace384c47016ac2c491c39854add3e48a75df",
+			"output": "src/content/docs/blog/with-prisma.mdx",
+			"outputSha256": "45843eeb9947470021a587e1644c26eab2ab29a3583e55af04b6360fd2877f8c",
+			"slug": "blog/with-prisma",
+			"title": "Accelerate your next Prisma server with Elysia",
+			"upstreamUrl": "https://elysiajs.com/blog/with-prisma",
+			"section": "articles",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"lastModified": "2025-09-19T09:38:24+07:00",
+			"release": {
+				"date": "2023-06-04",
+				"author": "saltyaom"
+			}
+		},
+		{
+			"source": "docs/eden/fetch.md",
+			"sourceSha256": "61e33958636f03629a472c235d4c5581a6ce92d612557d6685401248214e654a",
+			"output": "src/content/docs/eden/fetch.mdx",
+			"outputSha256": "71c953c1b87ecd4fa248916832944358832c8d8e67441bb04a5d3f7b25f5f0a5",
+			"slug": "eden/fetch",
+			"title": "Eden Fetch",
+			"upstreamUrl": "https://elysiajs.com/eden/fetch",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Eden Fetch",
+				"order": 34
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/installation.md",
+			"sourceSha256": "58d5c350b0996d2c2b8bcd1456fa1b373cecf49ae41afd9e407e13baaaa92c0c",
+			"output": "src/content/docs/eden/installation.mdx",
+			"outputSha256": "4c8d015082b49e53a5fe35e150cb397f08ddf9e68285b06ec280ab2362289dec",
+			"slug": "eden/installation",
+			"title": "Eden Installation",
+			"upstreamUrl": "https://elysiajs.com/eden/installation",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Installation",
+				"order": 26
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/eden/overview.md",
+			"sourceSha256": "c67910dc7dfaaa3663b88063d15890c570b4a6a071321177c5d44fa5a0087616",
+			"output": "src/content/docs/eden/overview.mdx",
+			"outputSha256": "fae74648b9b9854b0824406f60e906fac342c01e2d509f508574ccc7891e4f84",
+			"slug": "eden/overview",
+			"title": "End-to-End Type Safety",
+			"upstreamUrl": "https://elysiajs.com/eden/overview",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Overview",
+				"order": 25
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/test.md",
+			"sourceSha256": "212b6a1722e3f05a2ce91d9c047094ea9c140f8ffce4921e13e3f28b7e000398",
+			"output": "src/content/docs/eden/test.mdx",
+			"outputSha256": "678dbb11d1732a3daa021abb8c0a74c620a0a21485345384bfdc19e732a546f4",
+			"slug": "eden/test",
+			"title": "Eden Test",
+			"upstreamUrl": "https://elysiajs.com/eden/test",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/config.md",
+			"sourceSha256": "bbb7a8393df547f6dd19d2e80995d02da69e51e12dfc3a8b32f9087545a13d62",
+			"output": "src/content/docs/eden/treaty/config.mdx",
+			"outputSha256": "2d7fa9a829e8562ce8b0042877d932643590689563460efa39a19d67b52ba734",
+			"slug": "eden/treaty/config",
+			"title": "Config",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/config",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Config",
+				"order": 31,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/legacy.md",
+			"sourceSha256": "a24194adc43578b21d6f9da62e6736a36fe332c5a103bca76d1e45524f902ea8",
+			"output": "src/content/docs/eden/treaty/legacy.mdx",
+			"outputSha256": "17ec6b9ff788b9b1ad2d2eb356a5cfcc2772eb6894c57b9be2094b9fb2ddc752",
+			"slug": "eden/treaty/legacy",
+			"title": "Eden Treaty Legacy",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/legacy",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Legacy (Treaty 1)",
+				"order": 33,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/overview.md",
+			"sourceSha256": "98858c10217cbb50412a7fc07773bbd99a70b15ea10bcbccbb15de9e62904c20",
+			"output": "src/content/docs/eden/treaty/overview.mdx",
+			"outputSha256": "894e6479c366312540c532dc9e80cb2c03d0c9d01771bc002037c6102b96ba5a",
+			"slug": "eden/treaty/overview",
+			"title": "Eden Treaty",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/overview",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Overview",
+				"order": 27,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/parameters.md",
+			"sourceSha256": "e414dc1aec398a7a5ce6812c2d6c3f388a792c0f27a40f102f8d33631fc27674",
+			"output": "src/content/docs/eden/treaty/parameters.mdx",
+			"outputSha256": "67a717b255546fc8fa4f6bd250f91cd9666e857242100d88ed879661f1057565",
+			"slug": "eden/treaty/parameters",
+			"title": "Parameters",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/parameters",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Parameters",
+				"order": 28,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/response.md",
+			"sourceSha256": "0a238a07c514d1cff36fa108f9a2d8bde34247a2f5a4fa44caa7add030f8a400",
+			"output": "src/content/docs/eden/treaty/response.mdx",
+			"outputSha256": "ce2255ddeccf884eabee9215db5aa64104f389e6a168c5fbfd2fbeeb95dec7e3",
+			"slug": "eden/treaty/response",
+			"title": "Response",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/response",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Response",
+				"order": 29,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/unit-test.md",
+			"sourceSha256": "e088d3dac8e595b8a9c868139e3b79391eefde54dd3e02906b145efd89323aee",
+			"output": "src/content/docs/eden/treaty/unit-test.mdx",
+			"outputSha256": "f0888ed9df3685f9efeb6d544e184c01bc10f40710be555ff5aadc4058021f8b",
+			"slug": "eden/treaty/unit-test",
+			"title": "Unit Test",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/unit-test",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Unit Test",
+				"order": 32,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/eden/treaty/websocket.md",
+			"sourceSha256": "06318e870087cfd27b35226cb7e9ae7b7431f6a6572f403c4b85b9b8a4c8e995",
+			"output": "src/content/docs/eden/treaty/websocket.mdx",
+			"outputSha256": "68f6bbe7fd2a46e89265cc291f47e6c3a5e2f4c4ed03eb31534808a47561d7db",
+			"slug": "eden/treaty/websocket",
+			"title": "WebSocket",
+			"upstreamUrl": "https://elysiajs.com/eden/treaty/websocket",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Eden",
+				"label": "Web Socket",
+				"order": 30,
+				"subgroup": "Eden Treaty"
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/essential/best-practice.md",
+			"sourceSha256": "af4c247808358fe9ec2abf29cf4453d7b11ca67da42630c0d4b32a1f08946117",
+			"output": "src/content/docs/essential/best-practice.mdx",
+			"outputSha256": "1f0f3ba95ab3a837cf827ca6f1548b76b5559d695efdb25fb584928eb8b8731a",
+			"slug": "essential/best-practice",
+			"title": "Best Practice",
+			"upstreamUrl": "https://elysiajs.com/essential/best-practice",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 4,
+				"info": 4
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Best Practice",
+				"order": 9
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/essential/handler.md",
+			"sourceSha256": "25042064236e1a1d7a72470be0393f67d44e645b82d5fea087fabfb413a0e796",
+			"output": "src/content/docs/essential/handler.mdx",
+			"outputSha256": "2e48925c72dea8a0b1b27449295db5eacaaff80bed801ddeda76a5ca8cab13df",
+			"slug": "essential/handler",
+			"title": "Handler",
+			"upstreamUrl": "https://elysiajs.com/essential/handler",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 2
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Handler",
+				"order": 5
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/essential/life-cycle.md",
+			"sourceSha256": "66d44a96389a6504331b2c474fffe5eab4b0d99035550aae4ac8b56502c1aa4c",
+			"output": "src/content/docs/essential/life-cycle.mdx",
+			"outputSha256": "9e33726c614e8b4acdef20df07cc58a94b1fa826841d47dfc3194d398fc29b1f",
+			"slug": "essential/life-cycle",
+			"title": "Lifecycle",
+			"upstreamUrl": "https://elysiajs.com/essential/life-cycle",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 2
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Life Cycle",
+				"order": 7
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/essential/plugin.md",
+			"sourceSha256": "33c05a04a24224f957fd2a8b40d62e0a922496716b5e0ee23965a14bd5f01307",
+			"output": "src/content/docs/essential/plugin.mdx",
+			"outputSha256": "b5198f8816e7455ce8d7baf3323de98e705b7c1c8804495901882c7311ad81b0",
+			"slug": "essential/plugin",
+			"title": "Plugin",
+			"upstreamUrl": "https://elysiajs.com/essential/plugin",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 7,
+				"info": 3
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Plugin",
+				"order": 6
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/essential/route.md",
+			"sourceSha256": "c865f5af220dd80d3ae5dd8c9b3293154535acb537376d12ddfea2c2be0ef784",
+			"output": "src/content/docs/essential/route.mdx",
+			"outputSha256": "be3af019fe6e02a3d4429a90dcd9c36c4a569232d712fb3d2fa521a7190d2237",
+			"slug": "essential/route",
+			"title": "Routing",
+			"upstreamUrl": "https://elysiajs.com/essential/route",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 13,
+				"info": 10
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Route",
+				"order": 4
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/essential/validation.md",
+			"sourceSha256": "2926caef82caa51e1a04ca09dae9c83456ca4e3d3adcd1ced73f59a2e9a1e3df",
+			"output": "src/content/docs/essential/validation.mdx",
+			"outputSha256": "33b1bbda516cd584a62fe537a6ff1a9a26dd814336734150733e2800c5fc1919",
+			"slug": "essential/validation",
+			"title": "Validation",
+			"upstreamUrl": "https://elysiajs.com/essential/validation",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 8,
+				"info": 3
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Essential",
+				"label": "Validation",
+				"order": 8
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/integrations/ai-sdk.md",
+			"sourceSha256": "7f0da77a3bd9d2163791a913feb7b80dfbbc4e93d28b99148988e362dbc1b75d",
+			"output": "src/content/docs/integrations/ai-sdk.mdx",
+			"outputSha256": "813d30d8f70f83d70d1dfc6016d584b9e9c3285384f055ba3ace6def7864c4d1",
+			"slug": "integrations/ai-sdk",
+			"title": "Integration with AI SDK",
+			"upstreamUrl": "https://elysiajs.com/integrations/ai-sdk",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "AI SDK",
+				"order": 47
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/integrations/astro.md",
+			"sourceSha256": "75fcd9b127edf6ce0e6cf55286e8b56cb4781b084ffbba4e989744d92d7640f7",
+			"output": "src/content/docs/integrations/astro.mdx",
+			"outputSha256": "ba02baacacbf39f91bc61e5418bdb1b0fbdbe99e28114123dff93282f900ddd0",
+			"slug": "integrations/astro",
+			"title": "Integration with Astro",
+			"upstreamUrl": "https://elysiajs.com/integrations/astro",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Astro",
+				"order": 48
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/integrations/better-auth.md",
+			"sourceSha256": "715dc318a1e8a78fa9f80ad6ec313027094017202c80f9f6b77cf5940e018922",
+			"output": "src/content/docs/integrations/better-auth.mdx",
+			"outputSha256": "08e5529c98a68096f7ea72d03865bd638f950f373aaa139d721d4881ff023415",
+			"slug": "integrations/better-auth",
+			"title": "Better Auth",
+			"upstreamUrl": "https://elysiajs.com/integrations/better-auth",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Better Auth",
+				"order": 49
+			},
+			"lastModified": "2026-05-24T18:52:07+03:00"
+		},
+		{
+			"source": "docs/integrations/cheat-sheet.md",
+			"sourceSha256": "7e588130b56e8ea4982e52baa84d0d68294f9dd2fabd417ec6c96020a17b19cd",
+			"output": "src/content/docs/integrations/cheat-sheet.mdx",
+			"outputSha256": "4865e1488ddc37927e599e70c449189b857bd73ed81de227958fe07297c9a167",
+			"slug": "integrations/cheat-sheet",
+			"title": "Cheat Sheet",
+			"upstreamUrl": "https://elysiajs.com/integrations/cheat-sheet",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/integrations/cloudflare-worker.md",
+			"sourceSha256": "f329c644b6ee85da9c396882ff942914b6ba22d5e542954f8bca83a7e7a45cc0",
+			"output": "src/content/docs/integrations/cloudflare-worker.mdx",
+			"outputSha256": "a4242c677775a26e6f21fbbca180ac45133b915da5ebfce14e41b4144bfbd3ca",
+			"slug": "integrations/cloudflare-worker",
+			"title": "Cloudflare Worker",
+			"upstreamUrl": "https://elysiajs.com/integrations/cloudflare-worker",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Cloudflare Worker",
+				"order": 50
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/integrations/deno.md",
+			"sourceSha256": "246a9e95823bb1933975899652dcee4b81b3e35f69c167a4ac454adb9758919c",
+			"output": "src/content/docs/integrations/deno.mdx",
+			"outputSha256": "8538046f90b2df4a4b93276c77a337f4a17505c5f5090adbd65d03f3f2c86816",
+			"slug": "integrations/deno",
+			"title": "Integration with Deno",
+			"upstreamUrl": "https://elysiajs.com/integrations/deno",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Deno",
+				"order": 51
+			},
+			"lastModified": "2025-12-23T16:16:49+07:00"
+		},
+		{
+			"source": "docs/integrations/drizzle.md",
+			"sourceSha256": "b26ebb75b01562fb6c84a3bdecba35d14d5cfc4d1eede63e5369475693558653",
+			"output": "src/content/docs/integrations/drizzle.mdx",
+			"outputSha256": "ab2caa7c6f5828a314254cb679d3dcecc362a280ded314ba45ca5461db916856",
+			"slug": "integrations/drizzle",
+			"title": "Drizzle",
+			"upstreamUrl": "https://elysiajs.com/integrations/drizzle",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Drizzle",
+				"order": 52
+			},
+			"lastModified": "2025-10-11T00:13:46+03:00"
+		},
+		{
+			"source": "docs/integrations/expo.md",
+			"sourceSha256": "038999f8c58558fb62e232efd3e919062e796e7f5589cb1f0d75f1138663844f",
+			"output": "src/content/docs/integrations/expo.mdx",
+			"outputSha256": "76029a56fb12909dc265e4b0ed0d5dc37565c04a5ed4b7342b19cf12b8d6d127",
+			"slug": "integrations/expo",
+			"title": "Integration with Expo",
+			"upstreamUrl": "https://elysiajs.com/integrations/expo",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Expo",
+				"order": 53
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/integrations/netlify.md",
+			"sourceSha256": "ee5f210c6573dfc3852fcdfc211474984fefef5dba5af6f0e36b195fbba877cb",
+			"output": "src/content/docs/integrations/netlify.mdx",
+			"outputSha256": "7dc373ab43a27fa3de44b8133e3d57476f01f7d2b3b1bd7162f6b6cf66923f16",
+			"slug": "integrations/netlify",
+			"title": "Integration with Netlify Edge Function",
+			"upstreamUrl": "https://elysiajs.com/integrations/netlify",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Netlify",
+				"order": 54
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/integrations/nextjs.md",
+			"sourceSha256": "acc60f00a5c47bb26ef90fca5ea5a21f43d61ed1e16d53d5e8f2debfd80ec5ae",
+			"output": "src/content/docs/integrations/nextjs.mdx",
+			"outputSha256": "207e5f13fc94c0804383bebef631b70f968e3e4c59280f9d703aae36d3185a5c",
+			"slug": "integrations/nextjs",
+			"title": "Integration with Next.js",
+			"upstreamUrl": "https://elysiajs.com/integrations/nextjs",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Nextjs",
+				"order": 55
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/integrations/node.md",
+			"sourceSha256": "3a444d3d4df494cb6046f9ea7ea4b3fa7eda5ef0712defe1bc8a0cab5048ffcf",
+			"output": "src/content/docs/integrations/node.mdx",
+			"outputSha256": "3b0518768997ca0f69f79d2620c54ad33357aaec747e30c84b3bd56f895ec32c",
+			"slug": "integrations/node",
+			"title": "Integration with Node.js",
+			"upstreamUrl": "https://elysiajs.com/integrations/node",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Node.js",
+				"order": 56
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/integrations/nuxt.md",
+			"sourceSha256": "f288449ed1df6265c7163e245e2a9d06fea83dd3cdb3977212ddc309061aee0e",
+			"output": "src/content/docs/integrations/nuxt.mdx",
+			"outputSha256": "b72cb849637dc21d333a6ffd64ad6bc2e732a2a6ea38f83c9c4c007e442cc9c0",
+			"slug": "integrations/nuxt",
+			"title": "Integration with Nuxt",
+			"upstreamUrl": "https://elysiajs.com/integrations/nuxt",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Nuxt",
+				"order": 57
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/integrations/prisma.md",
+			"sourceSha256": "3a7b4f076a0aa2d472a972c3842394b6aae27efedbd80083ab9707ba33cf2697",
+			"output": "src/content/docs/integrations/prisma.mdx",
+			"outputSha256": "176a1a117a46f53b87794c6f35907ed1c0cfb49002acaf30673378b0941687b8",
+			"slug": "integrations/prisma",
+			"title": "Prisma",
+			"upstreamUrl": "https://elysiajs.com/integrations/prisma",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Prisma",
+				"order": 58
+			},
+			"lastModified": "2026-04-03T15:06:52+02:00"
+		},
+		{
+			"source": "docs/integrations/react-email.md",
+			"sourceSha256": "742ed0d4a4724bc229b83ab66d3778cef543914f4fee63a81d988137ea611052",
+			"output": "src/content/docs/integrations/react-email.mdx",
+			"outputSha256": "7bf7d246131ba1b0042c91952991eef8393e3db9aeaf04b3d07ea861afc90fd0",
+			"slug": "integrations/react-email",
+			"title": "React Email",
+			"upstreamUrl": "https://elysiajs.com/integrations/react-email",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "React Email",
+				"order": 59
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/integrations/sveltekit.md",
+			"sourceSha256": "87c0de6dd9d78547bcbc0dbc5746ab8f8b1aaceadafc45ec3a2177b4b5e9aad3",
+			"output": "src/content/docs/integrations/sveltekit.mdx",
+			"outputSha256": "fce40cffd67a0dce4ec74aa123734c9f45ea16cb22c9facab4168d0193e18c1d",
+			"slug": "integrations/sveltekit",
+			"title": "Integration with SvelteKit",
+			"upstreamUrl": "https://elysiajs.com/integrations/sveltekit",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "SvelteKit",
+				"order": 60
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/integrations/tanstack-start.md",
+			"sourceSha256": "96a80b040228fec54be927a46aa1c2e9bf30d2ce436a0d736b4ba8b1ee313328",
+			"output": "src/content/docs/integrations/tanstack-start.mdx",
+			"outputSha256": "8edb9cbcf1abb48028a9f6bb5ec6a021fbbc3263367523723b03277f0d3e0b51",
+			"slug": "integrations/tanstack-start",
+			"title": "Integration with TanStack Start",
+			"upstreamUrl": "https://elysiajs.com/integrations/tanstack-start",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Tanstack Start",
+				"order": 61
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/integrations/vercel.md",
+			"sourceSha256": "056c4749242ece08830e498604289b6cdeda3c82dc85d6697fb3ed18e97c9ad8",
+			"output": "src/content/docs/integrations/vercel.mdx",
+			"outputSha256": "65bcb9eafe4c5f934c94b7f847402ed7887d3dcfa2b0cda6757e8d9bc098b962",
+			"slug": "integrations/vercel",
+			"title": "Deploy Elysia on Vercel",
+			"upstreamUrl": "https://elysiajs.com/integrations/vercel",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Integration",
+				"label": "Vercel",
+				"order": 62
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/internal/jit-compiler.md",
+			"sourceSha256": "437ae4bdb32e7ff24487bc803c880d55b96dab4a9be99c165b664495f6203695",
+			"output": "src/content/docs/internal/jit-compiler.mdx",
+			"outputSha256": "d1e690b51e0c7462e630e63efdece5270175e4472653be664d7b673d019fae14",
+			"slug": "internal/jit-compiler",
+			"title": "JIT \"Compiler\"",
+			"upstreamUrl": "https://elysiajs.com/internal/jit-compiler",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Internal",
+				"label": "JIT Compiler",
+				"order": 63
+			},
+			"lastModified": "2026-02-08T19:07:53+07:00"
+		},
+		{
+			"source": "docs/key-concept.md",
+			"sourceSha256": "6e63c089aedd8cf6879ac5f5ef0e93ac37c77a2befdcdd28893c9b416c8966d3",
+			"output": "src/content/docs/key-concept.mdx",
+			"outputSha256": "ea3438ba820b760b26827df048c22136467f090a0e1537f9a6e9be1f86245684",
+			"slug": "key-concept",
+			"title": "Key Concept",
+			"upstreamUrl": "https://elysiajs.com/key-concept",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 5
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Getting Started",
+				"label": "Key Concept",
+				"order": 3
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/configuration.md",
+			"sourceSha256": "0c2b6fa046255500e97d8f8fbedbca8ddf014f6f8ec98a5e22568aac27f59ee7",
+			"output": "src/content/docs/patterns/configuration.mdx",
+			"outputSha256": "a39165233cff499f57a6c1d7221b7852de41db02aec485f9bbc36f183cc9fada",
+			"slug": "patterns/configuration",
+			"title": "Config",
+			"upstreamUrl": "https://elysiajs.com/patterns/configuration",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Configuration",
+				"order": 10
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/cookie.md",
+			"sourceSha256": "c660ae41ff890a2425a5298b92041082421556b065410021e5892a4449130778",
+			"output": "src/content/docs/patterns/cookie.mdx",
+			"outputSha256": "4f57b3bdb033f5e8073f75a85a50b23bc59d4617aa539a93755d8ec894a584ff",
+			"slug": "patterns/cookie",
+			"title": "Cookie",
+			"upstreamUrl": "https://elysiajs.com/patterns/cookie",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Cookie",
+				"order": 11
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/deploy.md",
+			"sourceSha256": "cb4f439c5caa861aa21f6469c3bf005ef26703ad589f54f328a77ad1f42a3aac",
+			"output": "src/content/docs/patterns/deploy.mdx",
+			"outputSha256": "26996ebb7a23fb147e551a02dfb8966ff2024262e785088da5ce6d703d1ff83b",
+			"slug": "patterns/deploy",
+			"title": "Deploy to production",
+			"upstreamUrl": "https://elysiajs.com/patterns/deploy",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Deploy to Production",
+				"order": 12
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/patterns/error-handling.md",
+			"sourceSha256": "8783e2e7fe972fbf4dfe995e64d705601101685279b237cb9f7267ab9cb8f453",
+			"output": "src/content/docs/patterns/error-handling.mdx",
+			"outputSha256": "bb868b05c4e502c57f5f50fff555cb31e08846784d80faaa38b94dd490dedd1c",
+			"slug": "patterns/error-handling",
+			"title": "Error Handling",
+			"upstreamUrl": "https://elysiajs.com/patterns/error-handling",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 4,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Error Handling",
+				"order": 13
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/extends-context.md",
+			"sourceSha256": "60f0db74e3d71e38d6bfbe771feb49dacf1d94cd3c47a195c049ef5191fc5eee",
+			"output": "src/content/docs/patterns/extends-context.mdx",
+			"outputSha256": "2b405624edae474031f1a37318c2b7fb1088fc6dff52d8e00906ac6f580aa3e1",
+			"slug": "patterns/extends-context",
+			"title": "Extend context",
+			"upstreamUrl": "https://elysiajs.com/patterns/extends-context",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 6,
+				"info": 3
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Extends Context",
+				"order": 14
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/fullstack-dev-server.md",
+			"sourceSha256": "c2569d69c9ce777280ae001df78755891d9a5dd3b105890eae5ac116b549bfa7",
+			"output": "src/content/docs/patterns/fullstack-dev-server.mdx",
+			"outputSha256": "635fc8b5502c1f0512d5c6a6ce9fd71d09bc271fd0d480c077e506dd8926c0cb",
+			"slug": "patterns/fullstack-dev-server",
+			"title": "Elysia with Bun Fullstack Dev Server",
+			"upstreamUrl": "https://elysiajs.com/patterns/fullstack-dev-server",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Fullstack Dev Server",
+				"order": 15
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/patterns/macro.md",
+			"sourceSha256": "a3b2a765d0bf143b5abbbd4e616d41278d32814a5f0f99fe22d0577f8e2d260f",
+			"output": "src/content/docs/patterns/macro.mdx",
+			"outputSha256": "e3732cda9143169d0ef584a166bd3b959de5d73154089bdb6c1a65b8b5451baa",
+			"slug": "patterns/macro",
+			"title": "Macro",
+			"upstreamUrl": "https://elysiajs.com/patterns/macro",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Macro",
+				"order": 16
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/mount.md",
+			"sourceSha256": "23ef85d4aaf4146b177c5bb352db72f0856c529d17e488462106c84bdccd050d",
+			"output": "src/content/docs/patterns/mount.mdx",
+			"outputSha256": "a1bb1677aa018ce527433e6783a2e24f6763cbc2020c03916e1109bad6937bdc",
+			"slug": "patterns/mount",
+			"title": "Mount",
+			"upstreamUrl": "https://elysiajs.com/patterns/mount",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Mount",
+				"order": 17
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/patterns/openapi.md",
+			"sourceSha256": "0e8d5c1f3e87bb76f91d500aa975186ca3e04369dbadb40b322ab95ec1e6b043",
+			"output": "src/content/docs/patterns/openapi.mdx",
+			"outputSha256": "cbd4f803af808c0e72c87852e06715c9546331e721936cd8c4a5011325e836b5",
+			"slug": "patterns/openapi",
+			"title": "OpenAPI",
+			"upstreamUrl": "https://elysiajs.com/patterns/openapi",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "OpenAPI",
+				"order": 18
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/opentelemetry.md",
+			"sourceSha256": "fef5b10f18b3ab388e11b436a633545de0d75e7b26408790997705cf626d8a69",
+			"output": "src/content/docs/patterns/opentelemetry.mdx",
+			"outputSha256": "3ff1414f58cc7afdd269f7d63674974afbfcc60a855c17fe21304d0c4c34d3ae",
+			"slug": "patterns/opentelemetry",
+			"title": "OpenTelemetry",
+			"upstreamUrl": "https://elysiajs.com/patterns/opentelemetry",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "OpenTelemetry",
+				"order": 19
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/patterns/trace.md",
+			"sourceSha256": "6f4ace39f8557003c0d21ce4dc049d127029da91f80ecfd92162ba7d56bd470e",
+			"output": "src/content/docs/patterns/trace.mdx",
+			"outputSha256": "4ac313173a022883de053bd8e9d8a10dd2eccf81228c16541e065eb45390346f",
+			"slug": "patterns/trace",
+			"title": "Trace",
+			"upstreamUrl": "https://elysiajs.com/patterns/trace",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Trace",
+				"order": 20
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/typebox.md",
+			"sourceSha256": "3cd4d4dce84499d2b0282abdd215b0a7749551cca2165d2924f9c0b064ac6a29",
+			"output": "src/content/docs/patterns/typebox.mdx",
+			"outputSha256": "ec9a8a2fe633237d78e048c291220de941879a6f83493f5052a9f530758346c3",
+			"slug": "patterns/typebox",
+			"title": "TypeBox (Elysia.t)",
+			"upstreamUrl": "https://elysiajs.com/patterns/typebox",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "TypeBox (Elysia.t)",
+				"order": 21
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/patterns/typescript.md",
+			"sourceSha256": "c0b9b39df23b71726fbaf6a2a85cd8426852eb0b6ac662817fba48c4df268d69",
+			"output": "src/content/docs/patterns/typescript.mdx",
+			"outputSha256": "a4dfe13367557b94929b8c1187ca9b019d4e1b79b4568050e66f1e1fbb5e8fbe",
+			"slug": "patterns/typescript",
+			"title": "TypeScript",
+			"upstreamUrl": "https://elysiajs.com/patterns/typescript",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "TypeScript",
+				"order": 22
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/patterns/unit-test.md",
+			"sourceSha256": "1834ab2568b6e182b1b772c05c2936bb3cf6d73d6a50566135a84ee2be15765c",
+			"output": "src/content/docs/patterns/unit-test.mdx",
+			"outputSha256": "9ec90e5f5b73e81050aedfae2f6fe6b98399b876bbfed04f9570540c6c5eaeba",
+			"slug": "patterns/unit-test",
+			"title": "Unit Test",
+			"upstreamUrl": "https://elysiajs.com/patterns/unit-test",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Unit Test",
+				"order": 23
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/patterns/websocket.md",
+			"sourceSha256": "649863a766b4c049d4bb8b2fa129f2a7389ff9563c900b68271e3f799d7035d7",
+			"output": "src/content/docs/patterns/websocket.mdx",
+			"outputSha256": "51beaf418758bcba321740fd766a22fdf8502c2b19b6455701075fc954dde6b5",
+			"slug": "patterns/websocket",
+			"title": "WebSocket",
+			"upstreamUrl": "https://elysiajs.com/patterns/websocket",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Patterns",
+				"label": "Web Socket",
+				"order": 24
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/plugins/bearer.md",
+			"sourceSha256": "a4f3a39b979780e31ad28f9dabac00ac5e2310b91a22fc9375da8cedb7a13c89",
+			"output": "src/content/docs/plugins/bearer.mdx",
+			"outputSha256": "73665a2e76305de819f16f0617a77dca4fb77eb73d555f8c88784f0903839745",
+			"slug": "plugins/bearer",
+			"title": "Bearer Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/bearer",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "Bearer",
+				"order": 36
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/cors.md",
+			"sourceSha256": "42253a674b5f86b9343606b97cff7ed5cb2edc7a1301bdea6714665465c959d7",
+			"output": "src/content/docs/plugins/cors.mdx",
+			"outputSha256": "1103df963e47539ef39aea54769c79000688777051e5803f98f9d29049d6aa88",
+			"slug": "plugins/cors",
+			"title": "CORS Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/cors",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "CORS",
+				"order": 37
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/cron.md",
+			"sourceSha256": "17f019d7dc341bebb883ec98fe42e11091588b8c4ba8be97a3006e51057760bb",
+			"output": "src/content/docs/plugins/cron.mdx",
+			"outputSha256": "e88e677a01a72c842e20614f513b0d08b0153fe82b96c0974f1ef4cab2ae228a",
+			"slug": "plugins/cron",
+			"title": "Cron Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/cron",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "Cron",
+				"order": 38
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/graphql-apollo.md",
+			"sourceSha256": "071041e7d74c87cf6fc182cb99fcf080f393818397ad90970a5a9a8c2b83c836",
+			"output": "src/content/docs/plugins/graphql-apollo.mdx",
+			"outputSha256": "8ce446dc620d9721221b6b7a757a7e821728abbcdb977fb1116ec351bef28c22",
+			"slug": "plugins/graphql-apollo",
+			"title": "GraphQL Apollo Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/graphql-apollo",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "GraphQL Apollo",
+				"order": 39
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/plugins/graphql-yoga.md",
+			"sourceSha256": "2625a5adc25adc30b16cb56753f16e2cc2810e0410b6f859574ea15937f87d3e",
+			"output": "src/content/docs/plugins/graphql-yoga.mdx",
+			"outputSha256": "7dff5981bf3a3934ab6b2b2f692eb07789828026d6f10a4e0dcef4551562f2a8",
+			"slug": "plugins/graphql-yoga",
+			"title": "GraphQL Yoga Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/graphql-yoga",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "GraphQL Yoga",
+				"order": 40
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/plugins/html.md",
+			"sourceSha256": "86fbeea0c70861bf4d0cb1c9cc719b20c6bc76b18981c3319762598d951a7a3a",
+			"output": "src/content/docs/plugins/html.mdx",
+			"outputSha256": "6c5afd8985e8a54d8e266700500daff3e0d02e6b993b12e928b46ca4133e3ce6",
+			"slug": "plugins/html",
+			"title": "HTML Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/html",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "HTML",
+				"order": 41
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/plugins/jwt.md",
+			"sourceSha256": "ae0544557f899935d598292eda70e7bbe4d9946dbb0e80c6671d13420e481000",
+			"output": "src/content/docs/plugins/jwt.mdx",
+			"outputSha256": "2b56397f87074f1d54a555f138a783a30e4f94b1451356da5c2c08e51f03b190",
+			"slug": "plugins/jwt",
+			"title": "JWT Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/jwt",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "JWT",
+				"order": 42
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/plugins/openapi.md",
+			"sourceSha256": "2d43a25b9a65916644c65f6faddae7f5c6623dcdd12defad4c2609910e6c48fd",
+			"output": "src/content/docs/plugins/openapi.mdx",
+			"outputSha256": "7e0ddc8d5c5a36af38d2c51581f00cf990b17b4abb5c62ce084b86087d9dc773",
+			"slug": "plugins/openapi",
+			"title": "OpenAPI Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/openapi",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "OpenAPI",
+				"order": 43
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/opentelemetry.md",
+			"sourceSha256": "e3fee0ac94e66ecec2504b0c575c0c7d193384d3d14ae5f8354757e3bfd495bb",
+			"output": "src/content/docs/plugins/opentelemetry.mdx",
+			"outputSha256": "31073a57ae310410dbfe3a41c0772f2b9a3d2ce9794a0a4ddf94309b7913762a",
+			"slug": "plugins/opentelemetry",
+			"title": "OpenTelemetry",
+			"upstreamUrl": "https://elysiajs.com/plugins/opentelemetry",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "OpenTelemetry",
+				"order": 44
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/overview.md",
+			"sourceSha256": "0e90a4b56a62b632926388c60f60dcb1c8f8e5003759f759dbba43c72e107e80",
+			"output": "src/content/docs/plugins/overview.mdx",
+			"outputSha256": "c657f2b14b2a91f4f03053bf085b70bf4e055da5394a26df185fb750e4816a97",
+			"slug": "plugins/overview",
+			"title": "Overview",
+			"upstreamUrl": "https://elysiajs.com/plugins/overview",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "Overview",
+				"order": 35
+			},
+			"lastModified": "2026-09-11T00:35:47+03:00"
+		},
+		{
+			"source": "docs/plugins/server-timing.md",
+			"sourceSha256": "680b70033d0d7fdca6769f1b5aefd60162e2b6b3a4ce8841a1c0cfc327f0451b",
+			"output": "src/content/docs/plugins/server-timing.mdx",
+			"outputSha256": "0b9bf9967b496ab64b9355f85e073015607e66ecbe138bcc3c20ef64dd7a6375",
+			"slug": "plugins/server-timing",
+			"title": "Server Timing Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/server-timing",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "Server Timing",
+				"order": 45
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/static.md",
+			"sourceSha256": "07ecb83227af4110e36fa5bc5dacc877b8b35455917555955e3ad7097ce6eca9",
+			"output": "src/content/docs/plugins/static.mdx",
+			"outputSha256": "2067b8f3a73e9253110118c7f5267068a344686a28dbaa2bb619aed86d1042a0",
+			"slug": "plugins/static",
+			"title": "Static Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/static",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Plugins",
+				"label": "Static",
+				"order": 46
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/plugins/swagger.md",
+			"sourceSha256": "bd0621eb217fe491e9dc49e87debf848b89f150e9f0ec3b43827691665301d39",
+			"output": "src/content/docs/plugins/swagger.mdx",
+			"outputSha256": "17503fcc853e6aeee93163330143dbfbde6631625f3bb298441838c1417246ad",
+			"slug": "plugins/swagger",
+			"title": "Swagger Plugin",
+			"upstreamUrl": "https://elysiajs.com/plugins/swagger",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 0
+			},
+			"searchable": false,
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/quick-start.md",
+			"sourceSha256": "bcd8c5855886ab1aec454d930e74bf9e84c125ba12318de4ce04fe3b443235de",
+			"output": "src/content/docs/quick-start.mdx",
+			"outputSha256": "cb4b16082f0c094ca10cb519d12d397457ee2269320b025459c8c3d2bc974aac",
+			"slug": "quick-start",
+			"title": "Quick Start",
+			"upstreamUrl": "https://elysiajs.com/quick-start",
+			"section": "docs",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 1
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Getting Started",
+				"label": "Quick Start",
+				"order": 1
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/table-of-content.md",
+			"sourceSha256": "1edd448c5d913beeb87ddbc4facc100817f26ef8b869dc079aecc1770e34e025",
+			"output": "src/content/docs/table-of-content.mdx",
+			"outputSha256": "edbf3b9460a619e44240f4708ae59dd89275f7e0c5cae28f41234b89e4286ed3",
+			"slug": "table-of-content",
+			"title": "Table of Content",
+			"upstreamUrl": "https://elysiajs.com/table-of-content",
+			"section": "docs",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 6,
+				"info": 4
+			},
+			"searchable": true,
+			"upstreamNav": {
+				"group": "Getting Started",
+				"label": "Table of Content",
+				"order": 2
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/features/end-to-end-type-safety/index.md",
+			"sourceSha256": "1455e5016c9b4db51ce8dab6265c857a13204d90c47b30f005daef39fe149358",
+			"output": "src/content/docs/tutorial/features/end-to-end-type-safety/index.mdx",
+			"outputSha256": "63c93a0dd12d62a00e6dfb1eced47d0eff4423c814888ec90c76417d95c2452f",
+			"slug": "tutorial/features/end-to-end-type-safety",
+			"title": "End-to-End Type Safety",
+			"upstreamUrl": "https://elysiajs.com/tutorial/features/end-to-end-type-safety/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "End-to-End Type Safety",
+				"order": 82,
+				"subgroup": "Features"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/tutorial/features/mount/index.md",
+			"sourceSha256": "c2476c401190e88fc460c014f0bdb77d418b898338fe8ee5872ded58a382d8b1",
+			"output": "src/content/docs/tutorial/features/mount/index.mdx",
+			"outputSha256": "cb68fac9c8bc663eebbeb9764e7a6c6b01a963f863f6b1b9be1b2bde4395f1cc",
+			"slug": "tutorial/features/mount",
+			"title": "Mount",
+			"upstreamUrl": "https://elysiajs.com/tutorial/features/mount/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Mount",
+				"order": 80,
+				"subgroup": "Features"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/features/openapi/index.md",
+			"sourceSha256": "875eb104e2dc1f68d96930c4c9f21cdf4142a8344a77144a889bf95c6867c262",
+			"output": "src/content/docs/tutorial/features/openapi/index.mdx",
+			"outputSha256": "fafca8e8a92fc79b2bfc13a7793c06df21be36b7e91a8359e5cf673f43ae3b35",
+			"slug": "tutorial/features/openapi",
+			"title": "OpenAPI",
+			"upstreamUrl": "https://elysiajs.com/tutorial/features/openapi/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "OpenAPI",
+				"order": 79,
+				"subgroup": "Features"
+			},
+			"lastModified": "2026-04-24T05:52:35+07:00"
+		},
+		{
+			"source": "docs/tutorial/features/unit-test/index.md",
+			"sourceSha256": "a07fe46265320db3cf7296036969eb306a9c5377148d33c397f6d06b7dd6d88e",
+			"output": "src/content/docs/tutorial/features/unit-test/index.mdx",
+			"outputSha256": "51b2d9af4d98de9944bd613340b223726500e159f6ed3ee1b9fb200891b29705",
+			"slug": "tutorial/features/unit-test",
+			"title": "Unit Test",
+			"upstreamUrl": "https://elysiajs.com/tutorial/features/unit-test/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Unit Test",
+				"order": 81,
+				"subgroup": "Features"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/encapsulation/index.md",
+			"sourceSha256": "d5b4dc14eaa5ff86f0dbde9d8257bc5f3ed2f68957e5255bd552c48b66051424",
+			"output": "src/content/docs/tutorial/getting-started/encapsulation/index.mdx",
+			"outputSha256": "4b2e7e4e286afed77690db4cee55bb51bc1d417f13ff4be829fcde3632bb8bcf",
+			"slug": "tutorial/getting-started/encapsulation",
+			"title": "Encapsulation",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/encapsulation/",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Encapsulation",
+				"order": 72,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/guard/index.md",
+			"sourceSha256": "c04e7b9e9d00e0b994e03e3fa5d96a5b0e8b661298740519cf28b0c02515acfe",
+			"output": "src/content/docs/tutorial/getting-started/guard/index.mdx",
+			"outputSha256": "7563c55ea1ec836bf3478dedc8c1612b2ed92e83ee15244aac9c7bd2cff3113b",
+			"slug": "tutorial/getting-started/guard",
+			"title": "Guard",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/guard/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Guard",
+				"order": 70,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/handler-and-context/index.md",
+			"sourceSha256": "1b64ad72df68401af4f8ad516f62d325a6fcdbf5d78dd8a65aebca63bdd4a41e",
+			"output": "src/content/docs/tutorial/getting-started/handler-and-context/index.mdx",
+			"outputSha256": "3885187a3f3005a861d19cad232fb13a8135ff87f4c2c1e10ef65255a5de215a",
+			"slug": "tutorial/getting-started/handler-and-context",
+			"title": "Handler and Context",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/handler-and-context/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Handler and Context",
+				"order": 66,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/life-cycle/index.md",
+			"sourceSha256": "fdee52be62a1ccf317115c825002c96dae83e15ea1f7ac094dbb410ea60a321b",
+			"output": "src/content/docs/tutorial/getting-started/life-cycle/index.mdx",
+			"outputSha256": "c16df3b3debf3e4a9e37040577d83a4e4d5f11eb058bd60bb58f5c5ee0df58f4",
+			"slug": "tutorial/getting-started/life-cycle",
+			"title": "Lifecycle",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/life-cycle/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Lifecycle",
+				"order": 69,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/plugin/index.md",
+			"sourceSha256": "b2798df762fcbfc5343bc1b1bc84f9196b704afbae4e02857198229e9a764c3c",
+			"output": "src/content/docs/tutorial/getting-started/plugin/index.mdx",
+			"outputSha256": "29fab8cca34ef2a15ca647372551518f7dded41904761e7377189866115e1d76",
+			"slug": "tutorial/getting-started/plugin",
+			"title": "Plugin",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/plugin/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Plugin",
+				"order": 71,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/status-and-headers/index.md",
+			"sourceSha256": "9e6a23fa9d599a83c6d47fd7f823c2ef965e5faeba8215c369bbe3e2b22bf597",
+			"output": "src/content/docs/tutorial/getting-started/status-and-headers/index.mdx",
+			"outputSha256": "87a4b84874e99c5dad5296eb447a05fef238b00d58ecb5ee0f681ff6a6b82510",
+			"slug": "tutorial/getting-started/status-and-headers",
+			"title": "Status",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/status-and-headers/",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 1,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Status and Headers",
+				"order": 67,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/validation/index.md",
+			"sourceSha256": "adc9bd2bf7da310efddde0dffb89bca0f5aa8329f718f5703d0f0d150ef2e89f",
+			"output": "src/content/docs/tutorial/getting-started/validation/index.mdx",
+			"outputSha256": "fa86be3e450a4ede23a71af1e4a2ce87d53caecdb6d84c2269ad405ce22d57e8",
+			"slug": "tutorial/getting-started/validation",
+			"title": "Validation",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/validation/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Validation",
+				"order": 68,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/getting-started/your-first-route/index.md",
+			"sourceSha256": "177a3ceed7273f6abcf213d00e6d9a4fc7f37eba75c0cd2cb7cc730c4087cb2f",
+			"output": "src/content/docs/tutorial/getting-started/your-first-route/index.mdx",
+			"outputSha256": "36e14e0d4696af4e9e13fe368e4c6a1684a1e8fb55086fda7f34e074d7ffa02a",
+			"slug": "tutorial/getting-started/your-first-route",
+			"title": "Your First Route",
+			"upstreamUrl": "https://elysiajs.com/tutorial/getting-started/your-first-route/",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 3,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Your First Route",
+				"order": 65,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2026-04-24T08:28:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/index.md",
+			"sourceSha256": "612e093a15331c9d2d28e32c1b62587a64d25e74866dd9e799870f9d404cc334",
+			"output": "src/content/docs/tutorial/index.mdx",
+			"outputSha256": "741ef37754fd41854d8ff7f18f449b5268a7212f606f7bb85742d2ace17fd143",
+			"slug": "tutorial",
+			"title": "Welcome to Elysia",
+			"upstreamUrl": "https://elysiajs.com/tutorial/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 3
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Introduction",
+				"order": 64,
+				"subgroup": "Getting Started"
+			},
+			"lastModified": "2025-12-12T13:25:56-07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/cookie/index.md",
+			"sourceSha256": "14587063aa83fb7b2a3b4bcd281566fbacfe619f78ad04938d1e7395810e647d",
+			"output": "src/content/docs/tutorial/patterns/cookie/index.mdx",
+			"outputSha256": "537fac48ed1b4b18e0f01741a45bb64b4770339f5f91abea116091b89d4ffa76",
+			"slug": "tutorial/patterns/cookie",
+			"title": "Cookie",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/cookie/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Cookie",
+				"order": 73,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/error-handling/index.md",
+			"sourceSha256": "0dcdbe3d4fc68a653021c99daea525787df301656f3b62122e15c3d01b7a41f2",
+			"output": "src/content/docs/tutorial/patterns/error-handling/index.mdx",
+			"outputSha256": "ad59086d0e7747b2f7c9cf3e3b6a31d1708469d28a1c6b60e790bfa5ec3fc5ce",
+			"slug": "tutorial/patterns/error-handling",
+			"title": "Error Handling",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/error-handling/",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 2,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Error Handling",
+				"order": 74,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/extends-context/index.md",
+			"sourceSha256": "438ee8e5c1405d82e16e284b7171a5536cdd24ec33c939cfaa5ded8f01568a34",
+			"output": "src/content/docs/tutorial/patterns/extends-context/index.mdx",
+			"outputSha256": "72b1929ac1811880653df6df0dff88a64903ee37f19dd104b46ffd7424af842e",
+			"slug": "tutorial/patterns/extends-context",
+			"title": "Extends Context",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/extends-context/",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 20,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Extends Context",
+				"order": 76,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/macro/index.md",
+			"sourceSha256": "7a6346d6eb039dc6c4b2be4ea290ca84a30fe860fd4598781dcf57ba02704d1c",
+			"output": "src/content/docs/tutorial/patterns/macro/index.mdx",
+			"outputSha256": "f79b34663c01d55457c08f6c288e76c624f17979e1a0b8d6caf6608936e2e36b",
+			"slug": "tutorial/patterns/macro",
+			"title": "Macro",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/macro/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Macro",
+				"order": 78,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/standalone-schema/index.md",
+			"sourceSha256": "70df89dced0cedd4e0c10565eed67497dc451818c87478104d2925958bb1e5ad",
+			"output": "src/content/docs/tutorial/patterns/standalone-schema/index.mdx",
+			"outputSha256": "758e27c15fc98a7b3c21f33bd6e021da7e3126fb66f83da74a88de285c19a5d4",
+			"slug": "tutorial/patterns/standalone-schema",
+			"title": "Standalone Schema",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/standalone-schema/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Standalone Schema",
+				"order": 77,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/patterns/validation-error/index.md",
+			"sourceSha256": "731d16fe30294961802043cc5fb7224188a7160ddde41f6c6fb662bc134a8451",
+			"output": "src/content/docs/tutorial/patterns/validation-error/index.mdx",
+			"outputSha256": "2708c31f86b496031973d31b37df949c9ec499cc7404f342515b5aae56adc7b8",
+			"slug": "tutorial/patterns/validation-error",
+			"title": "Validation Error",
+			"upstreamUrl": "https://elysiajs.com/tutorial/patterns/validation-error/",
+			"section": "tutorial",
+			"status": "imported",
+			"issues": {
+				"error": 0,
+				"warning": 0,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "Validation Error",
+				"order": 75,
+				"subgroup": "Patterns"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		},
+		{
+			"source": "docs/tutorial/whats-next.md",
+			"sourceSha256": "bd872cace0c5fc2f569346a5b0ebf8bec4ddc6bb3d3b74b0247d2deb5ad0a074",
+			"output": "src/content/docs/tutorial/whats-next.mdx",
+			"outputSha256": "04b293e210e80700b4681ef57376e20faecd3a816ce2dd5e6f91632fd1a47714",
+			"slug": "tutorial/whats-next",
+			"title": "Congratulations!",
+			"upstreamUrl": "https://elysiajs.com/tutorial/whats-next",
+			"section": "tutorial",
+			"status": "imported-with-warnings",
+			"issues": {
+				"error": 0,
+				"warning": 9,
+				"info": 2
+			},
+			"searchable": false,
+			"upstreamNav": {
+				"group": "Tutorial",
+				"label": "What's Next?",
+				"order": 83,
+				"subgroup": "Conclusion"
+			},
+			"lastModified": "2026-03-05T04:42:08+07:00"
+		}
+	],
+	"skipped": [
+		{
+			"source": "docs/blog.md",
+			"reason": "Blog index rendered by a custom Vue component (<Blogs>). The imported posts are listed in the \"Release Notes\" and \"Articles\" sidebar groups instead."
+		},
+		{
+			"source": "docs/illust.md",
+			"reason": "Illustration gallery (<Yonkoma>). Artwork, not technical documentation; subject to separate artwork rights."
+		},
+		{
+			"source": "docs/index.md",
+			"reason": "Official marketing landing page composed entirely of custom Vue components (<Fern>). Replaced by the independent homepage of this site."
+		},
+		{
+			"source": "docs/playground/index.md",
+			"reason": "In-browser playground application (Monaco editor + Elysia runtime). It has no static documentation content."
+		},
+		{
+			"source": "docs/playground/preview.md",
+			"reason": "In-browser playground application (Monaco editor + Elysia runtime). It has no static documentation content."
+		}
+	],
+	"ignoredFiles": [
+		{
+			"source": "docs/internal/jit-compiler/jit.vue",
+			"reason": "Vue component used by a page (not a page itself)"
+		},
+		{
+			"source": "docs/migrate/from-express.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-fastify.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-hono.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-trpc.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/index.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/tailwind.css",
+			"reason": "Stylesheet of the upstream theme"
+		},
+		{
+			"source": "docs/tutorial/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/end-to-end-type-safety/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/mount/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/openapi/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/unit-test/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/encapsulation/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/guard/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/handler-and-context/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/life-cycle/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/plugin/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/status-and-headers/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/validation/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/your-first-route/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/cookie/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/error-handling/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/extends-context/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/macro/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/standalone-schema/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/validation-error/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		}
+	],
+	"assets": [
+		{
+			"source": "docs/public/assets/axiom.webp",
+			"output": "public/upstream/assets/axiom.webp",
+			"url": "/upstream/assets/axiom.webp",
+			"bytes": 128478,
+			"sha256": "db3a45f67234bcd91774ff3ccc313fe7419832df464eaeea076c497dd1e09841",
+			"width": 2268,
+			"height": 1473,
+			"referencedBy": [
+				"docs/patterns/opentelemetry.md"
+			]
+		},
+		{
+			"source": "docs/public/assets/bun-fullstack.mp4",
+			"output": "public/upstream/assets/bun-fullstack.mp4",
+			"url": "/upstream/assets/bun-fullstack.mp4",
+			"bytes": 5292186,
+			"sha256": "4d270b7b3a95ab863a623a0470ee500abe1a51b6adb66834f2767c95f9b463f2",
+			"referencedBy": [
+				"docs/patterns/fullstack-dev-server.md"
+			]
+		},
+		{
+			"source": "docs/public/assets/lifecycle-chart.svg",
+			"output": "public/upstream/assets/lifecycle-chart.svg",
+			"url": "/upstream/assets/lifecycle-chart.svg",
+			"bytes": 138649,
+			"sha256": "e3436f76b82e5108bcb7db7f962165c35bec8f9336b3f13de04ce996ffaeb9bb",
+			"width": 1492,
+			"height": 609,
+			"referencedBy": [
+				"docs/essential/life-cycle.md",
+				"docs/patterns/trace.md",
+				"docs/patterns/typebox.md"
+			]
+		},
+		{
+			"source": "docs/public/assets/perfetto.webp",
+			"output": "public/upstream/assets/perfetto.webp",
+			"url": "/upstream/assets/perfetto.webp",
+			"bytes": 203440,
+			"sha256": "83de769d77309d7142fab6e1c53b95a72bc3f061effb15028d8dc35b874e8a83",
+			"width": 1920,
+			"height": 1247,
+			"referencedBy": [
+				"docs/patterns/typescript.md"
+			]
+		},
+		{
+			"source": "docs/public/assets/server-timing.webp",
+			"output": "public/upstream/assets/server-timing.webp",
+			"url": "/upstream/assets/server-timing.webp",
+			"bytes": 250594,
+			"sha256": "a5377247de44bef2d76a3ada18cac17a710522cffae2c6e918047d2c8c9f0a61",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/plugins/server-timing.md"
+			]
+		},
+		{
+			"source": "docs/public/assets/swagger-demo.webp",
+			"output": "public/upstream/assets/swagger-demo.webp",
+			"url": "/upstream/assets/swagger-demo.webp",
+			"bytes": 51498,
+			"sha256": "2009813b61fb4eaf3c1998c48a92e04c9060ac2c01c71efe94c5f01caddd087b",
+			"width": 3749,
+			"height": 1975,
+			"referencedBy": [
+				"docs/patterns/openapi.md",
+				"docs/plugins/swagger.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-03/elysia-fn.mp4",
+			"output": "public/upstream/blog/elysia-03/elysia-fn.mp4",
+			"url": "/upstream/blog/elysia-03/elysia-fn.mp4",
+			"bytes": 3488513,
+			"sha256": "b03db62ca07b11bd6e1c8f1d1f3fe5713804f111b1fb298b8c714d9dfd572d2c",
+			"referencedBy": [
+				"docs/blog/elysia-03.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-03/narrowed-error.webp",
+			"output": "public/upstream/blog/elysia-03/narrowed-error.webp",
+			"url": "/upstream/blog/elysia-03/narrowed-error.webp",
+			"bytes": 156766,
+			"sha256": "0521ac65c1dedf9cbff8344420c5f02e9b711877870f80ed262cdb7ed754cb7d",
+			"width": 3024,
+			"height": 1964,
+			"referencedBy": [
+				"docs/blog/elysia-03.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-03/narrowed-key.webp",
+			"output": "public/upstream/blog/elysia-03/narrowed-key.webp",
+			"url": "/upstream/blog/elysia-03/narrowed-key.webp",
+			"bytes": 158710,
+			"sha256": "35ced3b90812ed2abe3e2b289c2fcc0b597e7d72442a0af258028fb90503429e",
+			"width": 3024,
+			"height": 1964,
+			"referencedBy": [
+				"docs/blog/elysia-03.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-03/narrowed-param.webp",
+			"output": "public/upstream/blog/elysia-03/narrowed-param.webp",
+			"url": "/upstream/blog/elysia-03/narrowed-param.webp",
+			"bytes": 184194,
+			"sha256": "d9899dd2097ed86945c3aa65b3732dd1569b96a722918ed523c97230a11de15e",
+			"width": 3024,
+			"height": 1964,
+			"referencedBy": [
+				"docs/blog/elysia-03.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-06/lifecycle-05.webp",
+			"output": "public/upstream/blog/elysia-06/lifecycle-05.webp",
+			"url": "/upstream/blog/elysia-06/lifecycle-05.webp",
+			"bytes": 59064,
+			"sha256": "d81ed7274af9baf1f58a4a9f3d2d04f723e1e85b9429da6672a0f758298a6bb3",
+			"width": 2048,
+			"height": 1260,
+			"referencedBy": [
+				"docs/blog/elysia-06.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-06/lifecycle-06.webp",
+			"output": "public/upstream/blog/elysia-06/lifecycle-06.webp",
+			"url": "/upstream/blog/elysia-06/lifecycle-06.webp",
+			"bytes": 59726,
+			"sha256": "341e0c032188a2aa03637311746d3ba127659dd43a934874cbfd4f8e5be5d77e",
+			"width": 2048,
+			"height": 1261,
+			"referencedBy": [
+				"docs/blog/elysia-06.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/cookie.webp",
+			"output": "public/upstream/blog/elysia-07/cookie.webp",
+			"url": "/upstream/blog/elysia-07/cookie.webp",
+			"bytes": 265512,
+			"sha256": "03fae0d077bff6117acd5d58d98d0831d26c42c977ede1ab7b61bbbd10addae1",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/inference-comparison.webp",
+			"output": "public/upstream/blog/elysia-07/inference-comparison.webp",
+			"url": "/upstream/blog/elysia-07/inference-comparison.webp",
+			"bytes": 261196,
+			"sha256": "6b6377ce0a107e47e06bb56c98dd9f1e5734bd541a4ac2ebfeb93652f825c4ec",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/teapot-autocompletion.webp",
+			"output": "public/upstream/blog/elysia-07/teapot-autocompletion.webp",
+			"url": "/upstream/blog/elysia-07/teapot-autocompletion.webp",
+			"bytes": 254906,
+			"sha256": "b2d7e05c11f11047f5d2dd1e8cfcfae29d2a775dd7e92341f8615068a1a5bcac",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/teapot.webp",
+			"output": "public/upstream/blog/elysia-07/teapot.webp",
+			"url": "/upstream/blog/elysia-07/teapot.webp",
+			"bytes": 247374,
+			"sha256": "8ad975c8518d7e8d1bcfddb79648c6e0fd7916a82844b32a7787e918621a2ea0",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/trace.webp",
+			"output": "public/upstream/blog/elysia-07/trace.webp",
+			"url": "/upstream/blog/elysia-07/trace.webp",
+			"bytes": 222732,
+			"sha256": "dd4f65dcd2c123e468126ff766cf7f849a0413c4026132984c711d29bd70d729",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/type-0-6.webp",
+			"output": "public/upstream/blog/elysia-07/type-0-6.webp",
+			"url": "/upstream/blog/elysia-07/type-0-6.webp",
+			"bytes": 141534,
+			"sha256": "43a51eef80bb30281e4a7940523939f863f39fdc32481c408bbb7d79a5891bd5",
+			"width": 1995,
+			"height": 4096,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-07/type-0-7.webp",
+			"output": "public/upstream/blog/elysia-07/type-0-7.webp",
+			"url": "/upstream/blog/elysia-07/type-0-7.webp",
+			"bytes": 78712,
+			"sha256": "4d150befb3b848722dd67b792f74ea7e9413bcf62c22b1db16ebfdca381d2139",
+			"width": 2056,
+			"height": 2062,
+			"referencedBy": [
+				"docs/blog/elysia-07.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-10/558-ts-limit.webp",
+			"output": "public/upstream/blog/elysia-10/558-ts-limit.webp",
+			"url": "/upstream/blog/elysia-10/558-ts-limit.webp",
+			"bytes": 297080,
+			"sha256": "6c1139ca38ca2444a29b7c89361391781f324514066cfc26b9c1c6e0e16a3815",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/blog/elysia-10.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-10/ely-comparison.webp",
+			"output": "public/upstream/blog/elysia-10/ely-comparison.webp",
+			"url": "/upstream/blog/elysia-10/ely-comparison.webp",
+			"bytes": 169970,
+			"sha256": "524609600f261056660b6e01c0b40700932aecfe7613a816bc0dbdc901f4815b",
+			"width": 2248,
+			"height": 1884,
+			"referencedBy": [
+				"docs/blog/elysia-10.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-10/error-fn.webp",
+			"output": "public/upstream/blog/elysia-10/error-fn.webp",
+			"url": "/upstream/blog/elysia-10/error-fn.webp",
+			"bytes": 196606,
+			"sha256": "efac63334e9c4179f721d6cabd75c8f19fec53c1afde636e5535d4dcac261723",
+			"width": 3024,
+			"height": 1964,
+			"referencedBy": [
+				"docs/blog/elysia-10.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-10/inline-error-fn.webp",
+			"output": "public/upstream/blog/elysia-10/inline-error-fn.webp",
+			"url": "/upstream/blog/elysia-10/inline-error-fn.webp",
+			"bytes": 200372,
+			"sha256": "51e9316e4e4b2f977739b1d3165ed6275505aa480e9c1e49ba2e49834d2f70d0",
+			"width": 3024,
+			"height": 1964,
+			"referencedBy": [
+				"docs/blog/elysia-10.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-10/type-demo.mp4",
+			"output": "public/upstream/blog/elysia-10/type-demo.mp4",
+			"url": "/upstream/blog/elysia-10/type-demo.mp4",
+			"bytes": 6222376,
+			"sha256": "d96bce872a15f3db1c0bb06bac9f1c47d3ee6da608219af4b9e00acb0ce03512",
+			"referencedBy": [
+				"docs/blog/elysia-10.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-11/axiom.webp",
+			"output": "public/upstream/blog/elysia-11/axiom.webp",
+			"url": "/upstream/blog/elysia-11/axiom.webp",
+			"bytes": 221232,
+			"sha256": "de5c73643418fadb921512b444708e48513ae81189bc2a51fef1e2980a946105",
+			"width": 4064,
+			"height": 2334,
+			"referencedBy": [
+				"docs/blog/elysia-11.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-11/jaeger.webp",
+			"output": "public/upstream/blog/elysia-11/jaeger.webp",
+			"url": "/upstream/blog/elysia-11/jaeger.webp",
+			"bytes": 146670,
+			"sha256": "07a2757c787bafb35886cdae5a93cfc222950204ce659f470868cf0944e4e3ea",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-11.md",
+				"docs/plugins/opentelemetry.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-12/memory.webp",
+			"output": "public/upstream/blog/elysia-12/memory.webp",
+			"url": "/upstream/blog/elysia-12/memory.webp",
+			"bytes": 22550,
+			"sha256": "93e344dbc944f34c4a64a52d0bf806e3d43d10810c974575b3dbfb0234c20471",
+			"width": 1020,
+			"height": 1220,
+			"referencedBy": [
+				"docs/blog/elysia-12.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-12/node-benchmark.webp",
+			"output": "public/upstream/blog/elysia-12/node-benchmark.webp",
+			"url": "/upstream/blog/elysia-12/node-benchmark.webp",
+			"bytes": 25626,
+			"sha256": "1788e5415b12e1512400375911875f6b464308796d6bb8f2a76370274f0c3fd2",
+			"width": 1734,
+			"height": 1040,
+			"referencedBy": [
+				"docs/blog/elysia-12.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/elysia-ref.webp",
+			"output": "public/upstream/blog/elysia-13/elysia-ref.webp",
+			"url": "/upstream/blog/elysia-13/elysia-ref.webp",
+			"bytes": 147724,
+			"sha256": "fbd17b34218cc6b3624c5d050d852dbb85a94e276ab77a302d43b0555a8224e8",
+			"width": 2592,
+			"height": 1667,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/encode-schema.webp",
+			"output": "public/upstream/blog/elysia-13/encode-schema.webp",
+			"url": "/upstream/blog/elysia-13/encode-schema.webp",
+			"bytes": 93268,
+			"sha256": "d62fdac0dca89145deebd73df769bdca10ba1d8cea6258bfd8f580e42cbba782",
+			"width": 1981,
+			"height": 1116,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/exact-mirror-large.webp",
+			"output": "public/upstream/blog/elysia-13/exact-mirror-large.webp",
+			"url": "/upstream/blog/elysia-13/exact-mirror-large.webp",
+			"bytes": 100458,
+			"sha256": "086344c01e68010e2565a2b4f6dc8cd76c241bae75f64f6f27f40992045040ba",
+			"width": 1702,
+			"height": 1702,
+			"referencedBy": [
+				"docs/blog/elysia-13.md",
+				"docs/blog/elysia-v-encore.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/exact-mirror-small.webp",
+			"output": "public/upstream/blog/elysia-13/exact-mirror-small.webp",
+			"url": "/upstream/blog/elysia-13/exact-mirror-small.webp",
+			"bytes": 82048,
+			"sha256": "53f9796fe7b84bfeca6f47b102b8c2a3571d9e3e6dd120bb325797b4b3b94ea0",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/file-type.webp",
+			"output": "public/upstream/blog/elysia-13/file-type.webp",
+			"url": "/upstream/blog/elysia-13/file-type.webp",
+			"bytes": 92772,
+			"sha256": "d2f14a46b7dc2f1df827ecd8203d6df33248a57cd6d9e3ccf3e2c139054d6647",
+			"width": 1899,
+			"height": 1100,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/form.webp",
+			"output": "public/upstream/blog/elysia-13/form.webp",
+			"url": "/upstream/blog/elysia-13/form.webp",
+			"bytes": 63586,
+			"sha256": "539450aa60be429d2816b7608621c7af234d73622442282818323a4bf2d1aa1f",
+			"width": 2608,
+			"height": 1632,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/handle.webp",
+			"output": "public/upstream/blog/elysia-13/handle.webp",
+			"url": "/upstream/blog/elysia-13/handle.webp",
+			"bytes": 118658,
+			"sha256": "3a78e569583462612d870ec894f07c43bcf85e0ea99df1313cc49a1be1850d89",
+			"width": 1600,
+			"height": 1276,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/instance.webp",
+			"output": "public/upstream/blog/elysia-13/instance.webp",
+			"url": "/upstream/blog/elysia-13/instance.webp",
+			"bytes": 136084,
+			"sha256": "eb8033c3e6d737e5b639719595be8358975d52ba609bf14c7d3a0ddcac07fb51",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/no-validate.webp",
+			"output": "public/upstream/blog/elysia-13/no-validate.webp",
+			"url": "/upstream/blog/elysia-13/no-validate.webp",
+			"bytes": 88056,
+			"sha256": "1e5b544d7e1bc24ce5fb6eb43db56cafc7d08dc8351a04e42548cbbd6128b274",
+			"width": 1595,
+			"height": 1377,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/no-validation.webp",
+			"output": "public/upstream/blog/elysia-13/no-validation.webp",
+			"url": "/upstream/blog/elysia-13/no-validation.webp",
+			"bytes": 86858,
+			"sha256": "5145b357edcf74d3afdd7afa5fea9f35295c15a976868dfbb82614edb71b418c",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/normalize-1.2.webp",
+			"output": "public/upstream/blog/elysia-13/normalize-1.2.webp",
+			"url": "/upstream/blog/elysia-13/normalize-1.2.webp",
+			"bytes": 86218,
+			"sha256": "a42088de423ae33a17cfc50393f68ed33ed7c9522f0f96a28ce8b44913b6e80d",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/normalize-1.3.webp",
+			"output": "public/upstream/blog/elysia-13/normalize-1.3.webp",
+			"url": "/upstream/blog/elysia-13/normalize-1.3.webp",
+			"bytes": 86594,
+			"sha256": "9f8ff200b1d7ed4d399b2e5715653066948eb9b2953a0aa9fb40b8f11b7b6fc6",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/routes.webp",
+			"output": "public/upstream/blog/elysia-13/routes.webp",
+			"url": "/upstream/blog/elysia-13/routes.webp",
+			"bytes": 154968,
+			"sha256": "55fa88c42c05c6540db444e082dd67a2b82e435f6bf2f64642ef0722340b0d66",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/sanitize.webp",
+			"output": "public/upstream/blog/elysia-13/sanitize.webp",
+			"url": "/upstream/blog/elysia-13/sanitize.webp",
+			"bytes": 118722,
+			"sha256": "3fefbcd67be1df318ab835a357581507faa8da42a8e167a457fc4e0b9df5c9d2",
+			"width": 2224,
+			"height": 1424,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/schema-override.webp",
+			"output": "public/upstream/blog/elysia-13/schema-override.webp",
+			"url": "/upstream/blog/elysia-13/schema-override.webp",
+			"bytes": 85114,
+			"sha256": "8d95aa341a0ba862495546288284fda7f4e9d70192867276a0b9f03b87b4d5b0",
+			"width": 2400,
+			"height": 1786,
+			"referencedBy": [
+				"docs/blog/elysia-13.md",
+				"docs/essential/validation.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/schema-standalone.webp",
+			"output": "public/upstream/blog/elysia-13/schema-standalone.webp",
+			"url": "/upstream/blog/elysia-13/schema-standalone.webp",
+			"bytes": 91508,
+			"sha256": "13eb9810df9dd2832c41b883dd5a0e85f7d11a425ae3d6d3da0f2eb64d9c329f",
+			"width": 2400,
+			"height": 1786,
+			"referencedBy": [
+				"docs/blog/elysia-13.md",
+				"docs/essential/validation.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/status.webp",
+			"output": "public/upstream/blog/elysia-13/status.webp",
+			"url": "/upstream/blog/elysia-13/status.webp",
+			"bytes": 130242,
+			"sha256": "0ba43ea31097a0ac2936facb5026b8703e822c30c92e877c03895fa4c86d77e4",
+			"width": 1924,
+			"height": 1312,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/sucrose.webp",
+			"output": "public/upstream/blog/elysia-13/sucrose.webp",
+			"url": "/upstream/blog/elysia-13/sucrose.webp",
+			"bytes": 142428,
+			"sha256": "74c54227a30a04ef0523817da56164236feaa854502736d52903229b19c9baa8",
+			"width": 1520,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/treaty-index.webp",
+			"output": "public/upstream/blog/elysia-13/treaty-index.webp",
+			"url": "/upstream/blog/elysia-13/treaty-index.webp",
+			"bytes": 73660,
+			"sha256": "1e13da92cf0168fdf3d2f4e732634b3e4989c9c00b3f879b3196297f8bac72ea",
+			"width": 1528,
+			"height": 1057,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-13/type-instantiation.webp",
+			"output": "public/upstream/blog/elysia-13/type-instantiation.webp",
+			"url": "/upstream/blog/elysia-13/type-instantiation.webp",
+			"bytes": 80550,
+			"sha256": "c592fb21256fe3e351f1ff11ba199c92cfd3fcb7c0990c29d74f57aaf19e1af0",
+			"width": 1440,
+			"height": 1000,
+			"referencedBy": [
+				"docs/blog/elysia-13.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/group-standalone.webp",
+			"output": "public/upstream/blog/elysia-14/group-standalone.webp",
+			"url": "/upstream/blog/elysia-14/group-standalone.webp",
+			"bytes": 76674,
+			"sha256": "354eca7122a6d3012e51c76cdafeb69bb4a8a7ac1c52dec048614fb9bf9fed49",
+			"width": 1436,
+			"height": 1129,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/macro-extension.webp",
+			"output": "public/upstream/blog/elysia-14/macro-extension.webp",
+			"url": "/upstream/blog/elysia-14/macro-extension.webp",
+			"bytes": 118560,
+			"sha256": "df798b56a28c91eaa04b8a185f0240a98509f44409f7e0ac56517aadf311de95",
+			"width": 1726,
+			"height": 1455,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/macro-schema-lifecycle.webp",
+			"output": "public/upstream/blog/elysia-14/macro-schema-lifecycle.webp",
+			"url": "/upstream/blog/elysia-14/macro-schema-lifecycle.webp",
+			"bytes": 109748,
+			"sha256": "c220d1715e7bc091a53d23d965f2f737338db05033d1ecebf74d21dba86d51af",
+			"width": 1744,
+			"height": 1442,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/macro-schema.webp",
+			"output": "public/upstream/blog/elysia-14/macro-schema.webp",
+			"url": "/upstream/blog/elysia-14/macro-schema.webp",
+			"bytes": 100926,
+			"sha256": "527dee67b3765a240d58be3383d9d17adaf98628839feccb99628c07cbb66bc4",
+			"width": 1590,
+			"height": 1404,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/openapi-valibot.webp",
+			"output": "public/upstream/blog/elysia-14/openapi-valibot.webp",
+			"url": "/upstream/blog/elysia-14/openapi-valibot.webp",
+			"bytes": 132298,
+			"sha256": "96a6becaf5dcaa9ec201a88aac8eb458914fb87922beb77e126c436cf0ef90cf",
+			"width": 2247,
+			"height": 1163,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/openapi-zod.webp",
+			"output": "public/upstream/blog/elysia-14/openapi-zod.webp",
+			"url": "/upstream/blog/elysia-14/openapi-zod.webp",
+			"bytes": 149746,
+			"sha256": "1099cf8cdb04ea96f579b65a59e639eb9b68ae11ec32590bead044c4d7667c93",
+			"width": 2294,
+			"height": 1227,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/standard-schema.webp",
+			"output": "public/upstream/blog/elysia-14/standard-schema.webp",
+			"url": "/upstream/blog/elysia-14/standard-schema.webp",
+			"bytes": 165496,
+			"sha256": "a8c7b315362481439c2cca208bd784b33b5ac525ad8898f3b5d216888d731ed6",
+			"width": 1758,
+			"height": 1380,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/type-inference.webp",
+			"output": "public/upstream/blog/elysia-14/type-inference.webp",
+			"url": "/upstream/blog/elysia-14/type-inference.webp",
+			"bytes": 36474,
+			"sha256": "e3a05aec1d6acbcee323d3a5c293bd255df98604982405515067aa3ac638dc55",
+			"width": 880,
+			"height": 546,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/type-soundness.webp",
+			"output": "public/upstream/blog/elysia-14/type-soundness.webp",
+			"url": "/upstream/blog/elysia-14/type-soundness.webp",
+			"bytes": 158400,
+			"sha256": "1ed10a2cf405b4d493342d73ec2ba04675443a10d770c13c89aae24af7ff95a4",
+			"width": 2648,
+			"height": 1374,
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-20/error-infer.webp",
+			"output": "public/upstream/blog/elysia-20/error-infer.webp",
+			"url": "/upstream/blog/elysia-20/error-infer.webp",
+			"bytes": 121970,
+			"sha256": "488012f4528eed755253394abafedf01ef36b1547a09ae40db20bcabac6c5a14",
+			"width": 2096,
+			"height": 1662,
+			"referencedBy": [
+				"docs/blog/elysia-20.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/elysia-swagger.webp",
+			"output": "public/upstream/blog/elysia-supabase/elysia-swagger.webp",
+			"url": "/upstream/blog/elysia-supabase/elysia-swagger.webp",
+			"bytes": 115428,
+			"sha256": "b0e9baba6ef4345556354226ab4155b7c16670ba3571158f82cee293c9c997c9",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/lagrange-create-post.webp",
+			"output": "public/upstream/blog/elysia-supabase/lagrange-create-post.webp",
+			"url": "/upstream/blog/elysia-supabase/lagrange-create-post.webp",
+			"bytes": 58518,
+			"sha256": "77a82e9871b1c721f8be0d202bf0651502caf2b6487e1f7d8df3a9577a5b95bd",
+			"width": 1824,
+			"height": 1480,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/lagrange-get-post-failed.webp",
+			"output": "public/upstream/blog/elysia-supabase/lagrange-get-post-failed.webp",
+			"url": "/upstream/blog/elysia-supabase/lagrange-get-post-failed.webp",
+			"bytes": 60228,
+			"sha256": "2d677762827f3ad78cd5f854d690884e181b96ce486620810d6030adeb2ba716",
+			"width": 1824,
+			"height": 1480,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/lagrange-get-post-success.webp",
+			"output": "public/upstream/blog/elysia-supabase/lagrange-get-post-success.webp",
+			"url": "/upstream/blog/elysia-supabase/lagrange-get-post-success.webp",
+			"bytes": 73930,
+			"sha256": "c895b24869e369c42805ff89ffc3f361aeacae47c1787cb6575c355751f33dd2",
+			"width": 1824,
+			"height": 1480,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/lagrange-sign-in.webp",
+			"output": "public/upstream/blog/elysia-supabase/lagrange-sign-in.webp",
+			"url": "/upstream/blog/elysia-supabase/lagrange-sign-in.webp",
+			"bytes": 74060,
+			"sha256": "5598c26dcf1d7a00b1e13863e580f91a7eb5a26f144bed48e5506d6bc7469a2e",
+			"width": 1824,
+			"height": 1480,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/supabase-config.webp",
+			"output": "public/upstream/blog/elysia-supabase/supabase-config.webp",
+			"url": "/upstream/blog/elysia-supabase/supabase-config.webp",
+			"bytes": 113846,
+			"sha256": "e34cad2ac86beb86ec24d861e3a8f1dd58b06322d0228b96e9f670ccd7086e5d",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/supabase-create-project.webp",
+			"output": "public/upstream/blog/elysia-supabase/supabase-create-project.webp",
+			"url": "/upstream/blog/elysia-supabase/supabase-create-project.webp",
+			"bytes": 96766,
+			"sha256": "74ea02c2c992eb3dc1a5ccc592b8e839065263694b730ada7648cc0a3c71c73c",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/supabase-create-table-link.webp",
+			"output": "public/upstream/blog/elysia-supabase/supabase-create-table-link.webp",
+			"url": "/upstream/blog/elysia-supabase/supabase-create-table-link.webp",
+			"bytes": 79184,
+			"sha256": "7e6f5131919467e48f7264246bf135ea90abe95ff1ddea81c664e0f8987d3d4d",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/supabase-create-table.webp",
+			"output": "public/upstream/blog/elysia-supabase/supabase-create-table.webp",
+			"url": "/upstream/blog/elysia-supabase/supabase-create-table.webp",
+			"bytes": 103484,
+			"sha256": "0e60e2543648e95f308b26cc1700b28777875fd1f480f52385cc6df4e775944a",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/supabase-web.webp",
+			"output": "public/upstream/blog/elysia-supabase/supabase-web.webp",
+			"url": "/upstream/blog/elysia-supabase/supabase-web.webp",
+			"bytes": 120096,
+			"sha256": "693e1d200b5e3d2dd195b6e9cbfd471129ef939eaa13a8ee3ec13bc3d377a2d8",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-supabase/swagger-auto-complete.webp",
+			"output": "public/upstream/blog/elysia-supabase/swagger-auto-complete.webp",
+			"url": "/upstream/blog/elysia-supabase/swagger-auto-complete.webp",
+			"bytes": 195582,
+			"sha256": "29a0f74cfa7e1d0c31ccc5f9f9e9431ec1bfe642d3ac1bef4932d1ba98201c02",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/elysia-supabase.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-v-encore/benchmark-result.webp",
+			"output": "public/upstream/blog/elysia-v-encore/benchmark-result.webp",
+			"url": "/upstream/blog/elysia-v-encore/benchmark-result.webp",
+			"bytes": 21134,
+			"sha256": "78a3d1728a360e9c475bd45f82fdbad2eed4fd2715d418d5554a44e4a25254af",
+			"width": 1897,
+			"height": 1506,
+			"referencedBy": [
+				"docs/blog/elysia-v-encore.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-v-encore/encore-benchmark.webp",
+			"output": "public/upstream/blog/elysia-v-encore/encore-benchmark.webp",
+			"url": "/upstream/blog/elysia-v-encore/encore-benchmark.webp",
+			"bytes": 48786,
+			"sha256": "6645d6386ec2fd09938a31e1c71067e7805038252d405f150956cf50a0b3c3df",
+			"width": 1606,
+			"height": 1300,
+			"referencedBy": [
+				"docs/blog/elysia-v-encore.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/openapi-type-gen/drizzle-typegen.webp",
+			"output": "public/upstream/blog/openapi-type-gen/drizzle-typegen.webp",
+			"url": "/upstream/blog/openapi-type-gen/drizzle-typegen.webp",
+			"bytes": 158116,
+			"sha256": "ce89baea74907bb3cd4181e879b478f70bc961cf6519e3f50f85f5525a37df65",
+			"width": 2748,
+			"height": 1402,
+			"referencedBy": [
+				"docs/blog/openapi-type-gen.md",
+				"docs/tutorial/features/openapi/index.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/openapi-type-gen/scalar-preview-light.webp",
+			"output": "public/upstream/blog/openapi-type-gen/scalar-preview-light.webp",
+			"url": "/upstream/blog/openapi-type-gen/scalar-preview-light.webp",
+			"bytes": 50060,
+			"sha256": "9c81007884727e3055ec790cef25a707b761afabd7a1dece2bf152434328726f",
+			"width": 1512,
+			"height": 892,
+			"referencedBy": [
+				"docs/blog/openapi-type-gen.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/openapi-type-gen/type-gen.webp",
+			"output": "public/upstream/blog/openapi-type-gen/type-gen.webp",
+			"url": "/upstream/blog/openapi-type-gen/type-gen.webp",
+			"bytes": 243090,
+			"sha256": "9837ae0d37fe15f62df64a8ba78db3289c1e02314f34f8cd1ae123589d3df0ca",
+			"width": 2736,
+			"height": 1556,
+			"referencedBy": [
+				"docs/blog/openapi-type-gen.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/openapi-type-gen/union.webp",
+			"output": "public/upstream/blog/openapi-type-gen/union.webp",
+			"url": "/upstream/blog/openapi-type-gen/union.webp",
+			"bytes": 132502,
+			"sha256": "9d42c58e3963b90ee167578b6fbbf1cf68416c2e19d5854b79bfdea5bf381144",
+			"width": 1860,
+			"height": 1510,
+			"referencedBy": [
+				"docs/blog/openapi-type-gen.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/with-prisma/swagger.webp",
+			"output": "public/upstream/blog/with-prisma/swagger.webp",
+			"url": "/upstream/blog/with-prisma/swagger.webp",
+			"bytes": 95902,
+			"sha256": "7edcae1a30c2bcd711b845e0fef1d8986f9d9cd680749ebeb749c391fbfc493d",
+			"width": 3248,
+			"height": 2112,
+			"referencedBy": [
+				"docs/blog/with-prisma.md"
+			]
+		},
+		{
+			"source": "docs/public/eden/eden-treaty.mp4",
+			"output": "public/upstream/eden/eden-treaty.mp4",
+			"url": "/upstream/eden/eden-treaty.mp4",
+			"bytes": 3909760,
+			"sha256": "56231d16efadf6873396c63d2cddb930e2bbdd631de69640585fb6a3e8fc3fb0",
+			"referencedBy": [
+				"docs/eden/overview.md"
+			]
+		},
+		{
+			"source": "docs/public/essential/url-object.svg",
+			"output": "public/upstream/essential/url-object.svg",
+			"url": "/upstream/essential/url-object.svg",
+			"bytes": 31911,
+			"sha256": "3765046eabb12505446eb16469124ba596715c6533b8b4741f90664e4485a1c1",
+			"width": 698,
+			"height": 246,
+			"referencedBy": [
+				"docs/essential/validation.md"
+			]
+		},
+		{
+			"source": "docs/public/recipe/react-email/email-preview.webp",
+			"output": "public/upstream/recipe/react-email/email-preview.webp",
+			"url": "/upstream/recipe/react-email/email-preview.webp",
+			"bytes": 55360,
+			"sha256": "be3485b15e06732aae6d57d03388d05d46ee84ba754a78658c5b1287e3a60ef2",
+			"width": 3840,
+			"height": 2160,
+			"referencedBy": [
+				"docs/integrations/react-email.md"
+			]
+		}
+	],
+	"assetsNotMirrored": [
+		{
+			"source": "docs/public/blog/elysia-11/ely.webp",
+			"status": "excluded",
+			"reason": "Personal photograph of a person",
+			"referencedBy": [
+				"docs/blog/elysia-11.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/elysia-supersymmetry.webp",
+			"status": "excluded",
+			"reason": "Character artwork",
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		}
+	]
+}

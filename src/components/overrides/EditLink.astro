@@ -1,0 +1,28 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+
+const { editUrl, entry } = Astro.locals.starlightRoute;
+// Imported pages link to the upstream source file: content fixes belong upstream.
+const label = entry.data.upstream ? 'Suggest a change to the official docs' : Astro.locals.t('page.editLink');
+---
+
+{
+	editUrl && (
+		<a href={editUrl} class="sl-flex print:hidden">
+			<Icon name="pencil" size="1.2em" />
+			{label}
+		</a>
+	)
+}
+
+<style>
+	a {
+		gap: 0.5rem;
+		align-items: center;
+		text-decoration: none;
+		color: var(--sl-color-gray-3);
+	}
+	a:hover {
+		color: var(--sl-color-white);
+	}
+</style>

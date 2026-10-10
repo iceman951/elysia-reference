@@ -1,0 +1,3211 @@
+{
+	"generatedBy": "scripts/docs/import.ts",
+	"upstream": {
+		"name": "elysiajs/documentation",
+		"repository": "https://github.com/elysiajs/documentation",
+		"branch": "main",
+		"commit": "f68573703415eb3df63ff02851013148fea4748f",
+		"commitDate": "2026-09-11T00:35:47+03:00",
+		"siteUrl": "https://elysiajs.com",
+		"license": "MIT",
+		"licenseSha256": "139c2b5b5370aaf2bc08f0ef98bd90984c01ecec9448a6f93297f8ee28d2c938",
+		"versionEvidence": {
+			"package": "elysia",
+			"range": "^1.4.28",
+			"source": "package.json"
+		}
+	},
+	"summary": {
+		"discovered": 109,
+		"imported": 104,
+		"importedWithWarnings": 35,
+		"failed": 0,
+		"skipped": 5,
+		"issues": {
+			"error": 0,
+			"warning": 129,
+			"info": 168
+		},
+		"assetsMirrored": 79,
+		"assetsNotMirrored": 2,
+		"assetsMissing": 0
+	},
+	"pages": [
+		{
+			"source": "docs/at-glance.md",
+			"output": "src/content/docs/at-glance.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/at-glance.md",
+					"line": 17,
+					"source": "<script setup>\nimport Card from './components/nearl/card.vue'\nimport Deck from './components/nearl/card-deck.vue'\nimport Playground from './components/nearl/playground.vue'\n\nimport { Elysia } from 'elysia'\n\nconst demo1 = new Elysia()\n    .get('/', 'Hello Elysia')\n    .get('/user/:id', ({ params: { id }}) => id)\n    .post('/form', ({ body }) => body)\n\nconst demo2 = new Elysia()\n    .get('/user/:id', ({ params: { id }}) => id)\n    .get('/user/abc', () => 'abc')\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/at-glance.md",
+					"line": 55,
+					"source": "<Playground\n    :elysia=\"demo1\"\n    :alias=\"{\n        '/user/:id': '/user/1'\n    }\"\n    :mock=\"{\n        '/user/:id': {\n            GET: '1'\n        },\n        '/form': {\n            POST: JSON.stringify({\n                hello: 'Elysia'\n            })\n        }\n    }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/at-glance.md",
+					"line": 121,
+					"source": "<Playground\n    :elysia=\"demo2\"\n    :alias=\"{\n        '/user/:id': '/user/123'\n    }\"\n    :mock=\"{\n        '/user/:id': {\n            GET: '123'\n        },\n    }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "5 Twoslash code block(s) rendered as static code (5 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/at-glance.md"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-02.md",
+			"output": "src/content/docs/blog/elysia-02.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-02.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-02/blessing.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-02.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.2 - The Blessing\"\n    src=\"/blog/elysia-02/blessing.webp\"\n    alt=\"blue to purple aurora in the night sky above of snow mountain\"\n    author=\"saltyaom\"\n    date=\"29 Jan 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-03.md",
+			"output": "src/content/docs/blog/elysia-03.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-03.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-03/edge-of-ground.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-03.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.3 - 大地の閾を探して [Looking for Edge of Ground]\"\n    src=\"/blog/elysia-03/edge-of-ground.webp\"\n    alt=\"shattered glass pieces floating in the abyss\"\n    author=\"saltyaom\"\n    date=\"17 Mar 2023\"\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/plugins/eden/fn\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-03.md",
+					"line": 75,
+					"source": "/plugins/eden/fn"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/plugins/eden/treaty\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-03.md",
+					"line": 115,
+					"source": "/plugins/eden/treaty"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/plugins/eden/fn\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-03.md",
+					"line": 116,
+					"source": "/plugins/eden/fn"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/plugins/eden/fetch\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-03.md",
+					"line": 117,
+					"source": "/plugins/eden/fetch"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-04.md",
+			"output": "src/content/docs/blog/elysia-04.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-04.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-04/moonlit-night-concert.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-04.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.4 - 月夜の音楽会 (Moonlit Night Concert)\"\n    src=\"/blog/elysia-04/moonlit-night-concert.webp\"\n    alt=\"shattered glass pieces floating in the abyss\"\n    author=\"saltyaom\"\n    date=\"30 Mar 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-05.md",
+			"output": "src/content/docs/blog/elysia-05.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-05.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-05/radiant.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-05.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.5 - Radiant\"\n    src=\"/blog/elysia-05/radiant.webp\"\n    alt=\"Radiant\"\n    author=\"saltyaom\"\n    date=\"15 May 2023\"\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/life-cycle/parse.html#explicit-body\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-05.md",
+					"line": 181,
+					"source": "/life-cycle/parse.html#explicit-body"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/validation/elysia-type.html#numeric\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-05.md",
+					"line": 228,
+					"source": "/validation/elysia-type.html#numeric"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-06.md",
+			"output": "src/content/docs/blog/elysia-06.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-06.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-06/this-game.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-06.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.6 - This Game\"\n    src=\"/blog/elysia-06/this-game.webp\"\n    alt=\"Crystal Knight Piece\"\n    author=\"saltyaom\"\n    date=\"6 Aug 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-07.md",
+			"output": "src/content/docs/blog/elysia-07.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-07.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-07/stellar-stellar.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-07.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.7 - Stellar Stellar\"\n    src=\"/blog/elysia-07/stellar-stellar.webp\"\n    alt=\"Landscape of wild and mountain in the night full of star\"\n    author=\"saltyaom\"\n    date=\"20 Sep 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-08.md",
+			"output": "src/content/docs/blog/elysia-08.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-08.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-08/gate-of-steiner.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-08.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 0.8 - Gate of Steiner\"\n    src=\"/blog/elysia-08/gate-of-steiner.webp\"\n    alt=\"Satellite floating in space before the vast world\"\n    author=\"saltyaom\"\n    date=\"23 Dec 2023\"\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#performance-and-notable-improvement\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/blog/elysia-08.md",
+					"line": 52,
+					"source": "#performance-and-notable-improvement"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/essential/context.html#derive\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-08.md",
+					"line": 104,
+					"source": "/essential/context.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/life-cycle/before-handle#derive\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-08.md",
+					"line": 108,
+					"source": "/life-cycle/before-handle#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/integrations/nextj\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-08.md",
+					"line": 408,
+					"source": "/integrations/nextj"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-10.md",
+			"output": "src/content/docs/blog/elysia-10.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-10.md",
+					"line": 34,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-10/lament-of-the-fallen.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-10.md",
+					"line": 38,
+					"source": "<Blog\n    title=\"Elysia 1.0 - Lament of the Fallen\"\n    src=\"/blog/elysia-10/lament-of-the-fallen.webp\"\n    alt=\"Dreamy Euphony landscape of floating bubble\"\n    author=\"saltyaom\"\n    date=\"16 Mar 2024\"\n    shadow\n>"
+				},
+				{
+					"severity": "info",
+					"code": "iframe-replaced",
+					"message": "Third-party <iframe> embed replaced with a link (no third-party scripts on this site).",
+					"file": "docs/blog/elysia-10.md",
+					"line": 433,
+					"source": "<iframe\n    class=\"w-full h-64\"\n    src=\"https://discord.com/widget?id=1044804142461362206&theme=dark\"\n    allowtransparency=\"true\"\n    frameborder=\"0\"\n    sandbox=\"allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts\"\n    loadin=\"lazy\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/blog/elysia-10.md",
+					"line": 567,
+					"source": "<!-- There are a lot of emotions, a lot of tiring days, and countless nights trying to build something good, something we love, something we dream of.\n\nI have always been telling myself since then that, one day my effort would be recognized. One day someone would remember me. One day.\n\nI don't know if that day is today or not, there's still a long way ahead.\nBut something I know is that the seed I planted has starting to bloomed.\n\nI hope that we can see this journey together. -->"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-11.md",
+			"output": "src/content/docs/blog/elysia-11.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-11.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-11/elysia-11.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-11.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 1.1 - Grown-up's Paradise\"\n    src=\"/blog/elysia-11/elysia-11.webp\"\n    alt=\"Blue-purple tint of Elysia 1.1 logo\"\n    author=\"saltyaom\"\n    date=\"16 Jul 2024\"\n    shadow\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "asset-not-mirrored",
+					"message": "Image \"/blog/elysia-11/ely.webp\" is not mirrored (Personal photograph of a person); replaced with a link to the official site.",
+					"file": "docs/blog/elysia-11.md",
+					"line": 667,
+					"source": "/blog/elysia-11/ely.webp"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/life-cycle/trace\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-11.md",
+					"line": 214,
+					"source": "/life-cycle/trace"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-12.md",
+			"output": "src/content/docs/blog/elysia-12.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-12.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-12/elysia-12.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-12.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 1.2 - You and Me\"\n    src=\"/blog/elysia-12/elysia-12.webp\"\n    alt=\"Blue-purple tint background with white text label Elysia 1.2 in the middle\"\n    author=\"saltyaom\"\n    date=\"23 Dec 2024\"\n    shadow\n>"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "2 Twoslash code block(s) rendered as static code (2 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/blog/elysia-12.md"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#parser\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/blog/elysia-12.md",
+					"line": 47,
+					"source": "#parser"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#typebox\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/blog/elysia-12.md",
+					"line": 49,
+					"source": "#typebox"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-13.md",
+			"output": "src/content/docs/blog/elysia-13.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-13.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-13/elysia-13.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-13.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 1.3 and Scientific Witchery\"\n    src=\"/blog/elysia-13/elysia-13.webp\"\n    alt=\"pink-violet tint mesh gradient background with word 'Elysia 1.3' and the word 'Scientific Witchery' below the title\"\n    author=\"saltyaom\"\n    date=\"5 May 2025\"\n    shadow\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#bun-system-router\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/blog/elysia-13.md",
+					"line": 50,
+					"source": "#bun-system-router"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#rename-error-to-status\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/blog/elysia-13.md",
+					"line": 55,
+					"source": "#rename-error-to-status"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/patterns/type#form\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/blog/elysia-13.md",
+					"line": 282,
+					"source": "/patterns/type#form"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-14.md",
+			"output": "src/content/docs/blog/elysia-14.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-14.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-14/elysia-14.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-14.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"Elysia 1.4 - Supersymmetry\"\n    src=\"/blog/elysia-14/elysia-14.webp\"\n    alt=\"'Elysia 1.4' as title with the word 'Supersymmetry' on the left with ElysiaJS chan on the right.\"\n    author=\"saltyaom\"\n    date=\"13 Sep 2025\"\n    shadow\n>"
+				},
+				{
+					"severity": "warning",
+					"code": "asset-not-mirrored",
+					"message": "Image \"/blog/elysia-14/elysia-supersymmetry.webp\" is not mirrored (Character artwork); replaced with a link to the official site.",
+					"file": "docs/blog/elysia-14.md",
+					"line": 279,
+					"source": "/blog/elysia-14/elysia-supersymmetry.webp"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "2 Twoslash code block(s) rendered as static code (3 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/blog/elysia-14.md"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-20.md",
+			"output": "src/content/docs/blog/elysia-20.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-20.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n    import Chart from '../components/chart.vue'\n\n    const startupAt25Routes = [\n        { label: 'Hono', value: 21 },\n        { label: 'Elysia', value: 24 },\n        { label: 'Elysia + TypeBox', value: 28, highlight: true },\n        { label: 'Hono + Zod', value: 33 },\n        { label: 'Elysia + Zod', value: 38 },\n        { label: 'Express', value: 61 },\n        { label: 'Express + Zod', value: 72 },\n        { label: 'Fastify', value: 90 },\n        { label: 'Fastify + Zod', value: 93 }\n    ]\n\n    const memoryAt25Routes = [\n        { label: 'Hono', value: 35 },\n        { label: 'Elysia', value: 36 },\n        { label: 'Elysia + TypeBox', value: 42, highlight: true },\n        { label: 'Hono + Zod', value: 47 },\n        { label: 'Elysia + Zod', value: 48 },\n        { label: 'Express', value: 55 },\n        { label: 'Fastify', value: 56 },\n        { label: 'Express + Zod', value: 61 },\n        { label: 'Fastify + Zod', value: 63 }\n    ]\n\n    const bundleByVersion = [\n        { label: 'None', value: 736, secondaryValue: 344 },\n        { label: 'TypeBox', value: 736, secondaryValue: 847 },\n        { label: 'Valibot', value: 742, secondaryValue: 350 },\n        { label: 'Zod', value: 1260, secondaryValue: 868 }\n    ]\n\n    const bundleWithAot = [\n        { label: 'None', value: 344, secondaryValue: 226 },\n        { label: 'TypeBox', value: 847, secondaryValue: 288 },\n        { label: 'Valibot', value: 350, secondaryValue: 266 },\n        { label: 'Zod', value: 868, secondaryValue: 784 }\n    ]\n\n    const bundleFrameworks = [\n        { label: 'Hono', detail: '4.12.28', value: 21 },\n        { label: 'h3', detail: '2.0.1-rc.26', value: 103 },\n        { label: 'Elysia', detail: '2.0.0-exp.60', value: 141, highlight: true },\n        { label: 'Effect HTTP Node', detail: '4.0.0-beta.102', value: 357 },\n        { label: 'Express', detail: '5.2.1', value: 603 },\n        { label: 'Koa', detail: '3.2.1', value: 554 },\n        { label: 'Fastify', detail: '5.10.0', value: 729 },\n        { label: 'Adonis', detail: '5.8.0', value: 1200, display: '1.2 MB' },\n        { label: 'Nest', detail: '10.2.8', value: 1300, display: '1.3 MB' }\n    ]\n\n    const throughput = [\n\t    { label: 'Elysia', detail: 'Bun 2.0.0-exp.60', value: 210_411, highlight: true },\n\t    { label: 'Hono', detail: 'Bun 4.12.28', value: 168_275 },\n\t    { label: 'Fastify', detail: 'Node 5.10.0', value: 101_360 },\n\t    { label: 'Elysia', detail: 'Node 2.0.0-exp.60', value: 93_845, highlight: true },\n\t    { label: 'Hono', detail: 'Node 4.12.28', value: 86_129 },\n\t    { label: 'Effect HTTP', detail: 'Bun 4.0.0-beta.102', value: 88_936 },\n\t    { label: 'Effect HTTP', detail: 'Node 4.0.0-beta.102', value: 59_958 },\n\t    { label: 'Koa', detail: 'Node 3.2.1', value: 43_294 },\n\t    { label: 'Express', detail: 'Node 5.2.1', value: 42_974 },\n\t    { label: 'Adonis', detail: 'Node 5.8.0', value: 36_557 },\n\t    { label: 'Nest', detail: 'Node 10.2.8', value: 31_675 }\n    ]\n\n\t// Ping\n    // const throughput = [\n\t   //  { label: 'Elysia', detail: 'Bun 2.0.0-exp.60', value: 405_492, highlight: true },\n\t   //  { label: 'Hono', detail: 'Bun 4.12.28', value: 229_744 },\n\t   //  { label: 'Fastify', detail: 'Node 5.10.0', value: 151_181 },\n\t   //  { label: 'Elysia', detail: 'Node 2.0.0-exp.60', value: 146_216, highlight: true },\n\t   //  { label: 'Hono', detail: 'Node 4.12.28', value: 140_752 },\n\t   //  { label: 'Effect HTTP', detail: 'Bun 4.0.0-beta.102', value: 143_317 },\n\t   //  { label: 'Effect HTTP', detail: 'Node 4.0.0-beta.102', value: 95_462 },\n\t   //  { label: 'Express', detail: 'Node 5.2.1', value: 85_301 },\n\t   //  { label: 'Koa', detail: 'Node 3.2.1', value: 65_713 },\n\t   //  { label: 'Adonis', detail: 'Node 5.8.0', value: 50_603 },\n\t   //  { label: 'Nest', detail: 'Node 10.2.8', value: 48_055 }\n    // ]\n\n    const startupByVersion = [\n        { label: 'None', value: 37, secondaryValue: 26 },\n        { label: 'TypeBox', value: 37, second\n… (truncated)"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-20/elysia-20.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 197,
+					"source": "<Blog\n    title=\"Elysia 2 beta - DayDream\"\n    src=\"/blog/elysia-20/elysia-20.webp\"\n    alt=\"'Elysia 2' in a big title on the left with the word 'DayDream' on the slightly above the title. Accompany by Elysia chan mascot on the right side.\"\n    author=\"saltyaom\"\n    date=\"30 Jul 2026\"\n    shadow\n>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (bundleByVersion); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 262,
+					"source": "<Chart\n    :items=\"bundleByVersion\"\n    :series=\"['Elysia 1', 'Elysia 2']\"\n    unit=\"KB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (bundleWithAot); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 270,
+					"source": "<Chart\n    :items=\"bundleWithAot\"\n    :series=\"['Elysia 2', 'Elysia 2 + AOT']\"\n    unit=\"KB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (bundleFrameworks); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 282,
+					"source": "<Chart :items=\"bundleFrameworks\" unit=\"KB\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (startupByVersion); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 296,
+					"source": "<Chart\n    :items=\"startupByVersion\"\n    :series=\"['Elysia 1', 'Elysia 2']\"\n    unit=\"ms\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (startupAt25Routes); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 308,
+					"source": "<Chart :items=\"startupAt25Routes\" unit=\"ms\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (startupAt1000Routes); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 316,
+					"source": "<Chart :items=\"startupAt1000Routes\" unit=\"ms\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (memoryAt25Routes); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 327,
+					"source": "<Chart :items=\"memoryAt25Routes\" unit=\"MB\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (memoryBeforeAfterLoadtest); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 332,
+					"source": "<Chart\n    :items=\"memoryBeforeAfterLoadtest\"\n    :series=\"['Before', 'After']\"\n    unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (refRainMemory); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 412,
+					"source": "<Chart :items=\"refRainMemory\" unit=\"MB\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (compilation); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 424,
+					"source": "<Chart\n    :items=\"compilation\"\n    :series=\"['Time taken', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (complexSchema); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 439,
+					"source": "<Chart\n    :items=\"complexSchema\"\n    :series=\"['Time taken', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (aotStartup); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 490,
+					"source": "<Chart :items=\"aotStartup\" unit=\"ms\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (aotMemory); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 496,
+					"source": "<Chart\n    :items=\"aotMemory\"\n    :series=\"['Startup time', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (syntheticMemory); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 505,
+					"source": "<Chart\n    :items=\"syntheticMemory\"\n    :series=\"['Identical handlers', 'Distinct handlers (real app)']\"\n    unit=\"KB/route\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (aotDefaultMerge); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 517,
+					"source": "<Chart :items=\"aotDefaultMerge\" unit=\"μs\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (throughput); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 656,
+					"source": "<Chart :items=\"throughput\" unit=\"req/s\" />"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (addRoutes); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 686,
+					"source": "<Chart\n    :items=\"addRoutes\"\n    :series=\"['Time taken', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (applyRouter); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 699,
+					"source": "<Chart\n    :items=\"applyRouter\"\n    :series=\"['Time taken', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "chart-as-table",
+					"message": "<Chart> rendered as a table from its literal data (lifecycle); the bar graphics are not reproduced.",
+					"file": "docs/blog/elysia-20.md",
+					"line": 712,
+					"source": "<Chart\n    :items=\"lifecycle\"\n    :series=\"['Time taken', 'Memory usage']\"\n    unit=\"ms\"\n    secondary-unit=\"MB\"\n/>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-supabase.md",
+			"output": "src/content/docs/blog/elysia-supabase.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-supabase.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-supabase/elysia-supabase.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-supabase.md",
+					"line": 33,
+					"source": "<Blog\n  title=\"Elysia with Supabase. Your next backend at sonic speed\"\n  src=\"/blog/elysia-supabase/elysia-supabase.webp\"\n  alt=\"Elysia and Supabase resembance as a CPU place closely together\"\n  author=\"saltyaom\"\n  date=\"10 Mar 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/elysia-v-encore.md",
+			"output": "src/content/docs/blog/elysia-v-encore.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/elysia-v-encore.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/elysia-v-encore/elysia-v-encore.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/elysia-v-encore.md",
+					"line": 33,
+					"source": "<Blog\n    title=\"2x faster than Encore - 1 year later\"\n    src=\"/blog/elysia-v-encore/elysia-v-encore.webp\"\n    alt=\"2x faster than Encore. 1.5 year later after Encore vs Elysia performance comparison\"\n    author=\"saltyaom\"\n    date=\"14 Nov 2025\"\n    shadow\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/openapi-type-gen.md",
+			"output": "src/content/docs/blog/openapi-type-gen.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/openapi-type-gen.md",
+					"line": 29,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/openapi-type-gen/cover.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/openapi-type-gen.md",
+					"line": 33,
+					"source": "<Blog\ntitle=\"Introducing OpenAPI Type Gen for Elysia\"\nsrc=\"/blog/openapi-type-gen/cover.webp\"\nalt=\"OpenAPI Type Gen: Automatic API Documentation for Elysia\"\nauthor=\"saltyaom\"\ndate=\"4 Sep 2025\"\n>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/blog/openapi-type-gen.md",
+					"line": 82,
+					"source": "<!--Type generation works by analyzing your Elysia instance types to generate the corresponding OpenAPI documentation, thanks to Elysia investment in strong type soundness and integrity.-->"
+				}
+			]
+		},
+		{
+			"source": "docs/blog/with-prisma.md",
+			"output": "src/content/docs/blog/with-prisma.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/blog/with-prisma.md",
+					"line": 30,
+					"source": "<script setup>\n    import Blog from '../components/blog/Layout.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "release-cover-omitted",
+					"message": "Decorative cover artwork \"/blog/with-prisma/prism.webp\" is not mirrored or displayed.",
+					"file": "docs/blog/with-prisma.md",
+					"line": 34,
+					"source": "<Blog\ntitle=\"Accelerate your next Prisma server with Elysia\"\nsrc=\"/blog/with-prisma/prism.webp\"\nalt=\"Triangular Prism placing in the center\"\nauthor=\"saltyaom\"\ndate=\"4 Jun 2023\"\n>"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/fetch.md",
+			"output": "src/content/docs/eden/fetch.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/eden/installation.md",
+			"output": "src/content/docs/eden/installation.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "2 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/eden/installation.md"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/overview.md",
+			"output": "src/content/docs/eden/overview.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/eden/overview.md",
+					"line": 17,
+					"source": "<script setup lang=\"ts\">\nimport TutorialBadge from '../components/arona/badge.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/eden/overview.md",
+					"line": 44,
+					"source": "<!-- <iframe\n    id=\"embedded-editor\"\n    src=\"https://codesandbox.io/p/sandbox/bun-elysia-rdxljp?embed=1&codemirror=1&hidenavigation=1&hidedevtools=1&file=eden.ts\"\n    allow=\"accelerometer\"\n    sandbox=\"allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts\"\n    loading=\"lazy\"\n/>\n\n::: tip\nHover over variable and function to see type definition.\n::: -->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "1 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/eden/overview.md"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/test.md",
+			"output": "src/content/docs/eden/test.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/eden/treaty/config.md",
+			"output": "src/content/docs/eden/treaty/config.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/eden/treaty/legacy.md",
+			"output": "src/content/docs/eden/treaty/legacy.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/eden/treaty/overview.md",
+			"output": "src/content/docs/eden/treaty/overview.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "1 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/eden/treaty/overview.md"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/treaty/parameters.md",
+			"output": "src/content/docs/eden/treaty/parameters.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/eden/treaty/response.md",
+			"output": "src/content/docs/eden/treaty/response.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "3 Twoslash code block(s) rendered as static code (5 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/eden/treaty/response.md"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/treaty/unit-test.md",
+			"output": "src/content/docs/eden/treaty/unit-test.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "1 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/eden/treaty/unit-test.md"
+				}
+			]
+		},
+		{
+			"source": "docs/eden/treaty/websocket.md",
+			"output": "src/content/docs/eden/treaty/websocket.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/essential/best-practice.md",
+			"output": "src/content/docs/essential/best-practice.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/best-practice.md",
+					"line": 17,
+					"source": "<script setup>\nimport AronaBanner from '../components/arona/arona-banner.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "component-removed",
+					"message": "\"Ask Elysia\" AI assistant banner removed (a service of the official site).",
+					"file": "docs/essential/best-practice.md",
+					"line": 29,
+					"source": "<AronaBanner />"
+				},
+				{
+					"severity": "warning",
+					"code": "container-note",
+					"message": "Upstream uses \"::: note\", which VitePress does not define (it renders the markers as literal text). Converted to a note aside to match the evident intent.",
+					"file": "docs/essential/best-practice.md",
+					"line": 151,
+					"source": "::: note"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/best-practice.md",
+					"line": 368,
+					"source": "<!--### ❌ Don't: Pass entire `Context` to a service\n**Context is a highly dynamic type** that can be inferred from Elysia instance.\n\nDo not pass an entire `Context` to a service, instead use object destructuring to extract what you need and pass it to the service.\n```typescript\nimport type { Context } from 'elysia'\n\nclass AuthService {\n\tconstructor() {}\n\n\t// ❌ Don't do this\n\tisSignIn({ status, cookie: { session } }: Context) {\n\t\tif (session.value)\n\t\t\treturn status(401)\n\t}\n}\n```\n\nAs Elysia type is complex, and heavily depends on plugin and multiple level of chaining, it can be challenging to manually type as it's highly dynamic.\n\n### ⚠️ Infers Context from Elysia instance\n\nIn case of **absolute necessity**, you may infer the `Context` type from the Elysia instance itself:\n```typescript\nimport { Elysia, type InferContext } from 'elysia'\n\nconst setup = new Elysia()\n\t.state('a', 'a')\n\t.decorate('b', 'b')\n\nclass AuthService {\n\tconstructor() {}\n\n\t// ✅ Do\n\tisSignIn({ status, cookie: { session } }: InferContext<typeof setup>) {\n\t\tif (session.value)\n\t\t\treturn status(401)\n\t}\n}\n```\n\nHowever we recommend to avoid this if possible, and use [Elysia as a service](#✅-do-use-elysia-as-a-controller) instead.\n\nYou may find more about [InferContext](/essential/handler#infercontext) in [Essential: Handler](/essential/handler).-->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "3 Twoslash code block(s) rendered as static code (3 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/essential/best-practice.md"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#plugin-deduplication\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/best-practice.md",
+					"line": 347,
+					"source": "/essential/plugin.html#plugin-deduplication"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#elysia-type\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/best-practice.md",
+					"line": 414,
+					"source": "/essential/validation.html#elysia-type"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#remap\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/best-practice.md",
+					"line": 550,
+					"source": "/essential/handler.html#remap"
+				}
+			]
+		},
+		{
+			"source": "docs/essential/handler.md",
+			"output": "src/content/docs/essential/handler.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/handler.md",
+					"line": 17,
+					"source": "<script setup>\nimport Playground from '../components/nearl/playground.vue'\nimport Tab from '../components/fern/tab.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\nimport { Elysia } from 'elysia'\n\nconst handler1 = new Elysia()\n    .get('/', ({ path }) => path)\n\nconst handler2 = new Elysia()\n    .get('/', ({ status }) => status(418, \"Kirifuji Nagisa\"))\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/handler.md",
+					"line": 108,
+					"source": "<Playground :elysia=\"handler2\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/handler.md",
+					"line": 115,
+					"source": "<!--### status\nWe can return a custom status code by using either:\n\n- **status** function (recommended)\n- **set.status** (legacy)\n\n```typescript\nimport { Elysia } from 'elysia'\n\nnew Elysia()\n\t.get('/error', ({ status }) => status(418, 'I am a teapot'))\n\t.get('/set.status', ({ set }) => {\n\t\tset.status = 418\n\t\treturn 'I am a teapot'\n\t})\n\t.listen(3000)\n```\n-->"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#state\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/handler.md",
+					"line": 84,
+					"source": "#state"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#set.headers\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/handler.md",
+					"line": 90,
+					"source": "#set.headers"
+				}
+			]
+		},
+		{
+			"source": "docs/essential/life-cycle.md",
+			"output": "src/content/docs/essential/life-cycle.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/life-cycle.md",
+					"line": 17,
+					"source": "<script setup>\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\nimport Playground from '../components/nearl/playground.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nimport { Elysia } from 'elysia'\n\nconst demo = new Elysia()\n\t.onError(({ code }) => {\n\t\tif (code === 418) return 'caught'\n\t})\n    .get('/throw', ({ status }) => {\n\t\t// This will be caught by onError\n\t\tthrow status(418)\n\t})\n\t.get('/return', ({ status }) => {\n\t\t// This will NOT be caught by onError\n\t\treturn status(418)\n\t})\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/life-cycle.md",
+					"line": 167,
+					"source": "<!--::: tip\nThe code above will only apply to the current instance, not applying to parent.\n\nSee [scope](/essential/plugin#scope) to find out why\n:::-->"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#map-resonse\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/life-cycle.md",
+					"line": 868,
+					"source": "#map-resonse"
+				}
+			]
+		},
+		{
+			"source": "docs/essential/plugin.md",
+			"output": "src/content/docs/essential/plugin.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/plugin.md",
+					"line": 17,
+					"source": "<script setup>\nimport Playground from '../components/nearl/playground.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nimport { Elysia } from 'elysia'\n\nconst plugin = new Elysia()\n    .decorate('plugin', 'hi')\n    .get('/plugin', ({ plugin }) => plugin)\n\nconst demo1 = new Elysia()\n    .get('/', ({ plugin }) => plugin)\n    .use(plugin)\n\nconst plugin2 = (app) => {\n    if ('counter' in app.store) return app\n\n    return app\n        .state('counter', 0)\n        .get('/plugin', () => 'Hi')\n}\n\nconst demo2 = new Elysia()\n    .use(plugin2)\n    .get('/counter', ({ store: { counter } }) => counter)\n\nconst version = (version = 1) => new Elysia()\n        .get('/version', version)\n\nconst demo3 = new Elysia()\n    .use(version(1))\n\nconst setup = new Elysia({ name: 'setup' })\n    .decorate('a', 'a')\n\nconst plugin3 = (config) => new Elysia({\n        name: 'my-plugin',\n        seed: config,\n    })\n    .get(`${config.prefix}/hi`, () => 'Hi')\n\nconst demo4 = new Elysia()\n    .use(\n        plugin3({\n            prefix: '/v2'\n        })\n    )\n\n// child.ts\nconst child = new Elysia()\n    .use(setup)\n    .get('/', ({ a }) => a)\n\n// index.ts\nconst demo5 = new Elysia()\n    .use(child)\n\nconst _demo1 = new Elysia()\n    .post('/student', 'Rikuhachima Aru')\n\nconst _plugin2 = new Elysia()\n    .onBeforeHandle({ as: 'global' }, () => {\n        return 'hi'\n    })\n    .get('/child', () => 'child')\n\nconst _demo2 = new Elysia()\n    .use(plugin2)\n    .get('/parent', () => 'parent')\n\nconst _mock2 = {\n    '/child': {\n        'GET': 'hi'\n    },\n    '/parent': {\n        'GET': 'hi'\n    }\n}\n\nconst _plugin3 = new Elysia()\n    .onBeforeHandle({ as: 'global' }, () => {\n        return 'overwrite'\n    })\n\nconst _demo3 = new Elysia()\n    .guard(app => app\n        .use(plugin3)\n        .get('/inner', () => 'inner')\n    )\n    .get('/outer', () => 'outer')\n\nconst _mock3 = {\n    '/inner': {\n        'GET': 'overwrite'\n    },\n    '/outer': {\n        'GET': 'outer'\n    }\n}\n\nconst profile1 = new Elysia()\n\t.onBeforeHandle(({ status }) => status(401))\n\t.get('/profile', ({ status }) => status(401))\n\nconst scope1 = new Elysia()\n\t.use(profile1)\n\t// This will NOT have sign in check\n\t.patch('/rename', () => 'Updated!')\n\nconst profile2 = new Elysia()\n\t.onBeforeHandle({ as: 'global' }, ({ status }) => status(401))\n\t.get('/profile', ({ status }) => status(401))\n\nconst scope2 = new Elysia()\n\t.use(profile2)\n\t// This will NOT have sign in check\n\t.patch('/rename', ({ status }) => status(401))\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 158,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/plugin.md",
+					"line": 301,
+					"source": "<!-- Do not at 'the' before \"profile\" and \"app\" here - @Saltyaom -->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 304,
+					"source": "<Playground :elysia=\"scope1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 332,
+					"source": "<Playground :elysia=\"scope2\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 413,
+					"source": "<Playground :elysia=\"_demo2\" :mock=\"_mock2\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 453,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/plugin.md",
+					"line": 589,
+					"source": "<Playground :elysia=\"_demo1\" />"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "6 Twoslash code block(s) rendered as static code (5 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/essential/plugin.md"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#plugin-deduplication\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/plugin.md",
+					"line": 251,
+					"source": "/essential/plugin.html#plugin-deduplication"
+				}
+			]
+		},
+		{
+			"source": "docs/essential/route.md",
+			"output": "src/content/docs/essential/route.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/route.md",
+					"line": 17,
+					"source": "<script setup>\nimport Playground from '../components/nearl/playground.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nimport { Elysia } from 'elysia'\n\nconst demo1 = new Elysia()\n    .get('/', () => 'hello')\n    .get('/hi', () => 'hi')\n\nconst demo2 = new Elysia()\n    .get('/', () => 'hello')\n    .post('/hi', () => 'hi')\n\nconst demo3 = new Elysia()\n\t  .get('/id', () => `id: undefined`)\n    .get('/id/:id', ({ params: { id } }) => `id: ${id}`)\n\nconst demo4 = new Elysia()\n    .get('/', () => 'hi')\n    .post('/', () => 'hi')\n\nconst demo5 = new Elysia()\n    .get('/', () => 'hello')\n    .get('/hi', ({ status }) => status(404, 'Route not found :('))\n\nconst demo6 = new Elysia()\n    .get('/id/:id', ({ params: { id } }) => id)\n    .get('/id/123', '123')\n    .get('/id/anything', 'anything')\n    .get('/id', ({ status }) => status(404))\n    .get('/id/anything/test', ({ status }) => status(404))\n\nconst demo7 = new Elysia()\n    .get('/id/:id', ({ params: { id } }) => id)\n    .get('/id/123', '123')\n    .get('/id/anything', 'anything')\n    .get('/id', ({ status }) => status(404))\n    .get('/id/:id/:name', ({ params: { id, name } }) => id + ' ' + name)\n\nconst demo8 = new Elysia()\n    .get('/get', () => 'hello')\n    .post('/post', () => 'hi')\n    .route('M-SEARCH', '/m-search', () => 'connect')\n\nconst demo9 = new Elysia()\n    .get('/id/:id', ({ params: { id } }) => id)\n    .get('/id/123', '123')\n    .get('/id/anything', 'anything')\n    .get('/id', ({ status }) => status(404))\n    .get('/id/:id/:name', ({ params: { id, name } }) => id + '/' + name)\n\nconst demo10 = new Elysia()\n    .get('/id/1', () => 'static path')\n    .get('/id/:id', () => 'dynamic path')\n    .get('/id/*', () => 'wildcard path')\n\nconst demo11 = new Elysia()\n    .post('/user/sign-in', () => 'Sign in')\n    .post('/user/sign-up', () => 'Sign up')\n    .post('/user/profile', () => 'Profile')\n\nconst demo12 = new Elysia()\n    .group('/user', (app) =>\n        app\n            .post('/sign-in', () => 'Sign in')\n            .post('/sign-up', () => 'Sign up')\n            .post('/profile', () => 'Profile')\n    )\n\nconst users = new Elysia({ prefix: '/user' })\n    .post('/sign-in', () => 'Sign in')\n    .post('/sign-up', () => 'Sign up')\n    .post('/profile', () => 'Profile')\n\nconst demo13 = new Elysia()\n    .get('/', () => 'hello world')\n    .use(users)\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 116,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 142,
+					"source": "<Playground\n  :elysia=\"demo10\"\n    :alias=\"{\n    '/id/:id': '/id/2',\n    '/id/*': '/id/2/a'\n  }\"\n  :mock=\"{\n    '/id/*': {\n      GET: 'wildcard path'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 155,
+					"source": "<!--Here the server will respond as follows:\n\n| Path    | Response      |\n| ------- | ------------- |\n| /id/1   | static path   |\n| /id/2   | dynamic path  |\n| /id/2/a | wildcard path |-->"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 176,
+					"source": "<!--A path or pathname is an identifier to locate resources of a server.\n\n```bash\nhttp://localhost/path/page\n```\n\nElysia uses the path and method to look up the correct resource.\n\n<div class=\"bg-white rounded-lg\">\n    <img src=\"/essential/url-object.svg\" alt=\"URL Representation\" />\n</div>\n\nA path starts after the origin. Prefix with **/** and ends before search query **(?)**\n\nWe can categorize the URL and path as follows:-->"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 192,
+					"source": "<!--| URL                             | Path         |\n| ------------------------------- | ------------ |\n| http://example.com/                | /            |\n| http://example.com/hello           | /hello       |\n| http://example.com/hello/world     | /hello/world |\n| http://example.com/hello?name=salt | /hello       |\n| http://example.com/hello#title     | /hello       |\n\n::: tip\nIf the path is not specified, the browser and web server will treat the path as '/' as a default value.\n:::\n\nElysia will look up each request for [route](/essential/route) and response using [handler](/essential/handler) function.\n--->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 226,
+					"source": "<Playground\n  :elysia=\"demo6\"\n  :alias=\"{\n    '/id/:id': '/id/1'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: '1'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 253,
+					"source": "<!--## Segment\n\nURL segments are each path that is composed into a full path.\n\nSegments are separated by `/`.\n![Representation of URL segments](/essential/url-segment.webp)\n\nPath parameters in Elysia are represented by prefixing a segment with ':' followed by a name.\n![Representation of path parameter](/essential/path-parameter.webp)\n\nPath parameters allow Elysia to capture a specific segment of a URL.\n\nThe named path parameter will then be stored in `Context.params`.\n\n| Route     | Path   | Params  |\n| --------- | ------ | ------- |\n| /id/:id   | /id/1  | id=1    |\n| /id/:id   | /id/hi | id=hi   |\n| /id/:name | /id/hi | name=hi |-->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 290,
+					"source": "<Playground\n  :elysia=\"demo7\"\n  :alias=\"{\n    '/id/:id': '/id/1',\n    '/id/:id/:name': '/id/anything/rest'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: '1'\n    },\n    '/id/:id/:name': {\n      GET: 'anything rest'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 333,
+					"source": "<Playground\n  :elysia=\"demo3\"\n  :alias=\"{\n    '/id/:id': '/id/1'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: 'id 1'\n    },\n  }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 345,
+					"source": "<!--The server will respond as follows:\n\n| Path                   | Response      |\n| ---------------------- | ------------- |\n| /id                    | id undefined  |\n| /id/1                  | id 1          |-->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 369,
+					"source": "<Playground\n  :elysia=\"demo9\"\n  :alias=\"{\n    '/id/:id': '/id/1',\n    '/id/:id/:name': '/id/anything/rest'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: '1'\n    },\n    '/id/:id/:name': {\n      GET: 'anything/rest'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 385,
+					"source": "<!--In this case the server will respond as follows:\n\n| Path                   | Response      |\n| ---------------------- | ------------- |\n| /id/1                  | 1             |\n| /id/123                | 123           |\n| /id/anything           | anything      |\n| /id/anything?name=salt | anything      |\n| /id                    | Not Found     |\n| /id/anything/rest      | anything/rest |-->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 415,
+					"source": "<Playground\n  :elysia=\"demo10\"\n    :alias=\"{\n    '/id/:id': '/id/2',\n    '/id/*': '/id/2/a'\n  }\"\n  :mock=\"{\n    '/id/*': {\n      GET: 'wildcard path'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 467,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 491,
+					"source": "<Playground :elysia=\"demo8\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 500,
+					"source": "<!--When navigating to each method, you should see the results as the following:\n| Path      | Method   | Result  |\n| --------- | -------- | ------- |\n| /get      | GET      | hello   |\n| /post     | POST     | hi      |\n| /m-search | M-SEARCH | connect |-->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 525,
+					"source": "<Playground :elysia=\"demo4\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/route.md",
+					"line": 559,
+					"source": "<!--## 404\n\nIf no path matches the defined routes, Elysia will pass the request to [error](/essential/life-cycle.html#on-error) life cycle before returning a **\"NOT_FOUND\"** with an HTTP status of 404.\n\nWe can handle a custom 404 error by returning a value from `error` life cycle like this:\n\n```typescript twoslash\nimport { Elysia } from 'elysia'\n\nnew Elysia()\n    .get('/', 'hi')\n    .onError(({ code }) => {\n        if (code === 'NOT_FOUND') {\n            return 'Route not found :('\n        }\n    })\n    .listen(3000)\n```\n\n<Playground :elysia=\"demo5\" />\n\nWhen navigating to your web server, you should see the result as follows:\n\n| Path | Method | Result              |\n| ---- | ------ | ------------------- |\n| /    | GET    | hi                  |\n| /    | POST   | Route not found :\\( |\n| /hi  | GET    | Route not found :\\( |\n\nYou can learn more about life cycle and error handling in [Life Cycle Events](/essential/life-cycle#events) and [Error Handling](/essential/life-cycle.html#on-error).\n\n::: tip\nHTTP Status is used to indicate the type of response. By default if everything is correct, the server will return a '200 OK' status code (If a route matches and there is no error, Elysia will return 200 as default)\n\nIf the server fails to find any route to handle, like in this case, then the server shall return a '404 NOT FOUND' status code.\n:::-->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 610,
+					"source": "<Playground :elysia=\"demo11\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 627,
+					"source": "<Playground :elysia=\"demo12\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/route.md",
+					"line": 676,
+					"source": "<Playground :elysia=\"demo13\" />"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "4 Twoslash code block(s) rendered as static code (4 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/essential/route.md"
+				}
+			]
+		},
+		{
+			"source": "docs/essential/validation.md",
+			"output": "src/content/docs/essential/validation.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/essential/validation.md",
+					"line": 17,
+					"source": "<script setup>\nimport { Elysia, t, ValidationError } from 'elysia'\n\nimport Playground from '../components/nearl/playground.vue'\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nconst demo1 = new Elysia()\n    .get('/none', () => 'hi')\n    .guard({\n        query: t.Object({\n            name: t.String()\n        })\n    })\n    .get('/query', ({ query: { name } }) => name)\n\nconst demo2 = new Elysia()\n    .get('/id/1', '1')\n    .get('/id/a', () => {\n        throw new ValidationError(\n            'params',\n            t.Object({\n                id: t.Numeric()\n            }),\n            {\n                id: 'a'\n            }\n        )\n    })\n\nconst demo3 = new Elysia()\n \t.guard({\n        query: t.Object({\n            id: t.Number()\n        })\n    })\n    .get('/query?id=1', ({ query: { id } }) => id)\n    .get('/query?id=salt', ({ query: { id } }) => id)\n\nconst demo4 = new Elysia()\n \t.guard({\n        query: t.Object({\n            name: t.Array(t.String()),\n            squad: t.String()\n        })\n    })\n    .get('/query?name=rapi,anis,neon&squad=counter', ({ query: { id } }) => id)\n    .get('/query?name=rapi&name=anis&name=neon&squad=counter', ({ query: { id } }) => id)\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/validation.md",
+					"line": 165,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/validation.md",
+					"line": 203,
+					"source": "<Playground\n    :elysia=\"demo1\"\n    :mock=\"{\n        '/query': {\n            GET: 'Elysia'\n        }\n    }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/validation.md",
+					"line": 411,
+					"source": "<Playground\n    :elysia=\"demo3\"\n    :mock=\"{\n        '/query?id=1': {\n            GET: '1'\n        },\n        '/query?id=salt': {\n        \tGET: 'string cannot be assigned to number'\n        }\n    }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/validation.md",
+					"line": 445,
+					"source": "<Playground\n    :elysia=\"demo4\"\n    :mock=\"{\n        '/query?name=rapi,anis,neon&squad=counter': {\n            GET: JSON.stringify({\n                name: ['rapi', 'anis', 'neon'],\n                squad: 'counter'\n            }, null, 4)\n        },\n        '/query?name=rapi&name=anis&name=neon&squad=counter': {\n        \tGET: JSON.stringify({\n                name: ['rapi', 'anis', 'neon'],\n                squad: 'counter'\n            }, null, 4)\n        }\n    }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/essential/validation.md",
+					"line": 511,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/essential/validation.md",
+					"line": 1165,
+					"source": "<!--### Getting type from model\nTo get stored models from `Elysia.model`, we can access the `models` property follows by `name.Schema()` to get the schema definition.\n\n```typescript twoslash\nimport { Elysia, t } from 'elysia'\nimport * as z from 'zod'\n\nconst app = new Elysia()\n\t.model({\n\t\tsign: t.Object({\n\t\t\tusername: t.String(),\n\t\t\tpassword: t.String()\n\t\t}),\n\t\tzodSign: z.object({\n\t\t\tusername: z.string(),\n\t\t\tpassword: z.string()\n\t\t})\n\t})\n\n// For TypeBox\nconst sign = app.models.sign.schema\ntype sign = typeof sign.static\n//     ^?\n\n\n\n\n\n\n// For Zod\nconst zodSign = app.models.zodSign.schema\ntype zodSign = z.infer<typeof zodSign>\n//     ^?\n\n\n\n\n// ---cut-after---\n```\n\n`models.<name>.Schema()` will return the original schema definition, then you can follows the library's way of getting the type.-->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "14 Twoslash code block(s) rendered as static code (14 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/essential/validation.md"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/patterns/type#elysia-behavior\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/essential/validation.md",
+					"line": 392,
+					"source": "/patterns/type#elysia-behavior"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#on-error\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/validation.md",
+					"line": 697,
+					"source": "/essential/life-cycle.html#on-error"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#on-error\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/essential/validation.md",
+					"line": 995,
+					"source": "/essential/life-cycle.html#on-error"
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/ai-sdk.md",
+			"output": "src/content/docs/integrations/ai-sdk.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/astro.md",
+			"output": "src/content/docs/integrations/astro.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/better-auth.md",
+			"output": "src/content/docs/integrations/better-auth.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/cheat-sheet.md",
+			"output": "src/content/docs/integrations/cheat-sheet.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "1 Twoslash code block(s) rendered as static code (0 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/integrations/cheat-sheet.md"
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/cloudflare-worker.md",
+			"output": "src/content/docs/integrations/cloudflare-worker.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#static-file\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/integrations/cloudflare-worker.md",
+					"line": 79,
+					"source": "#static-file"
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/deno.md",
+			"output": "src/content/docs/integrations/deno.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/drizzle.md",
+			"output": "src/content/docs/integrations/drizzle.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#elysia-type\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/integrations/drizzle.md",
+					"line": 23,
+					"source": "/essential/validation.html#elysia-type"
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/expo.md",
+			"output": "src/content/docs/integrations/expo.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/netlify.md",
+			"output": "src/content/docs/integrations/netlify.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/nextjs.md",
+			"output": "src/content/docs/integrations/nextjs.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "upstream-markup-repaired",
+					"message": "Malformed upstream markup repaired: a second \"::: code-group\" inside an open code group was treated as its closing marker.",
+					"file": "docs/integrations/nextjs.md",
+					"line": 181,
+					"source": "::: code-group"
+				},
+				{
+					"severity": "info",
+					"code": "code-group-content",
+					"message": "Non-code content inside \"::: code-group\" is rendered after the tabs (it is always visible upstream as well).",
+					"file": "docs/integrations/nextjs.md",
+					"line": 120
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/node.md",
+			"output": "src/content/docs/integrations/node.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/nuxt.md",
+			"output": "src/content/docs/integrations/nuxt.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/prisma.md",
+			"output": "src/content/docs/integrations/prisma.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/react-email.md",
+			"output": "src/content/docs/integrations/react-email.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/sveltekit.md",
+			"output": "src/content/docs/integrations/sveltekit.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/integrations/tanstack-start.md",
+			"output": "src/content/docs/integrations/tanstack-start.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "upstream-markup-repaired",
+					"message": "Malformed upstream markup repaired: a second \"::: code-group\" inside an open code group was treated as its closing marker.",
+					"file": "docs/integrations/tanstack-start.md",
+					"line": 156,
+					"source": "::: code-group"
+				}
+			]
+		},
+		{
+			"source": "docs/integrations/vercel.md",
+			"output": "src/content/docs/integrations/vercel.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "unclosed-container",
+					"message": "Container \"::: code-group\" is never closed; it was closed at the end of its parent block.",
+					"file": "docs/integrations/vercel.md",
+					"line": 76,
+					"source": "::: code-group"
+				},
+				{
+					"severity": "info",
+					"code": "code-group-content",
+					"message": "Non-code content inside \"::: code-group\" is rendered after the tabs (it is always visible upstream as well).",
+					"file": "docs/integrations/vercel.md",
+					"line": 76
+				}
+			]
+		},
+		{
+			"source": "docs/internal/jit-compiler.md",
+			"output": "src/content/docs/internal/jit-compiler.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/internal/jit-compiler.md",
+					"line": 17,
+					"source": "<script setup>\nimport JIT from './jit-compiler/jit.vue'\nimport Benchmark from '../components/fern/benchmark.vue'\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Benchmark> (interactive benchmark chart) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/internal/jit-compiler.md",
+					"line": 27,
+					"source": "<Benchmark />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<JIT> (interactive visualization) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/internal/jit-compiler.md",
+					"line": 152,
+					"source": "<JIT />"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/integrations/cloudflare-workers\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/internal/jit-compiler.md",
+					"line": 128,
+					"source": "/integrations/cloudflare-workers"
+				}
+			]
+		},
+		{
+			"source": "docs/key-concept.md",
+			"output": "src/content/docs/key-concept.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/key-concept.md",
+					"line": 17,
+					"source": "<script setup>\nimport { Elysia } from 'elysia'\nimport Playground from './components/nearl/playground.vue'\nimport AronaBanner from './components/arona/arona-banner.vue'\n\nconst profile1 = new Elysia()\n\t.onBeforeHandle(({ status }) => status(401))\n\t.get('/profile', ({ status }) => status(401))\n\nconst demo1 = new Elysia()\n\t.use(profile1)\n\t// This will NOT have sign in check\n\t.patch('/rename', () => 'Updated!')\n\nconst profile2 = new Elysia()\n\t.onBeforeHandle({ as: 'global' }, ({ status }) => status(401))\n\t.get('/profile', ({ status }) => status(401))\n\nconst demo2 = new Elysia()\n\t.use(profile2)\n\t// This will NOT have sign in check\n\t.patch('/rename', ({ status }) => status(401))\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "component-removed",
+					"message": "\"Ask Elysia\" AI assistant banner removed (a service of the official site).",
+					"file": "docs/key-concept.md",
+					"line": 47,
+					"source": "<AronaBanner />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/key-concept.md",
+					"line": 69,
+					"source": "<!-- Do not at 'the' before \"profile\" and \"app\" here - @Saltyaom -->"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/key-concept.md",
+					"line": 72,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/key-concept.md",
+					"line": 100,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/key-concept.md",
+					"line": 106,
+					"source": "<!--## Everything is a component\n\nEvery Elysia instance is a component.\n\nA component is a plugin that could plug into other instances.\n\nIt could be a router, a store, a service, or anything else.\n\n```ts\nimport { Elysia } from 'elysia'\n\nconst store = new Elysia()\n\t.state({ visitor: 0 })\n\nconst router = new Elysia()\n\t.use(store)\n\t.get('/increase', ({ store }) => store.visitor++)\n\nconst app = new Elysia()\n\t.use(router)\n\t.get('/', ({ store }) => store)\n\t.listen(3000)\n```\n\nThis forces you to break down your application into small pieces, making it easy for you to add or remove features.\n\nLearn more about this in [plugin](/essential/plugin.html).-->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "5 Twoslash code block(s) rendered as static code (4 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/key-concept.md"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#plugin-deduplication\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/key-concept.md",
+					"line": 254,
+					"source": "/essential/plugin.html#plugin-deduplication"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/configuration.md",
+			"output": "src/content/docs/patterns/configuration.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/patterns/configuration.md",
+					"line": 550,
+					"source": "<!-- <br />\n\n# Experimental\n\nTry out an experimental feature which might be available in the future version of Elysia. -->"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#plugin-deduplication\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/configuration.md",
+					"line": 132,
+					"source": "/essential/plugin.html#plugin-deduplication"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#plugin-deduplication\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/configuration.md",
+					"line": 259,
+					"source": "/essential/plugin.html#plugin-deduplication"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/cookie.md",
+			"output": "src/content/docs/patterns/cookie.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/cookie.md",
+					"line": 17,
+					"source": "<script setup lang=\"ts\">\nimport TutorialBadge from '../components/arona/badge.vue'\n</script>"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/deploy.md",
+			"output": "src/content/docs/patterns/deploy.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/patterns/error-handling.md",
+			"output": "src/content/docs/patterns/error-handling.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/error-handling.md",
+					"line": 17,
+					"source": "<script setup>\nimport { Elysia, t, ValidationError, validationDetail } from 'elysia'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\nimport Playground from '../components/nearl/playground.vue'\nimport DocLink from '../components/xiao/doc-link/doc-link.vue'\n\nconst demo = new Elysia()\n\t.onError(({ code }) => {\n\t\tif (code === 418) return 'caught'\n\t})\n    .get('/throw', ({ error }) => {\n\t\t// This will be caught by onError\n\t\tthrow error(418)\n\t})\n\t.get('/return', ({ status }) => {\n\t\t// This will NOT be caught by onError\n\t\treturn status(418)\n\t})\n\nconst demo2 = new Elysia()\n    .get('/string', () => {\n        throw new ValidationError(\n            'params',\n            t.Object({\n                id: t.Numeric({\n                error: 'id must be a number'\n                })\n            }),\n            {\n                id: 'string'\n            }\n        )\n    })\n\t.get('/1', () => 1)\n\nconst demo3 = new Elysia()\n    .get('/string', () => {\n        throw new ValidationError(\n            'params',\n            t.Object({\n                id: t.Numeric({\n                error: validationDetail('id must be a number')\n                })\n            }),\n            {\n                id: 'string'\n            }\n        )\n    })\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/error-handling.md",
+					"line": 106,
+					"source": "<Playground\n\t:elysia=\"demo2\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/error-handling.md",
+					"line": 130,
+					"source": "<Playground\n\t:elysia=\"demo3\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/error-handling.md",
+					"line": 314,
+					"source": "<Playground\n    :elysia=\"demo\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#allow-unsafe-validation-details\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/error-handling.md",
+					"line": 175,
+					"source": "/patterns/configuration#allow-unsafe-validation-details"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/extends-context.md",
+			"output": "src/content/docs/patterns/extends-context.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/extends-context.md",
+					"line": 17,
+					"source": "<script setup>\nimport Playground from '../components/nearl/playground.vue'\nimport Tab from '../components/fern/tab.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\nimport { Elysia } from 'elysia'\n\nconst handler1 = new Elysia()\n    .get('/', ({ path }) => path)\n\nconst handler2 = new Elysia()\n    .get('/', ({ status }) => status(418, \"Kirifuji Nagisa\"))\n\nconst demo1 = new Elysia()\n    .state('version', 1)\n    .get('/a', ({ store: { version } }) => version)\n    .get('/b', ({ store }) => store)\n    .get('/c', () => 'still ok')\n\nconst demo2 = new Elysia()\n    // @ts-expect-error\n    .get('/error', ({ store }) => store.counter)\n    .state('version', 1)\n    .get('/', ({ store: { version } }) => version)\n\nconst demo3 = new Elysia()\n    .derive(({ headers }) => {\n        const auth = headers['authorization']\n\n        return {\n            bearer: auth?.startsWith('Bearer ') ? auth.slice(7) : null\n        }\n    })\n    .get('/', ({ bearer }) => bearer ?? '12345')\n\nconst demo4 = new Elysia()\n    .state('counter', 0)\n    .state('version', 1)\n    .state(({ version, ...store }) => ({\n        ...store,\n        elysiaVersion: 1\n    }))\n    // ✅ Create from state remap\n    .get('/elysia-version', ({ store }) => store.elysiaVersion)\n    // ❌ Excluded from state remap\n    .get('/version', ({ store }) => store.version)\n\nconst setup = new Elysia({ name: 'setup' })\n    .decorate({\n        argon: 'a',\n        boron: 'b',\n        carbon: 'c'\n    })\n\nconst demo5 = new Elysia()\n    .use(\n        setup\n            .prefix('decorator', 'setup')\n    )\n    .get('/', ({ setupCarbon }) => setupCarbon)\n\nconst demo6 = new Elysia()\n    .state('counter', 0)\n    // ✅ Using reference, value is shared\n    .get('/', ({ store }) => store.counter++)\n    // ❌ Creating a new variable on primitive value, the link is lost\n    .get('/error', ({ store: { counter } }) => counter)\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 131,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 153,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 209,
+					"source": "<Playground :elysia=\"demo6\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 265,
+					"source": "<Playground :elysia=\"demo3\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 401,
+					"source": "<Playground :elysia=\"demo4\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/patterns/extends-context.md",
+					"line": 433,
+					"source": "<Playground :elysia=\"demo5\" />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/patterns/extends-context.md",
+					"line": 457,
+					"source": "<!--## TypeScript\nElysia automatically type context base on various of factors like store, decorators, schema.\n\nIt's recommended to leave Elysia to type context instead of manually define one.\n\nHowever, Elysia also offers some utility type to help you define a handler type.\n- [InferContext](#infercontext)\n- [InferHandle](#inferhandler)\n\n### InferContext\nInfer context is a utility type to help you define a context type based on Elysia instance.\n\n```typescript\nimport { Elysia, type InferContext } from 'elysia'\n\nconst setup = new Elysia()\n\t.state('a', 'a')\n\t.decorate('b', 'b')\n\ntype Context = InferContext<typeof setup>\n\nconst handler = ({ store }: Context) => store.a\n```\n\n### InferHandler\nInfer handler is a utility type to help you define a handler type based on Elysia instance, path, and schema.\n\n```typescript\nimport { Elysia, type InferHandler } from 'elysia'\n\nconst setup = new Elysia()\n\t.state('a', 'a')\n\t.decorate('b', 'b')\n\ntype Handler = InferHandler<\n\t// Elysia instance to based on\n\ttypeof setup,\n\t// path\n\t'/path',\n\t// schema\n\t{\n\t\tbody: string\n\t\tresponse: {\n\t\t\t200: string\n\t\t}\n\t}\n>\n\nconst handler: Handler = ({ body }) => body\n\nconst app = new Elysia()\n\t.get('/', handler)\n```\n\nUnlike `InferContext`, `InferHandler` requires a path and schema to define a handler type and can safely ensure type safety of a return type.-->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "3 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/patterns/extends-context.md"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/fullstack-dev-server.md",
+			"output": "src/content/docs/patterns/fullstack-dev-server.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#tailwind\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/fullstack-dev-server.md",
+					"line": 106,
+					"source": "#tailwind"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/macro.md",
+			"output": "src/content/docs/patterns/macro.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/macro.md",
+					"line": 17,
+					"source": "<script setup>\nimport Tab from '../components/fern/tab.vue'\nimport TutorialBadge from '../components/arona/badge.vue'\n\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/patterns/macro.md",
+					"line": 81,
+					"source": "<!--## API\n\n**macro** has the same API as hook.\n\nIn the previous example, we created a **hi** macro accepting a **string**.\n\nWe then assigned **hi** to **\"Elysia\"**, the value was then sent back to the **hi** function, and then the function added a new event to **beforeHandle** stack.\n\nWhich is an equivalent of pushing the function to **beforeHandle** as follows:\n\n```typescript\nimport { Elysia } from 'elysia'\n\nconst app = new Elysia()\n    .get('/', () => 'hi', {\n        beforeHandle() {\n            console.log('Elysia')\n        }\n    })\n```\n\n**macro** shine when a logic is more complex than accepting a new function, for example, creating an authorization layer for each route.\n\n```typescript twoslash\n// @filename: auth.ts\nimport { Elysia } from 'elysia'\n\nexport const auth = new Elysia()\n    .macro({\n    \tisAuth: {\n      \t\tresolve() {\n     \t\t\treturn {\n         \t\t\tuser: 'saltyaom'\n          \t\t}\n      \t\t}\n        },\n        role(role: 'admin' | 'user') {\n        \treturn {}\n        }\n    })\n\n// @filename: index.ts\n// ---cut---\nimport { Elysia } from 'elysia'\nimport { auth } from './auth'\n\nconst app = new Elysia()\n    .use(auth)\n    .get('/', ({ user }) => user, {\n                          // ^?\n        isAuth: true,\n        role: 'admin'\n    })\n```\n\nMacro can also register a new property to the context, allowing us to access the value directly from the context.\n\nThe field can accept anything ranging from string to function, allowing us to create a custom life cycle event.\n\n::: note\n**macro** will be executed in order from top-to-bottom according to the definition in the hook, ensuring that the stack is handled in the correct order.\n:::-->"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "5 Twoslash code block(s) rendered as static code (5 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/patterns/macro.md"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/mount.md",
+			"output": "src/content/docs/patterns/mount.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/mount.md",
+					"line": 17,
+					"source": "<script setup lang=\"ts\">\nimport TutorialBadge from '../components/arona/badge.vue'\n</script>"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/openapi.md",
+			"output": "src/content/docs/patterns/openapi.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/openapi.md",
+					"line": 17,
+					"source": "<script setup>\nimport Tab from '../components/fern/tab.vue'\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#path\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/openapi.md",
+					"line": 473,
+					"source": "#path"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#documentationinfo\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/openapi.md",
+					"line": 490,
+					"source": "#documentationinfo"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/opentelemetry.md",
+			"output": "src/content/docs/patterns/opentelemetry.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/patterns/trace.md",
+			"output": "src/content/docs/patterns/trace.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#events\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/trace.md",
+					"line": 53,
+					"source": "/essential/life-cycle#events"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/typebox.md",
+			"output": "src/content/docs/patterns/typebox.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/typebox.md",
+					"line": 17,
+					"source": "<script setup>\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#on-error\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/typebox.md",
+					"line": 60,
+					"source": "/essential/life-cycle.html#on-error"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#object-string\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/typebox.md",
+					"line": 501,
+					"source": "#object-string"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#boolean-string\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/patterns/typebox.md",
+					"line": 504,
+					"source": "#boolean-string"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/typescript.md",
+			"output": "src/content/docs/patterns/typescript.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/typescript.md",
+					"line": 17,
+					"source": "<script setup>\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\nimport Tab from '../components/fern/tab.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "5 Twoslash code block(s) rendered as static code (5 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/patterns/typescript.md"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/unit-test.md",
+			"output": "src/content/docs/patterns/unit-test.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/patterns/unit-test.md",
+					"line": 17,
+					"source": "<script setup lang=\"ts\">\nimport TutorialBadge from '../components/arona/badge.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "1 Twoslash code block(s) rendered as static code (1 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/patterns/unit-test.md"
+				}
+			]
+		},
+		{
+			"source": "docs/patterns/websocket.md",
+			"output": "src/content/docs/patterns/websocket.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/bearer.md",
+			"output": "src/content/docs/plugins/bearer.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/cors.md",
+			"output": "src/content/docs/plugins/cors.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/cron.md",
+			"output": "src/content/docs/plugins/cron.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/graphql-apollo.md",
+			"output": "src/content/docs/plugins/graphql-apollo.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/graphql-yoga.md",
+			"output": "src/content/docs/plugins/graphql-yoga.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/html.md",
+			"output": "src/content/docs/plugins/html.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "twoslash-rendered-static",
+					"message": "2 Twoslash code block(s) rendered as static code (0 type-query marker(s) removed; hover type information is not reproduced).",
+					"file": "docs/plugins/html.md"
+				}
+			]
+		},
+		{
+			"source": "docs/plugins/jwt.md",
+			"output": "src/content/docs/plugins/jwt.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/openapi.md",
+			"output": "src/content/docs/plugins/openapi.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/plugins/openapi.md",
+					"line": 17,
+					"source": "<script setup lang=\"ts\">\nimport TutorialBadge from '../components/arona/badge.vue'\n</script>"
+				}
+			]
+		},
+		{
+			"source": "docs/plugins/opentelemetry.md",
+			"output": "src/content/docs/plugins/opentelemetry.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/overview.md",
+			"output": "src/content/docs/plugins/overview.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/server-timing.md",
+			"output": "src/content/docs/plugins/server-timing.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/static.md",
+			"output": "src/content/docs/plugins/static.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/plugins/swagger.md",
+			"output": "src/content/docs/plugins/swagger.mdx",
+			"status": "imported",
+			"issues": []
+		},
+		{
+			"source": "docs/quick-start.md",
+			"output": "src/content/docs/quick-start.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/quick-start.md",
+					"line": 17,
+					"source": "<script setup>\nimport Card from './components/nearl/card.vue'\nimport Deck from './components/nearl/card-deck.vue'\nimport Tab from './components/fern/tab.vue'\n</script>"
+				}
+			]
+		},
+		{
+			"source": "docs/table-of-content.md",
+			"output": "src/content/docs/table-of-content.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/table-of-content.md",
+					"line": 17,
+					"source": "<script setup>\n    import Card from './components/nearl/card.vue'\n    import Deck from './components/nearl/card-deck.vue'\n\n\timport TutorialLink from './components/xiao/tutorial-link.vue'\n\timport AronaBanner from './components/arona/arona-banner.vue'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "component-converted",
+					"message": "Interactive tutorial banner converted to a link card to the official interactive tutorial.",
+					"file": "docs/table-of-content.md",
+					"line": 29,
+					"source": "<TutorialLink />"
+				},
+				{
+					"severity": "info",
+					"code": "component-removed",
+					"message": "\"Ask Elysia\" AI assistant banner removed (a service of the official site).",
+					"file": "docs/table-of-content.md",
+					"line": 30,
+					"source": "<AronaBanner />"
+				},
+				{
+					"severity": "info",
+					"code": "html-comment-removed",
+					"message": "HTML comment removed (not rendered upstream).",
+					"file": "docs/table-of-content.md",
+					"line": 32,
+					"source": "<!--### Prerequisite Knowledge\nAlthough Elysia's documentation is designed to be beginner-friendly, we need to establish a baseline so that the docs can stay focused on Elysia's functionality. We will provide links to relevant documentation whenever we introduce a new concept.\n\nTo get the most out of our documentation, it's recommended that you have a basic understanding of Node.js and basic HTTP.-->"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 58,
+					"source": "/llms.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms-full.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 61,
+					"source": "/llms-full.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-express\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 71,
+					"source": "/migrate/from-express"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-fastify\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 74,
+					"source": "/migrate/from-fastify"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-hono\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 77,
+					"source": "/migrate/from-hono"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-trpc\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/table-of-content.md",
+					"line": 80,
+					"source": "/migrate/from-trpc"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/features/end-to-end-type-safety/index.md",
+			"output": "src/content/docs/tutorial/features/end-to-end-type-safety/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/features/end-to-end-type-safety/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport { Code } from 'lucide-vue-next'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "icon-converted",
+					"message": "Lucide \"Code\" icon replaced with the text \"</>\".",
+					"file": "docs/tutorial/features/end-to-end-type-safety/index.md",
+					"line": 61
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/features/end-to-end-type-safety/index.md",
+					"line": 32,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/eden/overview\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/features/mount/index.md",
+			"output": "src/content/docs/tutorial/features/mount/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/features/mount/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/features/mount/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/mount\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/features/openapi/index.md",
+			"output": "src/content/docs/tutorial/features/openapi/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/features/openapi/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/features/openapi/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/openapi\">"
+				},
+				{
+					"severity": "info",
+					"code": "link-to-upstream",
+					"message": "Link to a page that is not imported (playground/preview.md) points to the official site.",
+					"file": "docs/tutorial/features/openapi/index.md",
+					"line": 56,
+					"source": "/playground/preview"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/features/unit-test/index.md",
+			"output": "src/content/docs/tutorial/features/unit-test/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/features/unit-test/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport { Code } from 'lucide-vue-next'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "icon-converted",
+					"message": "Lucide \"Code\" icon replaced with the text \"</>\".",
+					"file": "docs/tutorial/features/unit-test/index.md",
+					"line": 115
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/features/unit-test/index.md",
+					"line": 32,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/unit-test\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/encapsulation/index.md",
+			"output": "src/content/docs/tutorial/getting-started/encapsulation/index.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/encapsulation/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n\nconst profile1 = new Elysia()\n\t.onBeforeHandle(\n\t\t({ query: { name }, status }) => {\n\t\t\tif(!name)\n\t\t\t\treturn status(401)\n\t\t}\n\t)\n\t.get('/profile', () => 'Hi!')\n\nconst demo1 = new Elysia()\n\t.use(profile1)\n\t.patch('/rename', () => 'Ok! XD')\n\nconst profile2 = new Elysia()\n\t.onBeforeHandle(\n\t\t{ as: 'global' },\n\t\t({ query: { name }, status }) => {\n\t\t\tif(!name)\n\t\t\t\treturn status(401)\n\t\t}\n\t)\n\t.get('/profile', ({ status }) => status(401))\n\nconst demo2 = new Elysia()\n\t.use(profile2)\n\t.patch('/rename', () => 'Ok! XD')\n\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/tutorial/getting-started/encapsulation/index.md",
+					"line": 84,
+					"source": "<Playground :elysia=\"demo1\" />"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/tutorial/getting-started/encapsulation/index.md",
+					"line": 123,
+					"source": "<Playground :elysia=\"demo2\" />"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/encapsulation/index.md",
+					"line": 58,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/plugin.html#scope\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/guard/index.md",
+			"output": "src/content/docs/tutorial/getting-started/guard/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/guard/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/guard/index.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/plugin#guard\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/handler-and-context/index.md",
+			"output": "src/content/docs/tutorial/getting-started/handler-and-context/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/handler-and-context/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport { Cog } from 'lucide-vue-next'\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "icon-converted",
+					"message": "Lucide \"Cog\" icon replaced with the Starlight \"setting\" icon.",
+					"file": "docs/tutorial/getting-started/handler-and-context/index.md",
+					"line": 86
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/handler-and-context/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/handler#context\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/life-cycle/index.md",
+			"output": "src/content/docs/tutorial/getting-started/life-cycle/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/life-cycle/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/life-cycle/index.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/life-cycle\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/plugin/index.md",
+			"output": "src/content/docs/tutorial/getting-started/plugin/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/plugin/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/plugin/index.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/plugin\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/status-and-headers/index.md",
+			"output": "src/content/docs/tutorial/getting-started/status-and-headers/index.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/status-and-headers/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/status-and-headers/index.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/handler#status-and-headers\">"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#status-and-headers\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/getting-started/status-and-headers/index.md",
+					"line": 29,
+					"source": "/essential/handler#status-and-headers"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/validation/index.md",
+			"output": "src/content/docs/tutorial/getting-started/validation/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/validation/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/validation/index.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/validation\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/getting-started/your-first-route/index.md",
+			"output": "src/content/docs/tutorial/getting-started/your-first-route/index.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/getting-started/your-first-route/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n\nconst demo3 = new Elysia()\n\t  .get('/id', () => `id: undefined`)\n    .get('/id/:id', ({ params: { id } }) => `id: ${id}`)\n\nconst demo6 = new Elysia()\n    .get('/id/:id', ({ params: { id } }) => id)\n    .get('/id/123', '123')\n    .get('/id/anything', 'anything')\n    .get('/id', ({ status }) => status(404))\n    .get('/id/anything/test', ({ status }) => status(404))\n\nconst demo9 = new Elysia()\n    .get('/id/:id', ({ params: { id } }) => id)\n    .get('/id/123', '123')\n    .get('/id/anything', 'anything')\n    .get('/id', ({ status }) => status(404))\n    .get('/id/:id/:name', ({ params: { id, name } }) => id + '/' + name)\n</script>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/tutorial/getting-started/your-first-route/index.md",
+					"line": 111,
+					"source": "<Playground\n  :elysia=\"demo6\"\n  :alias=\"{\n    '/id/:id': '/id/1'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: '1'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/tutorial/getting-started/your-first-route/index.md",
+					"line": 136,
+					"source": "<Playground\n  :elysia=\"demo3\"\n  :alias=\"{\n    '/id/:id': '/id/1'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: 'id 1'\n    },\n  }\"\n/>"
+				},
+				{
+					"severity": "warning",
+					"code": "interactive-component",
+					"message": "<Playground> (interactive example) requires the official site's Vue runtime; replaced with a link to the original page. The original markup is preserved in an MDX comment.",
+					"file": "docs/tutorial/getting-started/your-first-route/index.md",
+					"line": 164,
+					"source": "<Playground\n  :elysia=\"demo9\"\n  :alias=\"{\n    '/id/:id': '/id/1',\n    '/id/:id/:name': '/id/anything/rest'\n  }\"\n  :mock=\"{\n    '/id/:id': {\n      GET: '1'\n    },\n    '/id/:id/:name': {\n      GET: 'anything/rest'\n    }\n  }\"\n/>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/getting-started/your-first-route/index.md",
+					"line": 48,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/route\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/index.md",
+			"output": "src/content/docs/tutorial/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport Editor from '../components/xiao/playground/playground.vue'\n\nimport { Bookmark } from 'lucide-vue-next'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "icon-converted",
+					"message": "Lucide \"Bookmark\" icon replaced with the Starlight \"open-book\" icon.",
+					"file": "docs/tutorial/index.md",
+					"line": 36
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/index.md",
+					"line": 28,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/at-glance\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/cookie/index.md",
+			"output": "src/content/docs/tutorial/patterns/cookie/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/cookie/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/cookie/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/cookie\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/error-handling/index.md",
+			"output": "src/content/docs/tutorial/patterns/error-handling/index.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/error-handling/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/error-handling/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/error-handling\">"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/error-handling.html#custom-status-code\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/patterns/error-handling/index.md",
+					"line": 106,
+					"source": "/error-handling.html#custom-status-code"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/error-handling.html#custom-error-response\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/patterns/error-handling/index.md",
+					"line": 127,
+					"source": "/error-handling.html#custom-error-response"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/extends-context/index.md",
+			"output": "src/content/docs/tutorial/patterns/extends-context/index.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/extends-context\">"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#decorate\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 37,
+					"source": "/essential/handler.html#decorate"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#state\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 38,
+					"source": "/essential/handler.html#state"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 39,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#derive\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 40,
+					"source": "/essential/handler.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#decorate\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 63,
+					"source": "/essential/handler.html#decorate"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#state\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 80,
+					"source": "/essential/handler.html#state"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#decorate\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 84,
+					"source": "/essential/handler.html#decorate"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 86,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#derive\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 86,
+					"source": "/essential/handler.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 100,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#derive\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 100,
+					"source": "/essential/handler.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#derive\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 103,
+					"source": "/essential/handler.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 104,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 106,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 106,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#state\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 109,
+					"source": "/essential/handler.html#state"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#decorate\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 109,
+					"source": "/essential/handler.html#decorate"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 113,
+					"source": "/essential/handler.html#resolve"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#derive\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 113,
+					"source": "/essential/handler.html#derive"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-anchor",
+					"message": "Anchor \"#resolve\" does not match any heading of the target page; kept unchanged.",
+					"file": "docs/tutorial/patterns/extends-context/index.md",
+					"line": 140,
+					"source": "/essential/handler.html#resolve"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/macro/index.md",
+			"output": "src/content/docs/tutorial/patterns/macro/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/macro/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/macro/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/macro\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/standalone-schema/index.md",
+			"output": "src/content/docs/tutorial/patterns/standalone-schema/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/standalone-schema/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/standalone-schema/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/essential/validation#standalone\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/patterns/validation-error/index.md",
+			"output": "src/content/docs/tutorial/patterns/validation-error/index.mdx",
+			"status": "imported",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/patterns/validation-error/index.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport { Elysia } from 'elysia'\n\nimport Editor from '../../../components/xiao/playground/playground.vue'\nimport DocLink from '../../../components/xiao/doc-link/doc-link.vue'\nimport Playground from '../../../components/nearl/playground.vue'\n\nimport { code, testcases } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/patterns/validation-error/index.md",
+					"line": 30,
+					"source": "<Editor :code=\"code\" :testcases=\"testcases\" doc=\"/patterns/error-handling#custom-validation-message\">"
+				}
+			]
+		},
+		{
+			"source": "docs/tutorial/whats-next.md",
+			"output": "src/content/docs/tutorial/whats-next.mdx",
+			"status": "imported-with-warnings",
+			"issues": [
+				{
+					"severity": "info",
+					"code": "vue-sfc-block-removed",
+					"message": "<script> block removed (Vue single-file-component code, not documentation content).",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 20,
+					"source": "<script setup lang=\"ts\">\nimport Editor from '../components/xiao/playground/playground.vue'\n\nimport Card from '../components/nearl/card.vue'\nimport Deck from '../components/nearl/card-deck.vue'\n\nimport { code } from './data'\n</script>"
+				},
+				{
+					"severity": "info",
+					"code": "tutorial-static",
+					"message": "Interactive tutorial page imported as text: the in-browser editor, starter code and test cases are only available on the official site.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 29,
+					"source": "<Editor :code=\"code\">"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 51,
+					"source": "/llms.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms-full.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 51,
+					"source": "/llms-full.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 54,
+					"source": "/llms.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/llms-full.txt\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 57,
+					"source": "/llms-full.txt"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-express\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 83,
+					"source": "/migrate/from-express"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-fastify\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 86,
+					"source": "/migrate/from-fastify"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-hono\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 89,
+					"source": "/migrate/from-hono"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/migrate/from-trpc\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 92,
+					"source": "/migrate/from-trpc"
+				},
+				{
+					"severity": "warning",
+					"code": "broken-link",
+					"message": "Link target \"/patterns/deploys\" does not exist upstream; it points to the official site unchanged.",
+					"file": "docs/tutorial/whats-next.md",
+					"line": 136,
+					"source": "/patterns/deploys"
+				}
+			]
+		}
+	],
+	"conflicts": [],
+	"skipped": [
+		{
+			"source": "docs/blog.md",
+			"reason": "Blog index rendered by a custom Vue component (<Blogs>). The imported posts are listed in the \"Release Notes\" and \"Articles\" sidebar groups instead."
+		},
+		{
+			"source": "docs/illust.md",
+			"reason": "Illustration gallery (<Yonkoma>). Artwork, not technical documentation; subject to separate artwork rights."
+		},
+		{
+			"source": "docs/index.md",
+			"reason": "Official marketing landing page composed entirely of custom Vue components (<Fern>). Replaced by the independent homepage of this site."
+		},
+		{
+			"source": "docs/playground/index.md",
+			"reason": "In-browser playground application (Monaco editor + Elysia runtime). It has no static documentation content."
+		},
+		{
+			"source": "docs/playground/preview.md",
+			"reason": "In-browser playground application (Monaco editor + Elysia runtime). It has no static documentation content."
+		}
+	],
+	"ignoredFiles": [
+		{
+			"source": "docs/internal/jit-compiler/jit.vue",
+			"reason": "Vue component used by a page (not a page itself)"
+		},
+		{
+			"source": "docs/migrate/from-express.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-fastify.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-hono.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/from-trpc.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/migrate/index.txt",
+			"reason": "Excluded from the upstream build (srcExclude: migrate/*); Plain-text file; not part of the upstream build"
+		},
+		{
+			"source": "docs/tailwind.css",
+			"reason": "Stylesheet of the upstream theme"
+		},
+		{
+			"source": "docs/tutorial/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/end-to-end-type-safety/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/mount/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/openapi/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/features/unit-test/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/encapsulation/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/guard/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/handler-and-context/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/life-cycle/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/plugin/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/status-and-headers/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/validation/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/getting-started/your-first-route/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/cookie/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/error-handling/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/extends-context/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/macro/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/standalone-schema/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		},
+		{
+			"source": "docs/tutorial/patterns/validation-error/data.ts",
+			"reason": "Script module (e.g. interactive tutorial starter code and test cases)"
+		}
+	],
+	"assetsNotMirrored": [
+		{
+			"source": "docs/public/blog/elysia-11/ely.webp",
+			"status": "excluded",
+			"reason": "Personal photograph of a person",
+			"referencedBy": [
+				"docs/blog/elysia-11.md"
+			]
+		},
+		{
+			"source": "docs/public/blog/elysia-14/elysia-supersymmetry.webp",
+			"status": "excluded",
+			"reason": "Character artwork",
+			"referencedBy": [
+				"docs/blog/elysia-14.md"
+			]
+		}
+	]
+}

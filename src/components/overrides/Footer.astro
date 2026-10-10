@@ -1,0 +1,44 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { SITE } from '../../config/site';
+import SourceNotice from '../SourceNotice.astro';
+---
+
+<SourceNotice />
+<Default />
+<div class="site-disclaimer">
+	<p>{SITE.disclaimer}</p>
+	<ul class="site-disclaimer__links">
+		<li><a href="/project/attribution/">Attribution &amp; licensing</a></li>
+		<li><a href="/project/about/">About this project</a></li>
+		<li><a href={SITE.official.site}>Official ElysiaJS site</a></li>
+		<li><a href={SITE.repository}>Source on GitHub</a></li>
+	</ul>
+</div>
+
+<style>
+	.site-disclaimer {
+		margin-top: 2.5rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-xs);
+		text-align: center;
+	}
+	.site-disclaimer__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.25rem;
+		justify-content: center;
+		margin: 0.5rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	.site-disclaimer a {
+		color: var(--sl-color-gray-2);
+	}
+	.site-disclaimer a:hover,
+	.site-disclaimer a:focus-visible {
+		color: var(--sl-color-white);
+	}
+</style>

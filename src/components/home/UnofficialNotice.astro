@@ -1,0 +1,38 @@
+---
+/** Unobtrusive disclosure on the homepage. */
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<div class="unofficial-notice not-content" role="note">
+	<Icon name="information" size="1.25em" />
+	<p>
+		<strong>Unofficial documentation.</strong> Elysia Reference is an independent community project, not affiliated with or
+		endorsed by the ElysiaJS maintainers. Its documentation pages are adapted from the{' '}
+		<a href="https://elysiajs.com">official ElysiaJS documentation</a> under the MIT License — see{' '}
+		<a href="/project/attribution/">Attribution &amp; licensing</a>.
+	</p>
+</div>
+
+<style>
+	.unofficial-notice {
+		display: flex;
+		gap: 0.75rem;
+		align-items: flex-start;
+		padding: 0.875rem 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.unofficial-notice :global(svg) {
+		flex-shrink: 0;
+		margin-top: 0.125rem;
+		color: var(--sl-color-gray-3);
+	}
+	.unofficial-notice p {
+		margin: 0;
+	}
+	.unofficial-notice strong {
+		color: var(--sl-color-white);
+	}
+</style>

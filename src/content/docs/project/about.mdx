@@ -1,0 +1,55 @@
+---
+title: About Elysia Reference
+description: What Elysia Reference is, how its content is produced, how it relates to the official ElysiaJS documentation, and where to report problems.
+---
+
+Elysia Reference is an **unofficial, independent, community-maintained** documentation site for
+[ElysiaJS](https://elysiajs.com). It is not affiliated with or endorsed by the ElysiaJS maintainers. For the
+authoritative documentation, use [elysiajs.com](https://elysiajs.com).
+
+## Goals
+
+- Preserve the technical content of the official documentation exactly.
+- Make that content easier to navigate: task-oriented sidebar groups, breadcrumbs, an on-page table of contents,
+  full-text search, previous/next links, and a Markdown export of every page.
+- Stay in sync with the official documentation through an automated process that a person reviews.
+- Stay cheap to run: a static site with no server, database, accounts, analytics or third-party scripts.
+
+## Where the content comes from
+
+Almost every page is imported from the official documentation repository,
+[elysiajs/documentation](https://github.com/elysiajs/documentation), by a conversion pipeline that turns
+VitePress Markdown into Starlight MDX. The conversion is mechanical: it changes syntax (containers, tabs, cards,
+code-block options, links), never wording, API descriptions or code examples.
+
+Each imported page shows the documentation version it belongs to, links to its counterpart on the official site, and
+ends with a source note naming the exact upstream file and commit.
+
+Locally written pages are limited to the homepage, this "About This Project" section and the
+[API reference overview](/reference/).
+
+### What cannot be reproduced
+
+The official site has interactive features that need its own runtime: in-page playgrounds, charts, the in-browser
+tutorial editor, and Twoslash type information shown on hover. Pages that contain them link to the official page at
+that spot instead. Tutorial lessons are available as text, with the answers in collapsible sections. The
+[migration status](/project/migration-status/) page lists every page affected.
+
+## Synchronization
+
+A scheduled job checks the official repository every week. When the documentation changed, it converts the new
+version and opens a pull request with a change summary. Nothing is published until a maintainer reviews and merges
+that pull request. If the conversion fails, the job fails visibly instead of publishing partial content.
+
+## Reporting problems
+
+- **Errors in the documentation itself** (wrong or outdated information): report them to the
+  [official documentation repository](https://github.com/elysiajs/documentation/issues) so they are fixed for
+  everyone. Each imported page's "Suggest a change to the official docs" link opens the upstream source file.
+- **Problems with this site** (conversion mistakes, broken navigation, accessibility issues): open an issue in
+  [this project's repository](https://github.com/iceman951/elysia-reference/issues).
+
+## Licenses
+
+- Imported documentation: MIT License, Copyright 2022 saltyAom — see [Attribution & licensing](/project/attribution/).
+- This project's source code and locally written pages: MIT License, see the `LICENSE` file in the repository.

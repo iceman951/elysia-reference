@@ -1,0 +1,84 @@
+---
+/**
+ * Metadata row under the page title: applicable version, release information,
+ * link to the official page, and Markdown export.
+ */
+import { Icon } from '@astrojs/starlight/components';
+import { getVersion } from '../config/versions';
+import CopyMarkdown from './CopyMarkdown.astro';
+
+const { entry, id } = Astro.locals.starlightRoute;
+const { data } = entry;
+const version = getVersion(data.docVersion);
+const release = data.release;
+const upstream = data.upstream;
+const isTutorial = id === 'tutorial' || id.startsWith('tutorial/');
+const releaseDate = release?.date
+	? new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZone: 'UTC' }).format(release.date)
+	: undefined;
+---
+
+{
+	data.template !== 'splash' && (
+		<div class="page-meta not-content">
+			{version && (
+				<a class="meta-chip" href="/project/versions/" title="Documentation set this page belongs to">
+					{version.label}
+				</a>
+			)}
+			{release && (
+				<span class="meta-chip">{release.version ? `Release notes · Elysia ${release.version}` : 'Article'}</span>
+			)}
+			{isTutorial && <span class="meta-chip">Tutorial (text-only)</span>}
+			{releaseDate && release?.date && <time datetime={release.date.toISOString().slice(0, 10)}>{releaseDate}</time>}
+			{release?.author && <span>by {release.author}</span>}
+			{upstream && (
+				<a class="meta-action" href={upstream.url}>
+					Official page
+					<Icon name="external" size="0.9em" class="meta-icon" />
+				</a>
+			)}
+			<CopyMarkdown slug={id === 'index' ? '' : id} />
+		</div>
+	)
+}
+
+<style>
+	.page-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+		align-items: center;
+		margin-top: 0.75rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.meta-chip {
+		padding: 0.0625rem 0.5rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.375rem;
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	a.meta-chip:hover,
+	a.meta-chip:focus-visible {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+	}
+	.meta-action {
+		display: inline-flex;
+		gap: 0.25rem;
+		align-items: center;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--sl-color-text-accent);
+		font: inherit;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.meta-action:hover,
+	.meta-action:focus-visible {
+		text-decoration: underline;
+	}
+</style>

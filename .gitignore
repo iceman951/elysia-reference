@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Upstream checkout used by the docs import pipeline (see docs/CONTENT_PIPELINE.md)
+.cache/
+
+# Logs and local environment
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.wrangler/
+
+# Per-run reports (CI artifacts / pull request bodies); the migration report is committed
+reports/check-report.md
+reports/examples-smoke.md
+reports/sync-summary.md

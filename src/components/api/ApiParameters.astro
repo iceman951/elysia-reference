@@ -1,0 +1,49 @@
+---
+/** Parameter table for API reference entries. Descriptions accept inline HTML. */
+export interface ApiParameter {
+	name: string;
+	type: string;
+	optional?: boolean;
+	description: string;
+}
+
+interface Props {
+	parameters: ApiParameter[];
+}
+
+const { parameters } = Astro.props;
+---
+
+<table class="api-parameters">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Type</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			parameters.map((parameter) => (
+				<tr>
+					<td>
+						<code>{parameter.name}</code>
+						{parameter.optional && <span class="api-optional">optional</span>}
+					</td>
+					<td>
+						<code>{parameter.type}</code>
+					</td>
+					<td set:html={parameter.description} />
+				</tr>
+			))
+		}
+	</tbody>
+</table>
+
+<style>
+	.api-optional {
+		margin-inline-start: 0.375rem;
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-xs);
+	}
+</style>
