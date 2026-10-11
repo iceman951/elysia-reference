@@ -95,12 +95,14 @@ pnpm docs:sync    # move to the latest upstream commit and write reports/sync-su
 ```
 
 A weekly GitHub Actions workflow runs the sync, validates the result and opens (or updates) a pull request.
-Nothing is published until that pull request is reviewed and merged. Details: [docs/SYNC_STRATEGY.md](docs/SYNC_STRATEGY.md).
+Configure required checks and review protection on `main` before merging sync updates. Details:
+[docs/SYNC_STRATEGY.md](docs/SYNC_STRATEGY.md).
 
 ## Deployment
 
-The site deploys to Cloudflare Pages with its Git integration: production from `main`, previews for pull requests,
-build command `pnpm build`, output directory `dist`. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+Configure Cloudflare Pages with its Git integration: production from `main`, previews for pull requests, build
+command `pnpm verify`, output directory `dist`. Verification failures stop deployment; Bun example smoke tests run
+separately in GitHub Actions. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Current import
 

@@ -6,7 +6,8 @@ The official documentation changes continuously. This project follows it with a 
 
 1. **Upstream is the source of truth** for imported pages. Content fixes go upstream; this repository changes only
    how content is converted and presented.
-2. **Nothing reaches production without review.** A sync produces a pull request; production deploys only from `main`.
+2. **Review upstream changes before merging.** A sync produces a pull request. Configure `main` branch protection
+   below to require review and passing checks before the Git integration deploys the merged content.
 3. **Failures are loud.** A failed sync fails the workflow and opens (or comments on) an issue; partial content is never
    proposed as ready to merge.
 4. **Local work is never overwritten silently.** Locally authored pages are not touched; hand-edited generated files
@@ -51,12 +52,20 @@ The CI workflow is read-only.
 ### CI on sync pull requests
 
 Pull requests created with the default `GITHUB_TOKEN` do not trigger other workflows, which is why the sync job runs
-the full validation itself and reports the result in the pull request. To also get the regular CI checks (and
-Cloudflare preview builds triggered by the push are unaffected either way), add a repository secret `SYNC_TOKEN`
-containing a fine-grained personal access token or GitHub App token with *Contents: read/write* and *Pull requests:
-read/write* on this repository. The workflow uses it automatically when present.
+verification itself and reports the result in the pull request. The sync job does not run Bun example smoke tests.
+To trigger both regular CI checks, add a repository secret `SYNC_TOKEN` containing a fine-grained personal access
+token or GitHub App token with *Contents: read/write* and *Pull requests: read/write* on this repository. The workflow
+uses it automatically when present. Cloudflare preview builds triggered by the push are unaffected either way.
 
-Recommended branch protection for `main`: require the `CI / verify` check and one review.
+In the `main` branch protection or ruleset, require one review and these GitHub Actions checks by their exact job
+names in `.github/workflows/ci.yml`:
+
+- `Type check, test, validate and build`
+- `Example smoke tests (Bun)`
+
+When these checks are required, configure `SYNC_TOKEN` so automated sync pull requests can produce them. The
+validation summary posted by the sync job does not satisfy the required CI checks. Cloudflare's `pnpm verify`
+build command independently gates deployment on verification; branch protection gates merges on both CI jobs.
 
 ## Reviewing a sync pull request
 

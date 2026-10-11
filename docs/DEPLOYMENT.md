@@ -13,7 +13,7 @@ request.
    | Setting | Value |
    | --- | --- |
    | Framework preset | Astro (or None) |
-   | Build command | `pnpm build` |
+   | Build command | `pnpm verify` |
    | Build output directory | `dist` |
    | Root directory | *(empty — repository root)* |
    | Build system version | v3 |
@@ -33,6 +33,10 @@ request.
 
 ## What happens on each build
 
+`pnpm verify` runs type checks, unit tests and source validation, builds the site, then validates the generated
+links, anchors and assets. Any failing check stops the Cloudflare deployment. Bun example smoke tests run
+separately in GitHub Actions; they are not part of `pnpm verify`.
+
 `src/config/site.ts` reads the Cloudflare build environment:
 
 | `CF_PAGES_BRANCH` | Environment | Indexing |
@@ -51,12 +55,12 @@ exports.
 
 The build produces roughly 400 files and 45 MB (most of it mirrored screenshots and two short product videos; the
 largest file is about 6 MB), well within the Pages limits of 20,000 files per deployment and 25 MiB per file.
-`pnpm build` takes a few seconds; most of a Cloudflare build is dependency installation.
+The deployment also runs the checks in `pnpm verify`; dependency installation and validation add to the build time.
 
 ## Deploying without Git integration
 
 ```sh
-pnpm build
+pnpm verify
 npx wrangler pages deploy dist --project-name elysia-reference
 ```
 
@@ -73,6 +77,10 @@ npx wrangler pages deploy dist --project-name elysia-reference
 
 ## Release safety
 
-Production only changes when `main` changes. Upstream content arrives through reviewed pull requests (see
-[SYNC_STRATEGY.md](SYNC_STRATEGY.md)), CI runs the full validation on every pull request and push to `main`, and a
-failing build leaves the previous production deployment in place.
+With the Git integration configured above, production deployments come from `main`. Cloudflare runs `pnpm verify`
+before publishing, so a validation or build failure leaves the previous production deployment in place.
+
+GitHub Actions also runs verification and Bun example smoke tests on pull requests and pushes to `main`. Configure
+the required checks and review protection described in [SYNC_STRATEGY.md](SYNC_STRATEGY.md) to gate merges; an
+independent GitHub CI failure does not stop a Cloudflare build by itself. The automated sync proposes upstream
+content through pull requests.

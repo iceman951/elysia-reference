@@ -107,7 +107,12 @@ export async function runImport(options: ImportOptions = {}): Promise<ImportResu
 			...(imported.has(page) ? { slug: slugOfPage(page) } : {}),
 			upstreamUrl: upstreamUrlOf(upstream.siteUrl, page),
 		})),
-		{ siteUrl: upstream.siteUrl, publicFiles: assets.publicFiles, aliases: importConfig.linkAliases }
+		{
+			siteUrl: upstream.siteUrl,
+			publicFiles: assets.publicFiles,
+			aliases: importConfig.linkAliases,
+			generatedRoutes: importConfig.generatedRoutes,
+		}
 	);
 
 	// Phase 1: convert every page.

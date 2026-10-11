@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, test } from 'node:test';
+import { importConfig } from '../scripts/docs/import.config.ts';
 import { assertCompiles, convertFixture, issueCodes } from './helpers.ts';
 
 const page = (body: string, frontmatter = 'title: Fixture - ElysiaJS') => `---\n${frontmatter}\n---\n\n${body}\n`;
@@ -261,6 +262,22 @@ describe('links, anchors and assets', () => {
 		const result = convertFixture('a.md', page('# T\n\n[gone](/integrations/nextj)'));
 		assert.match(result.body, /\[gone\]\(https:\/\/elysiajs\.com\/integrations\/nextj\)/);
 		assert.ok(issueCodes(result.issues).includes('broken-link'));
+	});
+
+	test('links generated upstream LLMS files without reporting them as missing', async () => {
+		const result = convertFixture(
+			'a.md',
+			page('# T\n\n<Card title="llms.txt" href="/llms.txt" />\n\n[full](https://elysiajs.com/llms-full.txt) [download](/llms.txt?download=1#overview) [missing](/missing.txt)'),
+			{ generatedRoutes: importConfig.generatedRoutes }
+		);
+		assert.match(result.body, /<LinkCard title="llms\.txt" href="https:\/\/elysiajs\.com\/llms\.txt" \/>/);
+		assert.match(result.body, /\[full\]\(https:\/\/elysiajs\.com\/llms-full\.txt\)/);
+		assert.match(result.body, /\[download\]\(https:\/\/elysiajs\.com\/llms\.txt\?download=1#overview\)/);
+		const upstreamLinks = result.issues.filter((issue) => issue.code === 'link-to-upstream');
+		assert.equal(upstreamLinks.length, 3);
+		assert.ok(upstreamLinks.every((issue) => issue.severity === 'info'));
+		assert.deepEqual(result.issues.filter((issue) => issue.code === 'broken-link').map((issue) => issue.source), ['/missing.txt']);
+		await assertCompiles(result.body);
 	});
 
 	test('reports anchors that do not exist on the target page', () => {

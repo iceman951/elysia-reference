@@ -25,8 +25,8 @@
 		"skipped": 5,
 		"issues": {
 			"error": 0,
-			"warning": 129,
-			"info": 168
+			"warning": 123,
+			"info": 174
 		},
 		"assetsMirrored": 79,
 		"assetsNotMirrored": 2,
@@ -1942,8 +1942,8 @@
 			"status": "imported-with-warnings",
 			"issues": {
 				"error": 0,
-				"warning": 6,
-				"info": 4
+				"warning": 4,
+				"info": 6
 			},
 			"searchable": true,
 			"upstreamNav": {
@@ -2421,8 +2421,8 @@
 			"status": "imported-with-warnings",
 			"issues": {
 				"error": 0,
-				"warning": 9,
-				"info": 2
+				"warning": 5,
+				"info": 6
 			},
 			"searchable": false,
 			"upstreamNav": {

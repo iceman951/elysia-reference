@@ -298,6 +298,13 @@ export function finalizeLinks(pages: ReadonlyMap<string, ConvertedPage>, slugOf:
 				case 'home':
 					ref.apply(target.fragment ? `${page.ctx.siteUrl}/#${target.fragment}` : '/');
 					break;
+				case 'generated':
+					page.issues.info('link-to-upstream', `Link to a generated upstream route points to the official site (${target.reason}).`, {
+						...lineExtra,
+						source: ref.original,
+					});
+					ref.apply(target.url);
+					break;
 				case 'broken':
 					page.issues.warn('broken-link', `Link target "${ref.original}" does not exist upstream; it points to the official site unchanged.`, {
 						...lineExtra,

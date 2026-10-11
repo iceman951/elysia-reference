@@ -13,6 +13,7 @@ export interface ConvertFixtureOptions {
 	/** Files in the upstream public directory. */
 	publicFiles?: string[];
 	excludedAssets?: Record<string, string>;
+	generatedRoutes?: Record<string, string>;
 }
 
 export interface ConvertedFixture {
@@ -52,7 +53,12 @@ export function convertFixture(path: string, source: string, options: ConvertFix
 			...(content !== null ? { slug: slugOfPage(upstreamPath) } : {}),
 			upstreamUrl: upstreamUrlOf(SITE_URL, upstreamPath),
 		})),
-		{ siteUrl: SITE_URL, publicFiles: new Set(publicFiles), aliases: {} }
+		{
+			siteUrl: SITE_URL,
+			publicFiles: new Set(publicFiles),
+			aliases: {},
+			...(options.generatedRoutes ? { generatedRoutes: options.generatedRoutes } : {}),
+		}
 	);
 	const assets = new FixtureAssets(publicFiles, options.excludedAssets ?? {});
 	const all = new Map<string, ConvertedPage>();

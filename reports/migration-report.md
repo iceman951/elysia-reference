@@ -16,8 +16,8 @@
 | Failed pages | 0 |
 | Skipped pages | 5 |
 | Errors | 0 |
-| Warnings | 129 |
-| Informational notes | 168 |
+| Warnings | 123 |
+| Informational notes | 174 |
 | Assets mirrored | 79 |
 | Assets not mirrored (policy) | 2 |
 | Missing assets (referenced but absent upstream) | 0 |
@@ -29,7 +29,7 @@
 | --- | --- | ---: |
 | warning | `asset-not-mirrored` | 2 |
 | warning | `broken-anchor` | 48 |
-| warning | `broken-link` | 30 |
+| warning | `broken-link` | 24 |
 | warning | `container-note` | 1 |
 | warning | `interactive-component` | 45 |
 | warning | `unclosed-container` | 1 |
@@ -41,7 +41,7 @@
 | info | `html-comment-removed` | 22 |
 | info | `icon-converted` | 4 |
 | info | `iframe-replaced` | 1 |
-| info | `link-to-upstream` | 1 |
+| info | `link-to-upstream` | 7 |
 | info | `release-cover-omitted` | 17 |
 | info | `tutorial-static` | 20 |
 | info | `twoslash-rendered-static` | 19 |
@@ -279,8 +279,6 @@ Output: `src/content/docs/patterns/typebox.mdx` — status: imported-with-warnin
 
 Output: `src/content/docs/table-of-content.mdx` — status: imported-with-warnings
 
-- **warning** `broken-link` (line 58): Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. — `/llms.txt`
-- **warning** `broken-link` (line 61): Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. — `/llms-full.txt`
 - **warning** `broken-link` (line 71): Link target "/migrate/from-express" does not exist upstream; it points to the official site unchanged. — `/migrate/from-express`
 - **warning** `broken-link` (line 74): Link target "/migrate/from-fastify" does not exist upstream; it points to the official site unchanged. — `/migrate/from-fastify`
 - **warning** `broken-link` (line 77): Link target "/migrate/from-hono" does not exist upstream; it points to the official site unchanged. — `/migrate/from-hono`
@@ -343,10 +341,6 @@ Output: `src/content/docs/tutorial/patterns/extends-context/index.mdx` — statu
 
 Output: `src/content/docs/tutorial/whats-next.mdx` — status: imported-with-warnings
 
-- **warning** `broken-link` (line 51): Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. — `/llms.txt`
-- **warning** `broken-link` (line 51): Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. — `/llms-full.txt`
-- **warning** `broken-link` (line 54): Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. — `/llms.txt`
-- **warning** `broken-link` (line 57): Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. — `/llms-full.txt`
 - **warning** `broken-link` (line 83): Link target "/migrate/from-express" does not exist upstream; it points to the official site unchanged. — `/migrate/from-express`
 - **warning** `broken-link` (line 86): Link target "/migrate/from-fastify" does not exist upstream; it points to the official site unchanged. — `/migrate/from-fastify`
 - **warning** `broken-link` (line 89): Link target "/migrate/from-hono" does not exist upstream; it points to the official site unchanged. — `/migrate/from-hono`
@@ -397,8 +391,6 @@ Output: `src/content/docs/tutorial/whats-next.mdx` — status: imported-with-war
 | `docs/patterns/typebox.md` | 60 | `/essential/life-cycle.html#on-error` | Anchor "#on-error" does not match any heading of the target page; kept unchanged. |
 | `docs/patterns/typebox.md` | 501 | `#object-string` | Anchor "#object-string" does not match any heading of the target page; kept unchanged. |
 | `docs/patterns/typebox.md` | 504 | `#boolean-string` | Anchor "#boolean-string" does not match any heading of the target page; kept unchanged. |
-| `docs/table-of-content.md` | 58 | `/llms.txt` | Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. |
-| `docs/table-of-content.md` | 61 | `/llms-full.txt` | Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. |
 | `docs/table-of-content.md` | 71 | `/migrate/from-express` | Link target "/migrate/from-express" does not exist upstream; it points to the official site unchanged. |
 | `docs/table-of-content.md` | 74 | `/migrate/from-fastify` | Link target "/migrate/from-fastify" does not exist upstream; it points to the official site unchanged. |
 | `docs/table-of-content.md` | 77 | `/migrate/from-hono` | Link target "/migrate/from-hono" does not exist upstream; it points to the official site unchanged. |
@@ -426,10 +418,6 @@ Output: `src/content/docs/tutorial/whats-next.mdx` — status: imported-with-war
 | `docs/tutorial/patterns/extends-context/index.md` | 113 | `/essential/handler.html#resolve` | Anchor "#resolve" does not match any heading of the target page; kept unchanged. |
 | `docs/tutorial/patterns/extends-context/index.md` | 113 | `/essential/handler.html#derive` | Anchor "#derive" does not match any heading of the target page; kept unchanged. |
 | `docs/tutorial/patterns/extends-context/index.md` | 140 | `/essential/handler.html#resolve` | Anchor "#resolve" does not match any heading of the target page; kept unchanged. |
-| `docs/tutorial/whats-next.md` | 51 | `/llms.txt` | Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. |
-| `docs/tutorial/whats-next.md` | 51 | `/llms-full.txt` | Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. |
-| `docs/tutorial/whats-next.md` | 54 | `/llms.txt` | Link target "/llms.txt" does not exist upstream; it points to the official site unchanged. |
-| `docs/tutorial/whats-next.md` | 57 | `/llms-full.txt` | Link target "/llms-full.txt" does not exist upstream; it points to the official site unchanged. |
 | `docs/tutorial/whats-next.md` | 83 | `/migrate/from-express` | Link target "/migrate/from-express" does not exist upstream; it points to the official site unchanged. |
 | `docs/tutorial/whats-next.md` | 86 | `/migrate/from-fastify` | Link target "/migrate/from-fastify" does not exist upstream; it points to the official site unchanged. |
 | `docs/tutorial/whats-next.md` | 89 | `/migrate/from-hono` | Link target "/migrate/from-hono" does not exist upstream; it points to the official site unchanged. |
