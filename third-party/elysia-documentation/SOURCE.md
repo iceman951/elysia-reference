@@ -4,7 +4,7 @@ The pages under `src/content/docs/` that carry an `upstream` frontmatter block, 
 `public/upstream/`, are derived from the official ElysiaJS documentation:
 
 - Repository: https://github.com/elysiajs/documentation
-- Commit: f68573703415eb3df63ff02851013148fea4748f (2026-09-11T00:35:47+03:00)
+- Commit: f1c5e9b346652c9edc1b24c286de6114e51c0c58 (2026-10-20T02:39:05+07:00)
 - License: MIT — the complete license text is in [LICENSE](./LICENSE) (Copyright 2022 saltyAom).
 
 The content was converted from VitePress Markdown to Starlight MDX by `scripts/docs/import.ts`.
